@@ -1,0 +1,1017 @@
+[
+  {
+    "id": "C-0001",
+    "subject": "C",
+    "question": "Who is the father of C language?",
+    "options": [
+      "Steve Jobs",
+      "James Gosling",
+      "Dennis Ritchie",
+      "Rasmus Lerdorf"
+    ],
+    "correct_answer": "Dennis Ritchie",
+    "explanation": "Dennis Ritchie is the father of C Programming Language. C programming language was developed in 1972 at American Telephone & Telegraph Bell Laboratories of USA.",
+    "difficulty": 0.1,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0002",
+    "subject": "C",
+    "question": "Which of the following is not a valid C variable name?",
+    "options": [
+      "int number;",
+      "float rate;",
+      "int variable_count;",
+      "int $main;"
+    ],
+    "correct_answer": "int $main;",
+    "explanation": "Since only underscore and no other special character is allowed in a variable name, it results in an error.",
+    "difficulty": 0.2,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0003",
+    "subject": "C",
+    "question": "All keywords in C are in ____________",
+    "options": [
+      "LowerCase letters",
+      "UpperCase letters",
+      "CamelCase letters",
+      "None of the mentioned"
+    ],
+    "correct_answer": "LowerCase letters",
+    "explanation": "None.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0004",
+    "subject": "C",
+    "question": "Which of the following is true for variable names in C?",
+    "options": [
+      "They can contain alphanumeric characters as well as special characters",
+      "It is not an error to declare a variable to be one of the keywords(like goto, static)",
+      "Variable names cannot start with a digit",
+      "Variable can be of any length"
+    ],
+    "correct_answer": "Variable names cannot start with a digit",
+    "explanation": "According to the syntax for C variable name, it cannot start with a digit.",
+    "difficulty": 0.2,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0005",
+    "subject": "C",
+    "question": "Which is valid C expression?",
+    "options": [
+      "int my_num = 100,000;",
+      "int my_num = 100000;",
+      "int my num = 1000;",
+      "int $my_num = 10000;"
+    ],
+    "correct_answer": "int my_num = 100000;",
+    "explanation": "Space, comma and $ cannot be used in a variable name.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0006",
+    "subject": "C",
+    "question": "Which of the following cannot be a variable name in C?",
+    "options": [
+      "volatile",
+      "true",
+      "friend",
+      "export"
+    ],
+    "correct_answer": "volatile",
+    "explanation": "volatile is C keyword.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0007",
+    "subject": "C",
+    "question": "What is short int in C programming?",
+    "options": [
+      "The basic data type of C",
+      "Qualifier",
+      "Short is the qualifier and int is the basic data type",
+      "All of the mentioned"
+    ],
+    "correct_answer": "Short is the qualifier and int is the basic data type",
+    "explanation": "None.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0008",
+    "subject": "C",
+    "question": "Which of the following declaration is not supported by C language?",
+    "options": [
+      "String str;",
+      "char *str;",
+      "float str = 3e2;",
+      "Both “String str;” and “float str = 3e2;”"
+    ],
+    "correct_answer": "String str;",
+    "explanation": "It is legal in Java, but not in C language.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0009",
+    "subject": "C",
+    "question": "Which keyword is used to prevent any changes in the variable within a C program?",
+    "options": [
+      "immutable",
+      "mutable",
+      "const",
+      "volatile"
+    ],
+    "correct_answer": "const",
+    "explanation": "const is a keyword constant in C program.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0010",
+    "subject": "C",
+    "question": "What is the result of logical or relational expression in C?",
+    "options": [
+      "True or False",
+      "0 or 1",
+      "0 if an expression is false and any positive number if an expression is true",
+      "None of the mentioned"
+    ],
+    "correct_answer": "0 or 1",
+    "explanation": "None.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0011",
+    "subject": "C",
+    "question": "Which of the following typecasting is accepted by C language?",
+    "options": [
+      "Widening conversions",
+      "Narrowing conversions",
+      "Widening & Narrowing conversions",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Widening & Narrowing conversions",
+    "explanation": "None.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0012",
+    "subject": "C",
+    "question": "Where in C the order of precedence of operators do not exist?",
+    "options": [
+      "Within conditional statements, if, else",
+      "Within while, do-while",
+      "Within a macro definition",
+      "None of the mentioned"
+    ],
+    "correct_answer": "None of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.45,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0013",
+    "subject": "C",
+    "question": "Which of the following is NOT possible with any 2 operators in C?",
+    "options": [
+      "Different precedence, same associativity",
+      "Different precedence, different associativity",
+      "Same precedence, different associativity",
+      "All of the mentioned"
+    ],
+    "correct_answer": "Same precedence, different associativity",
+    "explanation": "None.",
+    "difficulty": 0.5,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0014",
+    "subject": "C",
+    "question": "What is an example of iteration in C?",
+    "options": [
+      "for",
+      "while",
+      "do-while",
+      "all of the mentioned"
+    ],
+    "correct_answer": "all of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0015",
+    "subject": "C",
+    "question": "Functions can return enumeration constants in C?",
+    "options": [
+      "true",
+      "false",
+      "depends on the compiler",
+      "depends on the standard"
+    ],
+    "correct_answer": "true",
+    "explanation": "None.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0016",
+    "subject": "C",
+    "question": "Functions in C Language are always _________",
+    "options": [
+      "Internal",
+      "External",
+      "Both Internal and External",
+      "External and Internal are not valid terms for functions"
+    ],
+    "correct_answer": "External",
+    "explanation": "None.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0017",
+    "subject": "C",
+    "question": "Which of following is not accepted in C?",
+    "options": [
+      "static a = 10; //static as",
+      "static int func (int); //parameter as static",
+      "static static int a; //a static variable prefixed with static",
+      "all of the mentioned"
+    ],
+    "correct_answer": "static static int a; //a static variable prefixed with static",
+    "explanation": "None.",
+    "difficulty": 0.4,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0018",
+    "subject": "C",
+    "question": "Property which allows to produce different executable for different platforms in C is called?",
+    "options": [
+      "File inclusion",
+      "Selective inclusion",
+      "Conditional compilation",
+      "Recursive macros"
+    ],
+    "correct_answer": "Conditional compilation",
+    "explanation": "Conditional compilation is the preprocessor facility to produce a different executable.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0019",
+    "subject": "C",
+    "question": "What is #include <stdio.h>?",
+    "options": [
+      "Preprocessor directive",
+      "Inclusion directive",
+      "File inclusion directive",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Preprocessor directive",
+    "explanation": "None.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0020",
+    "subject": "C",
+    "question": "C preprocessors can have compiler specific features.",
+    "options": [
+      "True",
+      "False",
+      "Depends on the standard",
+      "Depends on the platform"
+    ],
+    "correct_answer": "True",
+    "explanation": "#pragma is compiler specific feature.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0021",
+    "subject": "C",
+    "question": "Which of the following are C preprocessors?",
+    "options": [
+      "#ifdef",
+      "#define",
+      "#endif",
+      "all of the mentioned"
+    ],
+    "correct_answer": "all of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0022",
+    "subject": "C",
+    "question": "The C-preprocessors are specified with _________ symbol.",
+    "options": [
+      "#",
+      "$",
+      "” ”",
+      "&"
+    ],
+    "correct_answer": "#",
+    "explanation": "The C-preprocessors are specified with # symbol.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0023",
+    "subject": "C",
+    "question": "How is search done in #include and #include “somelibrary.h” according to C standard?",
+    "options": [
+      "When former is used, current directory is searched and when latter is used, standard directory is searched",
+      "When former is used, standard directory is searched and when latter is used, current directory is searched",
+      "When former is used, search is done in implementation defined manner and when latter is used, current directory is searched",
+      "For both, search for ‘somelibrary’ is done in implementation-defined places"
+    ],
+    "correct_answer": "When former is used, standard directory is searched and when latter is used, current directory is searched",
+    "explanation": "None.",
+    "difficulty": 0.4,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0024",
+    "subject": "C",
+    "question": "How many number of pointer (*) does C have against a pointer variable declaration?",
+    "options": [
+      "7",
+      "127",
+      "255",
+      "No limits"
+    ],
+    "correct_answer": "No limits",
+    "explanation": "None.",
+    "difficulty": 0.35,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0025",
+    "subject": "C",
+    "question": "Which of the following is not possible statically in C language?",
+    "options": [
+      "Jagged Array",
+      "Rectangular Array",
+      "Cuboidal Array",
+      "Multidimensional Array"
+    ],
+    "correct_answer": "Jagged Array",
+    "explanation": "None.",
+    "difficulty": 0.4,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0026",
+    "subject": "C",
+    "question": "Which of the following return-type cannot be used for a function in C?",
+    "options": [
+      "char *",
+      "struct",
+      "void",
+      "none of the mentioned"
+    ],
+    "correct_answer": "none of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0027",
+    "subject": "C",
+    "question": "The standard header _______ is used for variable list arguments (…) in C.",
+    "options": [
+      "<stdio.h >",
+      "<stdlib.h>",
+      "<math.h>",
+      "<stdarg.h>"
+    ],
+    "correct_answer": "<stdarg.h>",
+    "explanation": "None.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0028",
+    "subject": "C",
+    "question": "When a C program is started, O.S environment is responsible for opening file and providing pointer for that file?",
+    "options": [
+      "Standard input",
+      "Standard output",
+      "Standard error",
+      "All of the mentioned"
+    ],
+    "correct_answer": "All of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0029",
+    "subject": "C",
+    "question": "In C language, FILE is of which data type?",
+    "options": [
+      "int",
+      "char *",
+      "struct",
+      "None of the mentioned"
+    ],
+    "correct_answer": "struct",
+    "explanation": "None.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0030",
+    "subject": "C",
+    "question": "What is the sizeof(char) in a 32-bit C compiler?",
+    "options": [
+      "1 bit",
+      "2 bits",
+      "1 Byte",
+      "2 Bytes"
+    ],
+    "correct_answer": "1 Byte",
+    "explanation": "None.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0031",
+    "subject": "C",
+    "question": "Which of the following is not an operator in C?",
+    "options": [
+      ",",
+      "sizeof()",
+      "~",
+      "None of the mentioned"
+    ],
+    "correct_answer": "None of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.4,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0032",
+    "subject": "C",
+    "question": "scanf() is a predefined function in______header file.",
+    "options": [
+      "stdlib. h",
+      "ctype. h",
+      "stdio. h",
+      "stdarg. h"
+    ],
+    "correct_answer": "stdio. h",
+    "explanation": "scanf() is a predefined function in \"stdio.h\" header file.printf and scanf() carry out input and output functions in C. These functions statements are present in the header file stdio.h.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0033",
+    "subject": "C",
+    "question": "What is meant by ‘a’ in the following C operation?",
+    "options": [
+      "Attach",
+      "Append",
+      "Apprehend",
+      "Add"
+    ],
+    "correct_answer": "Append",
+    "explanation": "None.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "C-0034",
+    "subject": "C",
+    "question": "What will be the output of the following C code?",
+    "options": [
+      "Compile time error",
+      "Hello World! 34",
+      "Hello World! 1000",
+      "Hello World! followed by a junk value"
+    ],
+    "correct_answer": "Compile time error",
+    "explanation": "Since y is already defined, redefining it results in an error. Output: $ cc pgm2.c pgm2.c: In function ‘main’: pgm2.c:5: error: redefinition of ‘y’ pgm2.c:4: note: previous definition of ‘y’ was here",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0035",
+    "subject": "C",
+    "question": "What will happen if the following C code is executed?",
+    "options": [
+      "It will cause a compile-time error",
+      "It will cause a run-time error",
+      "It will run without any error and prints 3",
+      "It will experience infinite looping"
+    ],
+    "correct_answer": "It will run without any error and prints 3",
+    "explanation": "A C program can have same function name and same variable name. $ cc pgm3.c $ a.out 3",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0036",
+    "subject": "C",
+    "question": "What will be the output of the following C code?",
+    "options": [
+      "128",
+      "-128",
+      "Depends on the compiler",
+      "None of the mentioned"
+    ],
+    "correct_answer": "-128",
+    "explanation": "The range of signed character is from -128 to +127. Since we are assigning a value of 128 to the variable ‘chr’, the result will be negative. 128 in binary is represented as “1000 0000” for character datatype. As you can see that the sign bit is set to 1, followed by 7 zeros (0), its final decimal value will be -128 (negative 128). Output: $ cc pgm2.c $ a.out -128",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0037",
+    "subject": "C",
+    "question": "What will be the output of the following C code on a 64 bit machine?",
+    "options": [
+      "8",
+      "5",
+      "9",
+      "4"
+    ],
+    "correct_answer": "4",
+    "explanation": "Since the size of a union is the size of its maximum data type, here int is the largest data type. Hence the size of the union is 4. Output: $ cc pgm7.c $ a.out 4",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0038",
+    "subject": "C",
+    "question": "What will be the output of the following C function?",
+    "options": [
+      "0",
+      "Compile time error",
+      "1",
+      "8"
+    ],
+    "correct_answer": "8",
+    "explanation": "m is an integer constant, hence it is compatible. Output: $ cc pgm5.c $ a.out 8",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0039",
+    "subject": "C",
+    "question": "What will be the output of the following C code?",
+    "options": [
+      "Error because function name cannot be preceded by const",
+      "Sanfoundry.com",
+      "Sanfoundry.com is printed infinite times",
+      "Blank screen, no output"
+    ],
+    "correct_answer": "Sanfoundry.com",
+    "explanation": "None. Output: $ cc pgm13.c $ a.out Sanfoundry.com",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "C-0040",
+    "subject": "C",
+    "question": "Will the following C code compile without any error?",
+    "options": [
+      "Yes",
+      "No",
+      "Depends on the C standard implemented by compilers",
+      "Error"
+    ],
+    "correct_answer": "Depends on the C standard implemented by compilers",
+    "explanation": "Compilers implementing C90 do not allow this, but compilers implementing C99 allow it. Output: $ cc pgm4.c pgm4.c: In function ‘main’: pgm4.c:4: error: ‘for’ loop initial declarations are only allowed in C99 mode pgm4.c:4: note: use option -std=c99 or -std=gnu99 to compile your code",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0041",
+    "subject": "C",
+    "question": "What will be the final value of x in the following C code?",
+    "options": [
+      "3.75",
+      "Depends on compiler",
+      "24",
+      "3"
+    ],
+    "correct_answer": "24",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0042",
+    "subject": "C",
+    "question": "What will be the output of the following C code? (Initial values: x= 7, y = 8)",
+    "options": [
+      "7.000000, 7",
+      "Run time error",
+      "7.000000, junk",
+      "Varies"
+    ],
+    "correct_answer": "7.000000, junk",
+    "explanation": "None.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0043",
+    "subject": "C",
+    "question": "What will be the output of the following C code considering the size of a short int is 2, char is 1 and int is 4 bytes?",
+    "options": [
+      "2, 1, 2",
+      "2, 1, 1",
+      "2, 1, 4",
+      "2, 2, 8"
+    ],
+    "correct_answer": "2, 1, 4",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0044",
+    "subject": "C",
+    "question": "What is the difference between the following 2 C codes?",
+    "options": [
+      "No difference as space doesn’t make any difference, values of a, b, d are same in both the case",
+      "Space does make a difference, values of a, b, d are different",
+      "Program 1 has syntax error, program 2 is not",
+      "Program 2 has syntax error, program 1 is not"
+    ],
+    "correct_answer": "Program 2 has syntax error, program 1 is not",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0045",
+    "subject": "C",
+    "question": "What will be the output of the following C code snippet?",
+    "options": [
+      "returns 1",
+      "returns 2",
+      "Varies",
+      "Compile time error"
+    ],
+    "correct_answer": "Compile time error",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0046",
+    "subject": "C",
+    "question": "What will be the value of the following assignment expression?",
+    "options": [
+      "2",
+      "True",
+      "1",
+      "0"
+    ],
+    "correct_answer": "1",
+    "explanation": "None.",
+    "difficulty": 0.45,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0047",
+    "subject": "C",
+    "question": "What will be the output of the following C function?",
+    "options": [
+      "1 2 3 4 5",
+      "Segmentation fault",
+      "Compilation error",
+      "Undefined behaviour"
+    ],
+    "correct_answer": "1 2 3 4 5",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0048",
+    "subject": "C",
+    "question": "What will be the final values of i and j in the following C code?",
+    "options": [
+      "i value is 1 and j value is 1",
+      "i value is 0 and j value is 0",
+      "i value is 1 and j value is undefined",
+      "i and j value are undefined"
+    ],
+    "correct_answer": "i value is 1 and j value is undefined",
+    "explanation": "None.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0049",
+    "subject": "C",
+    "question": "Comment on the following C statement.",
+    "options": [
+      "Output will be 3, 2",
+      "Output will be 3, 1",
+      "Output will be 6, 1",
+      "Output is compiler dependent"
+    ],
+    "correct_answer": "Output is compiler dependent",
+    "explanation": "None.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0050",
+    "subject": "C",
+    "question": "How many times i value is checked in the following C program?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "correct_answer": "4",
+    "explanation": "None.",
+    "difficulty": 0.5,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0051",
+    "subject": "C",
+    "question": "What will be the output of the following C code?",
+    "options": [
+      "In while loop 2",
+      "In while loop in while loop 3",
+      "In while loop 3",
+      "Infinite loop"
+    ],
+    "correct_answer": "In while loop 2",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "C-0052",
+    "subject": "C",
+    "question": "What will be the data type returned for the following C function?",
+    "options": [
+      "char",
+      "int",
+      "double",
+      "multiple type-casting in return is illegal"
+    ],
+    "correct_answer": "int",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0053",
+    "subject": "C",
+    "question": "What is the problem in the following C declarations?",
+    "options": [
+      "A function with same name cannot have different signatures",
+      "A function with same name cannot have different return types",
+      "A function with same name cannot have different number of parameters",
+      "All of the mentioned"
+    ],
+    "correct_answer": "All of the mentioned",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0054",
+    "subject": "C",
+    "question": "Which option should be selected to work the following C expression?",
+    "options": [
+      "typedef char [] string;",
+      "typedef char *string;",
+      "typedef char [] string; and typedef char *string;",
+      "Such expression cannot be generated in C"
+    ],
+    "correct_answer": "typedef char *string;",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0055",
+    "subject": "C",
+    "question": "What is the meaning of the following C statement?",
+    "options": [
+      "10 spaces before the string state is printed",
+      "Print empty spaces if the string state is less than 10 characters",
+      "Print the last 10 characters of the string",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Print empty spaces if the string state is less than 10 characters",
+    "explanation": "None.",
+    "difficulty": 0.5,
+    "type": "logic",
+    "estimated_time": 45
+  },
+  {
+    "id": "C-0056",
+    "subject": "C",
+    "question": "What are the elements present in the array of the following C code?",
+    "options": [
+      "5, 5, 5, 5, 5",
+      "5, 0, 0, 0, 0",
+      "5, (garbage), (garbage), (garbage), (garbage)",
+      "(garbage), (garbage), (garbage), (garbage), 5"
+    ],
+    "correct_answer": "5, 0, 0, 0, 0",
+    "explanation": "None.",
+    "difficulty": 0.55,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0057",
+    "subject": "C",
+    "question": "What will be the output of the following C function when EOF returns?",
+    "options": [
+      "‘�’ character of array line is encountered",
+      "‘n’ character in array line is encountered",
+      "‘t’ character in array line is encountered",
+      "When an error occurs"
+    ],
+    "correct_answer": "When an error occurs",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0058",
+    "subject": "C",
+    "question": "Which part of the program address space is p stored in the following C code?",
+    "options": [
+      "Code/text segment",
+      "Data segment",
+      "Bss segment",
+      "Stack"
+    ],
+    "correct_answer": "Bss segment",
+    "explanation": "None.",
+    "difficulty": 0.65,
+    "type": "logic",
+    "estimated_time": 55
+  },
+  {
+    "id": "C-0059",
+    "subject": "C",
+    "question": "Which of the following sequences are unaccepted in C language?",
+    "options": [],
+    "correct_answer": "?) C",
+    "explanation": "None.",
+    "difficulty": 0.6,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "C-0060",
+    "subject": "C",
+    "question": "Comment on the output of following C code.",
+    "options": [
+      "It will print a",
+      "It will print 0",
+      "Compile time error",
+      "Run time error"
+    ],
+    "correct_answer": "Run time error",
+    "explanation": "(none)",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0061",
+    "subject": "C",
+    "question": "What is the output of this C code?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "(none)",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "C-0062",
+    "subject": "C",
+    "question": "What is the output of this C code?",
+    "options": [
+      "abnfoundry C-Test",
+      "Sanfoundry C-Test",
+      "Compile time error",
+      "Run time error"
+    ],
+    "correct_answer": "Run time error",
+    "explanation": "(none)",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "C-0063",
+    "subject": "C",
+    "question": "What is the output of this C code?",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "(none)",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "C-0064",
+    "subject": "C",
+    "question": "What is the output of this C code?",
+    "options": [
+      "True",
+      "False",
+      "No Output will be printed",
+      "Run Time Error"
+    ],
+    "correct_answer": "No Output will be printed",
+    "explanation": "(none)",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  }
+]

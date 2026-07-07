@@ -1,0 +1,986 @@
+[
+  {
+    "id": "PY-0001",
+    "subject": "Python",
+    "question": "Who developed Python Programming Language?",
+    "options": [
+      "Wick van Rossum",
+      "Rasmus Lerdorf",
+      "Guido van Rossum",
+      "Niene Stom"
+    ],
+    "correct_answer": "Guido van Rossum",
+    "explanation": "Python language is designed by a Dutch programmer Guido van Rossum in the Netherlands.",
+    "difficulty": 0.1,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0002",
+    "subject": "Python",
+    "question": "Which type of Programming does Python support?",
+    "options": [
+      "object-oriented programming",
+      "structured programming",
+      "functional programming",
+      "all of the mentioned"
+    ],
+    "correct_answer": "all of the mentioned",
+    "explanation": "Python is an interpreted programming language, which supports object-oriented, structured, and functional programming.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0003",
+    "subject": "Python",
+    "question": "Is Python case sensitive when dealing with identifiers?",
+    "options": [
+      "no",
+      "yes",
+      "machine dependent",
+      "none of the mentioned"
+    ],
+    "correct_answer": "yes",
+    "explanation": "Case is always significant while dealing with identifiers in python.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0004",
+    "subject": "Python",
+    "question": "Which of the following is the correct extension of the Python file?",
+    "options": [
+      ".python",
+      ".pl",
+      ".py",
+      ".p"
+    ],
+    "correct_answer": ".py",
+    "explanation": "‘.py’ is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension ‘.py’.",
+    "difficulty": 0.1,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0005",
+    "subject": "Python",
+    "question": "Is Python code compiled or interpreted?",
+    "options": [
+      "Python code is both compiled and interpreted",
+      "Python code is neither compiled nor interpreted",
+      "Python code is only compiled",
+      "Python code is only interpreted"
+    ],
+    "correct_answer": "Python code is both compiled and interpreted",
+    "explanation": "Many languages have been implemented using both compilers and interpreters, including C, Pascal, and Python.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0006",
+    "subject": "Python",
+    "question": "All keywords in Python are in _________",
+    "options": [
+      "Capitalized",
+      "lower case",
+      "UPPER CASE",
+      "None of the mentioned"
+    ],
+    "correct_answer": "None of the mentioned",
+    "explanation": "Most keywords are in lowercase, but some like True, False, and None are capitalized.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0007",
+    "subject": "Python",
+    "question": "What will be the value of the following Python expression?",
+    "options": [
+      "7",
+      "2",
+      "4",
+      "1"
+    ],
+    "correct_answer": "7",
+    "explanation": "In Python, the modulus operator % has higher precedence than addition +. So, the expression is evaluated as 4 + (3 % 5), which is 4 + 3 = 7.",
+    "difficulty": 0.45,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "PY-0008",
+    "subject": "Python",
+    "question": "Which of the following is used to define a block of code in Python language?",
+    "options": [
+      "Indentation",
+      "Key",
+      "Brackets",
+      "All of the mentioned"
+    ],
+    "correct_answer": "Indentation",
+    "explanation": "In Python, to define a block of code we use indentation. Indentation refers to whitespaces at the beginning of the line.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0009",
+    "subject": "Python",
+    "question": "Which keyword is used for function in Python language?",
+    "options": [
+      "Function",
+      "def",
+      "Fun",
+      "Define"
+    ],
+    "correct_answer": "def",
+    "explanation": "The def keyword is used to create, (or define) a function in python.",
+    "difficulty": 0.1,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0010",
+    "subject": "Python",
+    "question": "Which of the following character is used to give single-line comments in Python?",
+    "options": [
+      "//",
+      "#",
+      "!",
+      "/*"
+    ],
+    "correct_answer": "#",
+    "explanation": "To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes. Example: “”” comment text “””",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0011",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "1 2 3",
+      "SyntaxError",
+      "1 2",
+      "none of the mentioned"
+    ],
+    "correct_answer": "SyntaxError",
+    "explanation": "The output will be a SyntaxError because i + = 1 is invalid syntax in Python. There should be no space between + and =. The correct syntax is i += 1.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0012",
+    "subject": "Python",
+    "question": "Which of the following functions can help us to find the version of python that we are currently working on?",
+    "options": [
+      "sys.version(1)",
+      "sys.version(0)",
+      "sys.version()",
+      "sys.version"
+    ],
+    "correct_answer": "sys.version",
+    "explanation": "The function sys.version can help us to find the version of python that we are currently working on. It also contains information on the build number and compiler used. For example, 3.5.2, 2.7.3 etc. this function also returns the current date, time, bits etc along with the version.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0013",
+    "subject": "Python",
+    "question": "Python supports the creation of anonymous functions at runtime, using a construct called __________",
+    "options": [
+      "pi",
+      "anonymous",
+      "lambda",
+      "none of the mentioned"
+    ],
+    "correct_answer": "lambda",
+    "explanation": "In Python, lambda functions are anonymous, meaning they don’t have a name. They are defined using the lambda keyword and can take any number of arguments but only have one expression. Lambdas are useful for creating small, throwaway functions quickly without formally defining them using def.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0014",
+    "subject": "Python",
+    "question": "What is the order of precedence in python?",
+    "options": [
+      "Exponential, Parentheses, Multiplication, Division, Addition, Subtraction",
+      "Exponential, Parentheses, Division, Multiplication, Addition, Subtraction",
+      "Parentheses, Exponential, Multiplication, Addition, Division, Subtraction",
+      "Parentheses, Exponential, Multiplication, Division, Addition, Subtraction"
+    ],
+    "correct_answer": "Parentheses, Exponential, Multiplication, Division, Addition, Subtraction",
+    "explanation": "Python follows the PEMDAS rule (similar to BODMAS): Parentheses, Exponentiation, Multiplication/Division, then Addition/Subtraction. Operators at the same level are evaluated left to right.",
+    "difficulty": 0.3,
+    "type": "logic",
+    "estimated_time": 45
+  },
+  {
+    "id": "PY-0015",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code snippet if x=1?",
+    "options": [
+      "4",
+      "2",
+      "1",
+      "8"
+    ],
+    "correct_answer": "4",
+    "explanation": "The binary form of 1 is 0001. The expression x<<2 implies we are performing bitwise left shift on x. This shift yields the value: 0100, which is the binary form of the number 4.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0016",
+    "subject": "Python",
+    "question": "What does pip stand for python?",
+    "options": [
+      "Pip Installs Python",
+      "Pip Installs Packages",
+      "Preferred Installer Program",
+      "All of the mentioned"
+    ],
+    "correct_answer": "Preferred Installer Program",
+    "explanation": "pip is a package manager for python. Which is also called Preferred Installer Program.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0017",
+    "subject": "Python",
+    "question": "Which of the following is true for variable names in Python?",
+    "options": [
+      "underscore and ampersand are the only two special characters allowed",
+      "unlimited length",
+      "all private members must have leading and trailing underscores",
+      "none of the mentioned"
+    ],
+    "correct_answer": "unlimited length",
+    "explanation": "Python allows variable names of unlimited length. Private members usually have only a leading underscore, not both leading and trailing. The ampersand (&) is not permitted in variable names; only the underscore (_) is allowed as a special character.",
+    "difficulty": 0.25,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "PY-0018",
+    "subject": "Python",
+    "question": "What are the values of the following Python expressions?",
+    "options": [
+      "512, 64, 512",
+      "512, 512, 512",
+      "64, 512, 64",
+      "64, 64, 64"
+    ],
+    "correct_answer": "512, 64, 512",
+    "explanation": "Expression 1 is evaluated as: 2**9, which is equal to 512. Expression 2 is evaluated as 8**2, which is equal to 64. The last expression is evaluated as 2**(3**2). This is because the associativity of ** operator is from right to left. Hence the result of the third expression is 512.",
+    "difficulty": 0.65,
+    "type": "logic",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0019",
+    "subject": "Python",
+    "question": "Which of the following is the truncation division operator in Python?",
+    "options": [
+      "|",
+      "//",
+      "/",
+      "%"
+    ],
+    "correct_answer": "//",
+    "explanation": "// is the operator for truncation division. It is called so because it returns only the integer part of the quotient, truncating the decimal part. For example: 20//3 = 6.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0020",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "[1, 0, 2, ‘hello’, ”, []]",
+      "Error",
+      "[1, 2, ‘hello’]",
+      "[1, 0, 2, 0, ‘hello’, ”, []]"
+    ],
+    "correct_answer": "[1, 2, ‘hello’]",
+    "explanation": "The function filter(bool, l) removes all false elements from the list l, such as 0, ”, and []. The remaining true elements — 1, 2, and ‘hello’ — are returned as a new list.",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "PY-0021",
+    "subject": "Python",
+    "question": "Which of the following functions is a built-in function in python?",
+    "options": [
+      "factorial()",
+      "print()",
+      "seed()",
+      "sqrt()"
+    ],
+    "correct_answer": "print()",
+    "explanation": "The function seed is a function which is present in the random module. The functions sqrt and factorial are a part of the math module. The print function is a built-in function which prints a value directly to the system output.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0022",
+    "subject": "Python",
+    "question": "Which of the following is the use of id() function in python?",
+    "options": [
+      "Every object doesn’t have a unique id",
+      "Id  returns the identity of the object",
+      "All of the mentioned",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Id  returns the identity of the object",
+    "explanation": "The id() function in Python returns the identity of an object. This identity is a unique integer (or memory address) that remains constant for the object during its lifetime. Every object in Python has a unique id, which helps in comparing object references.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0023",
+    "subject": "Python",
+    "question": "The following python program can work with ____ parameters.",
+    "options": [
+      "any number of",
+      "0",
+      "1",
+      "2"
+    ],
+    "correct_answer": "any number of",
+    "explanation": "The decorator function f defines f1 which uses *args and **kwargs to accept any number of positional and keyword arguments. This allows the decorated function to work with any number of parameters, making the decorator flexible.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0024",
+    "subject": "Python",
+    "question": "What will be the output of the following Python function?",
+    "options": [
+      "-4",
+      "-3",
+      "2",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "The max(False, -3, -4) evaluates to 0 because False is treated as 0, and 0 is greater than -3 and -4. Then, min(0, 2, 7) returns 0. Since 0 is equivalent to False, the output is False.",
+    "difficulty": 0.7,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "PY-0025",
+    "subject": "Python",
+    "question": "Which of the following is not a core data type in Python programming?",
+    "options": [
+      "Tuples",
+      "Lists",
+      "Class",
+      "Dictionary"
+    ],
+    "correct_answer": "Class",
+    "explanation": "Class is a user-defined data type.",
+    "difficulty": 0.25,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "PY-0026",
+    "subject": "Python",
+    "question": "What will be the output of the following Python expression if x=56.236?",
+    "options": [
+      "56.236",
+      "56.23",
+      "56.0000",
+      "56.24"
+    ],
+    "correct_answer": "56.24",
+    "explanation": "The expression shown above rounds off the given number to the number of decimal places specified. Since the expression given specifies rounding off to two decimal places, the output of this expression will be 56.24. Had the value been x=56.234 (last digit being any number less than 5), the output would have been 56.23.",
+    "difficulty": 0.4,
+    "type": "logic",
+    "estimated_time": 40
+  },
+  {
+    "id": "PY-0027",
+    "subject": "Python",
+    "question": "Which of these is the definition for packages in Python?",
+    "options": [
+      "A set of main modules",
+      "A folder of python modules",
+      "A number of files containing Python definitions and statements",
+      "A set of programs making use of Python modules"
+    ],
+    "correct_answer": "A folder of python modules",
+    "explanation": "In Python, a package is defined as a folder containing multiple Python modules, along with a special __init__.py file that indicates the directory is a package. Packages help in organizing related modules into a single directory hierarchy, making the codebase more modular and manageable.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0028",
+    "subject": "Python",
+    "question": "What will be the output of the following Python function?",
+    "options": [
+      "Error",
+      "6",
+      "4",
+      "3"
+    ],
+    "correct_answer": "4",
+    "explanation": "The len() function returns the number of elements in the list, regardless of their types. In this case, the list [“hello”, 2, 4, 6] contains four elements, so len() returns 4.",
+    "difficulty": 0.35,
+    "type": "program",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0029",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [],
+    "correct_answer": "?) D",
+    "explanation": "In this code, x = ‘abcd’ is iterated over, and for each character i, i.upper() is called. The upper() method returns a new string where all characters are converted to uppercase. Each uppercase character is then printed on a new line. Therefore, the output is A, B, C, D, one per line.",
+    "difficulty": 0.45,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0030",
+    "subject": "Python",
+    "question": "What is the order of namespaces in which Python looks for an identifier?",
+    "options": [
+      "Python first searches the built-in namespace, then the global namespace and finally the local namespace",
+      "Python first searches the built-in namespace, then the local namespace and finally the global namespace",
+      "Python first searches the local namespace, then the global namespace and finally the built-in namespace",
+      "Python first searches the global namespace, then the local namespace and finally the built-in namespace"
+    ],
+    "correct_answer": "Python first searches the local namespace, then the global namespace and finally the built-in namespace",
+    "explanation": "When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it’s a nested function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.",
+    "difficulty": 0.4,
+    "type": "logic",
+    "estimated_time": 50
+  },
+  {
+    "id": "PY-0031",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code snippet?",
+    "options": [
+      "4 3 2 1",
+      "error",
+      "1 2 3 4",
+      "none of the mentioned"
+    ],
+    "correct_answer": "4 3 2 1",
+    "explanation": "The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. The for loop iterates over this reversed list and prints each element, with end=’ ‘ ensuring the output is on one line with spaces in between.",
+    "difficulty": 0.45,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0032",
+    "subject": "Python",
+    "question": "What will be the output of the following Python statement?",
+    "options": [
+      "bc",
+      "abc",
+      "a",
+      "bca"
+    ],
+    "correct_answer": "abc",
+    "explanation": "In Python, the + operator is used for string concatenation. “a” + “bc” joins the two strings together into a single string “abc”.",
+    "difficulty": 0.2,
+    "type": "program",
+    "estimated_time": 45
+  },
+  {
+    "id": "PY-0033",
+    "subject": "Python",
+    "question": "Which function is called when the following Python program is executed?",
+    "options": [
+      "str()",
+      "format()",
+      "__str__()",
+      "__format__()"
+    ],
+    "correct_answer": "__format__()",
+    "explanation": "When format(f) is executed, Python internally invokes the special method f.__format__(). This method controls how the object is formatted. The __str__() method is used by str(f), not format(f).",
+    "difficulty": 0.6,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0034",
+    "subject": "Python",
+    "question": "Which one of the following is not a keyword in Python language?",
+    "options": [
+      "pass",
+      "eval",
+      "assert",
+      "nonlocal"
+    ],
+    "correct_answer": "eval",
+    "explanation": "eval can be used as a variable.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0035",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "12",
+      "224",
+      "None",
+      "Error"
+    ],
+    "correct_answer": "12",
+    "explanation": "When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is “12”. However, the local variable id is reassigned to “224”, but this change does not affect self.id, which retains the value “12”.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "PY-0036",
+    "subject": "Python",
+    "question": "What will be the output of the following Python program?",
+    "options": [
+      "Error",
+      "None",
+      "False",
+      "True"
+    ],
+    "correct_answer": "True",
+    "explanation": "The list q is passed by reference to the function foo, so both x and q refer to the same object in memory. The id() function returns the memory address of the object, which remains unchanged. Therefore, id(q) == foo(q) evaluates to True.",
+    "difficulty": 0.65,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0037",
+    "subject": "Python",
+    "question": "Which module in the python standard library parses options received from the command line?",
+    "options": [
+      "getarg",
+      "getopt",
+      "main",
+      "os"
+    ],
+    "correct_answer": "getopt",
+    "explanation": "The getopt module in Python’s standard library is used to parse command-line options and arguments. It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. For example: import getopt , sys opts , args = getopt . getopt ( sys . argv [ 1 : ] , \"h\" , [ \"help\" ] ) This line parses short option -h and long option –help.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0038",
+    "subject": "Python",
+    "question": "What will be the output of the following Python program?",
+    "options": [
+      "{‘a’, ‘c’, ‘c’, ‘p’, ‘q’, ‘s’, ‘a’, ‘n’}",
+      "{‘abc’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, [‘p’, ‘q’], ‘san}"
+    ],
+    "correct_answer": "{‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}",
+    "explanation": "The code shown first adds the element ‘san’ to the set z. The set z is then updated and two more elements, namely, ‘p’ and ‘q’ are added to it. Hence the output is: {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0039",
+    "subject": "Python",
+    "question": "What arithmetic operators cannot be used with strings in Python?",
+    "options": [
+      "*",
+      "–",
+      "+",
+      "All of the mentioned"
+    ],
+    "correct_answer": "–",
+    "explanation": "+ is used to concatenate and * is used to multiply strings.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0040",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "Abc. def",
+      "abc. def",
+      "Abc. Def",
+      "ABC. DEF"
+    ],
+    "correct_answer": "Abc. def",
+    "explanation": "The first letter of the string is converted to uppercase and the others are converted to lowercase.",
+    "difficulty": 0.45,
+    "type": "program",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0041",
+    "subject": "Python",
+    "question": "Which of the following statements is used to create an empty set in Python?",
+    "options": [
+      "( )",
+      "[ ]",
+      "{ }",
+      "set()"
+    ],
+    "correct_answer": "set()",
+    "explanation": "{ } creates a dictionary not a set. Only set() creates an empty set.",
+    "difficulty": 0.3,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0042",
+    "subject": "Python",
+    "question": "What will be the value of ‘result’ in following Python program?",
+    "options": [
+      "[1, 3, 5, 7, 8]",
+      "[1, 7, 8]",
+      "[1, 2, 4, 7, 8]",
+      "error"
+    ],
+    "correct_answer": "[1, 3, 5, 7, 8]",
+    "explanation": "Here, ‘result’ is a list which is extending three times. When first time ‘extend’ function is called for ‘result’, the inner code generates a generator object, which is further used in ‘extend’ function. This generator object contains the values which are in ‘list1’ only (not in ‘list2’ and ‘list3’). Same is happening in second and third call of ‘extend’ function in these generator object contains values only in ‘list2’ and ‘list3’ respectively. So, ‘result’ variable will contain elements which are only in one list (not more than 1 list).",
+    "difficulty": 0.75,
+    "type": "program",
+    "estimated_time": 75
+  },
+  {
+    "id": "PY-0043",
+    "subject": "Python",
+    "question": "To add a new element to a list we use which Python command?",
+    "options": [
+      "list1.addEnd(5)",
+      "list1.addLast(5)",
+      "list1.append(5)",
+      "list1.add(5)"
+    ],
+    "correct_answer": "list1.append(5)",
+    "explanation": "We use the function append to add an element to the list.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0044",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "*  abcde *",
+      "*abcde *",
+      "* abcde*",
+      "* abcde  *"
+    ],
+    "correct_answer": "*abcde *",
+    "explanation": "Padding is done towards the right-hand-side first when the final string is of even length.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0045",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "[1, 4]",
+      "[1, 3, 4]",
+      "[4, 3]",
+      "[1, 3]"
+    ],
+    "correct_answer": "[4, 3]",
+    "explanation": "In the code, list2 = list1 creates a reference to the same list in memory. So when list1[0] is changed to 4, list2 also reflects that change. The output is [4, 3].",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0046",
+    "subject": "Python",
+    "question": "Which one of the following is the use of function in python?",
+    "options": [
+      "Functions don’t provide better modularity for your application",
+      "you can’t also create your own functions",
+      "Functions are reusable pieces of programs",
+      "All of the mentioned"
+    ],
+    "correct_answer": "Functions are reusable pieces of programs",
+    "explanation": "Functions are reusable pieces of programs. They allow you to give a name to a block of statements, allowing you to run that block using the specified name anywhere in your program and any number of times.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0047",
+    "subject": "Python",
+    "question": "Which of the following Python statements will result in the output: 6?",
+    "options": [
+      "A[2][1]",
+      "A[1][2]",
+      "A[3][2]",
+      "A[2][3]"
+    ],
+    "correct_answer": "A[1][2]",
+    "explanation": "The output that is required is 6, that is, row 2, item 3. This position is represented by the statement: A[1][2].",
+    "difficulty": 0.4,
+    "type": "logic",
+    "estimated_time": 45
+  },
+  {
+    "id": "PY-0048",
+    "subject": "Python",
+    "question": "What is the maximum possible length of an identifier in Python?",
+    "options": [
+      "79 characters",
+      "31 characters",
+      "63 characters",
+      "none of the mentioned"
+    ],
+    "correct_answer": "none of the mentioned",
+    "explanation": "In Python, identifiers can be of any length. There is no fixed maximum, though extremely long names are not practical.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0049",
+    "subject": "Python",
+    "question": "What will be the output of the following Python program?",
+    "options": [
+      "error"
+    ],
+    "correct_answer": "?) C",
+    "explanation": "In this code, the while loop iterates from i = 0 to i = 2, printing the values of i. When i becomes 3, the if i == 3 condition is met, and the break statement is executed, which terminates the loop early. Since the loop was terminated using break, the else block is not executed. Therefore, the output is 0, 1, and 2.",
+    "difficulty": 0.5,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0050",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "error",
+      "1 2 3 4",
+      "a b c d",
+      "0 1 2 3"
+    ],
+    "correct_answer": "0 1 2 3",
+    "explanation": "i takes values 0, 1, 2 and 3.",
+    "difficulty": 0.35,
+    "type": "program",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0051",
+    "subject": "Python",
+    "question": "What are the two main types of functions in Python?",
+    "options": [
+      "System function",
+      "Custom function",
+      "Built-in function & User defined function",
+      "User function"
+    ],
+    "correct_answer": "Built-in function & User defined function",
+    "explanation": "Built-in functions and user defined ones. The built-in functions are part of the Python language. Examples are: dir(), len() or abs(). The user defined functions are functions created with the def keyword.",
+    "difficulty": 0.15,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0052",
+    "subject": "Python",
+    "question": "What will be the output of the following Python program?",
+    "options": [
+      "5",
+      "8",
+      "2",
+      "1"
+    ],
+    "correct_answer": "5",
+    "explanation": "The function addItem uses += [1] to modify the list passed to it. Since lists are mutable and passed by reference, mylist is modified directly. After appending 1, it becomes [1, 2, 3, 4, 1], so its length is 5.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0053",
+    "subject": "Python",
+    "question": "Which of the following is a Python tuple?",
+    "options": [
+      "{1, 2, 3}",
+      "{}",
+      "[1, 2, 3]",
+      "(1, 2, 3)"
+    ],
+    "correct_answer": "(1, 2, 3)",
+    "explanation": "A tuple in Python is an immutable sequence type and is defined using round brackets ( ). For example, (1, 2, 3) is a tuple.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0054",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code snippet?",
+    "options": [
+      "Error",
+      "True",
+      "False",
+      "No output"
+    ],
+    "correct_answer": "True",
+    "explanation": "The code shown above is used to check whether a particular item is a part of a given set or not. Since ‘a’ is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.",
+    "difficulty": 0.4,
+    "type": "program",
+    "estimated_time": 55
+  },
+  {
+    "id": "PY-0055",
+    "subject": "Python",
+    "question": "What will be the output of the following Python expression?",
+    "options": [
+      "4",
+      "4.6",
+      "5",
+      "4.5"
+    ],
+    "correct_answer": "5",
+    "explanation": "The round() function rounds the number to the nearest integer by default. Since 4.576 is closer to 5 than 4, round(4.576) returns 5. Therefore, the output is 5.",
+    "difficulty": 0.35,
+    "type": "logic",
+    "estimated_time": 40
+  },
+  {
+    "id": "PY-0056",
+    "subject": "Python",
+    "question": "Which of the following is a feature of Python DocString?",
+    "options": [
+      "In Python all functions should have a docstring",
+      "Docstrings can be accessed by the __doc__ attribute on objects",
+      "It provides a convenient way of associating documentation with Python modules, functions, classes, and methods",
+      "All of the mentioned"
+    ],
+    "correct_answer": "All of the mentioned",
+    "explanation": "Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings. DocStrings are an important tool that you should make use of since it helps to document the program better and makes it easier to understand.",
+    "difficulty": 0.25,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0057",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)",
+      "Error",
+      "Hello foo and bin",
+      "None of the mentioned"
+    ],
+    "correct_answer": "Hello foo and bin",
+    "explanation": "The output of the code is Hello foo and bin. Here, the format string uses index-based access to retrieve elements from the tuple passed as a single argument. {0[0]} and {0[1]} access the first and second elements of the tuple respectively.",
+    "difficulty": 0.55,
+    "type": "program",
+    "estimated_time": 60
+  },
+  {
+    "id": "PY-0058",
+    "subject": "Python",
+    "question": "What is output of print(math.pow(3, 2))?",
+    "options": [
+      "9.0",
+      "None",
+      "9",
+      "None of the mentioned"
+    ],
+    "correct_answer": "9.0",
+    "explanation": "math.pow() returns a floating point number.",
+    "difficulty": 0.25,
+    "type": "program",
+    "estimated_time": 65
+  },
+  {
+    "id": "PY-0059",
+    "subject": "Python",
+    "question": "Which of the following is the use of id() function in python?",
+    "options": [
+      "Every object in Python doesn’t have a unique id",
+      "In Python Id function returns the identity of the object",
+      "None of the mentioned",
+      "All of the mentioned"
+    ],
+    "correct_answer": "In Python Id function returns the identity of the object",
+    "explanation": "Each object in Python has a unique id. The id() function returns the object’s id.",
+    "difficulty": 0.2,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0060",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "01",
+      "[0] [1]",
+      "(’01’)",
+      "(‘[0] [1]’,)"
+    ],
+    "correct_answer": "(‘[0] [1]’,)",
+    "explanation": "In this code, map(str, x) converts each inner list [0] and [1] into strings: “[0]” and “[1]”. Then ‘ ‘.join(…) creates the string “[0] [1]”. Finally, it is wrapped in a tuple using the comma syntax, resulting in (‘[0] [1]’,).",
+    "difficulty": 0.7,
+    "type": "program",
+    "estimated_time": 70
+  },
+  {
+    "id": "PY-0061",
+    "subject": "Python",
+    "question": "The process of pickling in Python includes ____________",
+    "options": [
+      "conversion of a Python object hierarchy into byte stream",
+      "conversion of a datatable into a list",
+      "conversion of a byte stream into Python object hierarchy",
+      "conversion of a list into a datatable"
+    ],
+    "correct_answer": "conversion of a Python object hierarchy into byte stream",
+    "explanation": "Pickling is the process of serializing a Python object, that is, conversion of a Python object hierarchy into a byte stream. The reverse of this process is known as unpickling.",
+    "difficulty": 0.35,
+    "type": "direct",
+    "estimated_time": 25
+  },
+  {
+    "id": "PY-0062",
+    "subject": "Python",
+    "question": "What will be the output of the following Python code?",
+    "options": [
+      "error, there is more than one return statement in a single try-finally block",
+      "3",
+      "2",
+      "1"
+    ],
+    "correct_answer": "2",
+    "explanation": "In Python, if both the try block and the finally block contain return statements, the return in the finally block overrides the one in the try block. So, even though return 1 is in the try, the function ends up returning 2 because of the finally block.",
+    "difficulty": 0.7,
+    "type": "program",
+    "estimated_time": 70
+  }
+]

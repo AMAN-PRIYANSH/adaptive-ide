@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — Adaptive Learning IDE</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="page-result">
+
+  <div class="result-container">
+
+    <div class="result-hero">
+      <div class="result-badge" id="resultBadge">—</div>
+      <h1 class="result-title">Quiz Complete</h1>
+      <p class="result-sub" id="resultSub"></p>
+    </div>
+
+    <!-- Stats grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-val" id="statAbility">—</div>
+        <div class="stat-label">Final Ability</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statAccuracy">—</div>
+        <div class="stat-label">Accuracy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statCorrect">—</div>
+        <div class="stat-label">Correct / Total</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statHints">—</div>
+        <div class="stat-label">Hints Used</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statAvgTime">—</div>
+        <div class="stat-label">Avg Time / Q</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statScore">—</div>
+        <div class="stat-label">Score</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-row">
+      <div class="chart-wrap">
+        <h3 class="chart-title">Ability Progression</h3>
+        <canvas id="abilityChart"></canvas>
+      </div>
+      <div class="chart-wrap">
+        <h3 class="chart-title">Question Difficulty vs Ability</h3>
+        <canvas id="difficultyChart"></canvas>
+      </div>
+    </div>
+
+    <div class="result-actions">
+      <a href="/" class="btn-primary">Try Again</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Results data injected from Flask
+    const results = {{ results | tojson }};
+
+    // Populate stats
+    document.getElementById('statAbility').textContent  = (results.final_ability * 100).toFixed(1) + '%';
+    document.getElementById('statAccuracy').textContent = (results.accuracy * 100).toFixed(0) + '%';
+    document.getElementById('statCorrect').textContent  = results.correct + ' / ' + results.total;
+    document.getElementById('statHints').textContent    = results.hints_used;
+    document.getElementById('statAvgTime').textContent  = results.avg_time + 's';
+    document.getElementById('statScore').textContent    = results.score.toFixed(1);
+
+    document.getElementById('resultSub').textContent =
+      results.subject + ' · ' + results.level + ' start';
+
+    // Badge / emoji based on accuracy
+    const acc = results.accuracy;
+    const badge = document.getElementById('resultBadge');
+    if (acc >= 0.80)      { badge.textContent = '🏆'; }
+    else if (acc >= 0.60) { badge.textContent = '🎯'; }
+    else if (acc >= 0.40) { badge.textContent = '📚'; }
+    else                  { badge.textContent = '💪'; }
+
+    // ── Ability Progression Chart ─────────────────────────────────────
+    const abilityLabels = results.ability_history.map((_, i) => i === 0 ? 'Start' : 'Q' + i);
+    new Chart(document.getElementById('abilityChart'), {
+      type: 'line',
+      data: {
+        labels: abilityLabels,
+        datasets: [{
+          label: 'Ability',
+          data: results.ability_history,
+          borderColor: '#6c63ff',
+          backgroundColor: 'rgba(108,99,255,0.12)',
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: '#6c63ff',
+          pointRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: {
+          y: {
+            min: 0, max: 1,
+            ticks: { callback: v => (v * 100).toFixed(0) + '%' }
+          }
+        }
+      }
+    });
+
+    // ── Difficulty vs Ability Chart ───────────────────────────────────
+    const diffs   = results.difficulty_history;
+    const abilArr = results.ability_history.slice(1);   // post-answer abilities
+    const qLabels = diffs.map((_, i) => 'Q' + (i + 1));
+
+    new Chart(document.getElementById('difficultyChart'), {
+      type: 'line',
+      data: {
+        labels: qLabels,
+        datasets: [
+          {
+            label: 'Question Difficulty',
+            data: diffs,
+            borderColor: '#ff6b6b',
+            backgroundColor: 'rgba(255,107,107,0.10)',
+            fill: false,
+            tension: 0.3,
+            pointRadius: 5,
+          },
+          {
+            label: 'Student Ability',
+            data: abilArr,
+            borderColor: '#6c63ff',
+            borderDash: [5, 3],
+            fill: false,
+            tension: 0.3,
+            pointRadius: 3,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position: 'bottom' } },
+        scales: {
+          y: {
+            min: 0, max: 1,
+            ticks: { callback: v => (v * 100).toFixed(0) + '%' }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

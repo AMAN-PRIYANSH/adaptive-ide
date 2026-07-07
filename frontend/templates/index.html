@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Learning IDE</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body class="page-index">
+
+  <div class="hero">
+    <div class="hero-badge">ADAPTIVE LEARNING IDE</div>
+    <h1 class="hero-title">Test Your Skills.<br>The Quiz Adapts to You.</h1>
+    <p class="hero-sub">Answer questions, and the engine tracks your ability in real time — harder questions when you're doing well, easier ones when you struggle.</p>
+  </div>
+
+  {% if error %}
+  <div class="toast toast-error">{{ error }}</div>
+  {% endif %}
+
+  <div class="card setup-card">
+    <h2 class="card-title">Start a Quiz</h2>
+
+    <div class="field-group">
+      <label class="field-label">Subject</label>
+      <div class="pill-group" id="subjectGroup">
+        {% for subject in subjects %}
+        <button class="pill" data-val="{{ subject }}" data-group="subject">{{ subject }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">Your Level</label>
+      <div class="pill-group" id="levelGroup">
+        <button class="pill" data-val="Beginner"     data-group="level">Beginner</button>
+        <button class="pill" data-val="Intermediate" data-group="level">Intermediate</button>
+        <button class="pill" data-val="Advanced"     data-group="level">Advanced</button>
+      </div>
+      <p class="field-hint">Not sure? Pick Intermediate — the engine will adapt within a few questions.</p>
+    </div>
+
+    <button class="btn-primary" id="startBtn" disabled>Start Quiz →</button>
+  </div>
+
+  <div class="how-it-works">
+    <div class="how-card">
+      <span class="how-icon">🎯</span>
+      <h3>Adaptive Difficulty</h3>
+      <p>Questions match your current ability, making it neither too easy nor too hard.</p>
+    </div>
+    <div class="how-card">
+      <span class="how-icon">📈</span>
+      <h3>Live Ability Tracking</h3>
+      <p>Your score updates after every answer based on difficulty, time, and hints.</p>
+    </div>
+    <div class="how-card">
+      <span class="how-icon">💡</span>
+      <h3>Smart Hints</h3>
+      <p>Use a hint if you're stuck — but it will affect your final ability score.</p>
+    </div>
+  </div>
+
+  <script>
+    const state = { subject: null, level: null };
+
+    document.querySelectorAll('.pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const group = btn.dataset.group;
+        document.querySelectorAll(`.pill[data-group="${group}"]`).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state[group] = btn.dataset.val;
+        document.getElementById('startBtn').disabled = !(state.subject && state.level);
+      });
+    });
+
+    document.getElementById('startBtn').addEventListener('click', async () => {
+      const btn = document.getElementById('startBtn');
+      btn.disabled = true;
+      btn.textContent = 'Starting…';
+      const res = await fetch('/api/start', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(state),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        window.location.href = '/quiz';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Start Quiz →';
+        alert(data.error || 'Something went wrong');
+      }
+    });
+  </script>
+</body>
+</html>
