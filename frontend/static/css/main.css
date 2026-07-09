@@ -414,3 +414,74 @@ html, body {
   white-space: pre;
   margin: 0.75rem 0 1rem;
 }
+
+/* ── Layout fix v2: dev panel bottom-left, never overlaps header ──── */
+#devToggleWrap { display: none; }   /* old wrap removed from HTML */
+
+.dev-toggle-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  border-radius: var(--radius-sm);
+  padding: 0.28rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.dev-toggle-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.dev-panel {
+  position: fixed;
+  bottom: 1rem;          /* bottom-left — zero overlap with header */
+  left: 1rem;
+  top: auto;
+  right: auto;
+  width: 270px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem 1rem;
+  z-index: 199;
+  font-size: 0.76rem;
+  font-family: var(--mono);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.dev-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.dev-close {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+}
+.dev-close:hover { color: var(--red); }
+
+/* Timer is now in header — ensure it's visible */
+.quiz-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* topic badge */
+.q-topic {
+  background: rgba(80,250,123,0.12);
+  color: var(--green);
+  border: 1px solid rgba(80,250,123,0.3);
+}
+.q-topic.hidden { display: none !important; }
+
+/* questionBody spacing */
+#questionBody { margin-bottom: 1.25rem; }
+#questionBody .question-text { margin-bottom: 0; }
+#questionBody .code-block    { margin-top: 0.75rem; margin-bottom: 0; }

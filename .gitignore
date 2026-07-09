@@ -31,6 +31,10 @@ Thumbs.db
 .pytest_cache/
 .mypy_cache/
 
+# Data / model artifacts
+*.jsonl
+*.pkl
+
 # Coverage
 .coverage
 htmlcov/

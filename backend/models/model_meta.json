@@ -1,0 +1,27 @@
+{
+  "model_name": "Random Forest",
+  "features": [
+    "ability_before",
+    "uncertainty_before",
+    "difficulty",
+    "discrimination",
+    "guessing_param",
+    "expected_p",
+    "q_num",
+    "questions_done",
+    "correct_streak",
+    "wrong_streak",
+    "learning_rate",
+    "estimated_time",
+    "ability_difficulty_gap",
+    "uncertainty_weighted_p",
+    "q_type_enc"
+  ],
+  "train_rows": 2400,
+  "test_rows": 600,
+  "test_accuracy": 0.6367,
+  "test_auc": 0.5497,
+  "test_brier": 0.2319,
+  "irt_baseline_auc": 0.5423,
+  "auc_improvement": 0.0074
+}

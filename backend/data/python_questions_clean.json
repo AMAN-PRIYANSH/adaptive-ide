@@ -64,11 +64,11 @@
       ".p"
     ],
     "correct_answer": ".py",
-    "explanation": "'.py' is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension '.py'.",
+    "explanation": "‘.py’ is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension ‘.py’.",
     "difficulty": 0.1,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Think about the fundamental concept being tested here. '.",
+    "hint": "Think about the fundamental concept being tested here. ‘.",
     "needs_code": false
   },
   {
@@ -172,7 +172,7 @@
       "/*"
     ],
     "correct_answer": "#",
-    "explanation": "To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes. Example: \"\"\" comment text \"\"\"",
+    "explanation": "To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes. Example: “”” comment text “””",
     "difficulty": 0.15,
     "type": "direct",
     "estimated_time": 25,
@@ -226,11 +226,11 @@
       "none of the mentioned"
     ],
     "correct_answer": "lambda",
-    "explanation": "In Python, lambda functions are anonymous, meaning they don't have a name. They are defined using the lambda keyword and can take any number of arguments but only have one expression. Lambdas are useful for creating small, throwaway functions quickly without formally defining them using def.",
+    "explanation": "In Python, lambda functions are anonymous, meaning they don’t have a name. They are defined using the lambda keyword and can take any number of arguments but only have one expression. Lambdas are useful for creating small, throwaway functions quickly without formally defining them using def.",
     "difficulty": 0.35,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Think about the fundamental concept being tested here. In Python, lambda functions are anonymous, meaning they don't have a name.",
+    "hint": "Think about the fundamental concept being tested here. In Python, lambda functions are anonymous, meaning they don’t have a name.",
     "needs_code": false
   },
   {
@@ -334,7 +334,7 @@
       "[1, 0, 2, 0, 'hello', '', []]"
     ],
     "correct_answer": "[1, 2, 'hello']",
-    "explanation": "The function filter(bool, l) removes all false elements from the list l, such as 0, \", and []. The remaining true elements — 1, 2, and 'hello' — are returned as a new list.",
+    "explanation": "The function filter(bool, l) removes all false elements from the list l, such as 0, ”, and []. The remaining true elements — 1, 2, and ‘hello’ — are returned as a new list.",
     "difficulty": 0.6,
     "type": "program",
     "estimated_time": 70,
@@ -364,7 +364,7 @@
     "subject": "Python",
     "question": "Which of the following is the use of id() function in python?",
     "options": [
-      "Every object doesn't have a unique id",
+      "Every object doesn’t have a unique id",
       "Id  returns the identity of the object",
       "All of the mentioned",
       "None of the mentioned"
@@ -428,7 +428,7 @@
     "difficulty": 0.4,
     "type": "logic",
     "estimated_time": 40,
-    "hint": "The %.2f format specifier rounds to 2 decimal places. Think about what 56.236 becomes when rounded to 2 decimal places.",
+    "hint": "Think carefully: The expression shown above rounds off the given number to the number of decimal places specified.",
     "needs_code": false
   },
   {
@@ -460,7 +460,7 @@
       "3"
     ],
     "correct_answer": "4",
-    "explanation": "The len() function returns the number of elements in the list, regardless of their types. In this case, the list [\"hello\", 2, 4, 6] contains four elements, so len() returns 4.",
+    "explanation": "The len() function returns the number of elements in the list, regardless of their types. In this case, the list [“hello”, 2, 4, 6] contains four elements, so len() returns 4.",
     "difficulty": 0.35,
     "type": "program",
     "estimated_time": 55,
@@ -478,7 +478,7 @@
       "Python first searches the global namespace, then the local namespace and finally the built-in namespace"
     ],
     "correct_answer": "Python first searches the local namespace, then the global namespace and finally the built-in namespace",
-    "explanation": "When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it's a nested function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.",
+    "explanation": "When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it’s a nested function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.",
     "difficulty": 0.4,
     "type": "logic",
     "estimated_time": 50,
@@ -496,7 +496,7 @@
       "none of the mentioned"
     ],
     "correct_answer": "4 3 2 1",
-    "explanation": "The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. The for loop iterates over this reversed list and prints each element, with end=' ' ensuring the output is on one line with spaces in between.",
+    "explanation": "The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. The for loop iterates over this reversed list and prints each element, with end=’ ‘ ensuring the output is on one line with spaces in between.",
     "difficulty": 0.45,
     "type": "program",
     "estimated_time": 65,
@@ -514,7 +514,7 @@
       "bca"
     ],
     "correct_answer": "abc",
-    "explanation": "In Python, the + operator is used for string concatenation. \"a\" + \"bc\" joins the two strings together into a single string \"abc\".",
+    "explanation": "In Python, the + operator is used for string concatenation. “a” + “bc” joins the two strings together into a single string “abc”.",
     "difficulty": 0.2,
     "type": "program",
     "estimated_time": 45,
@@ -550,7 +550,7 @@
       "Error"
     ],
     "correct_answer": "12",
-    "explanation": "When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is \"12\". However, the local variable id is reassigned to \"224\", but this change does not affect self.id, which retains the value \"12\".",
+    "explanation": "When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is “12”. However, the local variable id is reassigned to “224”, but this change does not affect self.id, which retains the value “12”.",
     "difficulty": 0.65,
     "type": "program",
     "estimated_time": 70,
@@ -586,11 +586,11 @@
       "os"
     ],
     "correct_answer": "getopt",
-    "explanation": "The getopt module in Python's standard library is used to parse command-line options and arguments. It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. For example: import getopt , sys opts , args = getopt . getopt ( sys . argv [ 1 : ] , \"h\" , [ \"help\" ] ) This line parses short option -h and long option –help.",
+    "explanation": "The getopt module in Python’s standard library is used to parse command-line options and arguments. It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. For example: import getopt , sys opts , args = getopt . getopt ( sys . argv [ 1 : ] , \"h\" , [ \"help\" ] ) This line parses short option -h and long option –help.",
     "difficulty": 0.3,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Python's standard library has a dedicated module for parsing command-line options. Think about which module handles argv parsing.",
+    "hint": "Think about the fundamental concept being tested here. The getopt module in Python’s standard library is used to parse command-line options and arguments.",
     "needs_code": false
   },
   {
@@ -598,13 +598,13 @@
     "subject": "Python",
     "question": "What will be the output of the following Python program?\n\nz=set('abc')\nz.add('san')\nz.update(set(['p', 'q']))\nprint(z)",
     "options": [
-      "{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}",
-      "{'abc', 'p', 'q', 'san'}",
-      "{'a', 'b', 'c', 'p', 'q', 'san'}",
-      "{'a', 'b', 'c', ['p', 'q'], 'san}"
+      "{‘a’, ‘c’, ‘c’, ‘p’, ‘q’, ‘s’, ‘a’, ‘n’}",
+      "{‘abc’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, [‘p’, ‘q’], ‘san}"
     ],
     "correct_answer": "{'a', 'b', 'c', 'p', 'q', 'san'}",
-    "explanation": "The code shown first adds the element 'san' to the set z. The set z is then updated and two more elements, namely, 'p' and 'q' are added to it. Hence the output is: {'a', 'b', 'c', 'p', 'q', 'san'} (Set output order may vary between Python versions.)",
+    "explanation": "The code shown first adds the element ‘san’ to the set z. The set z is then updated and two more elements, namely, ‘p’ and ‘q’ are added to it. Hence the output is: {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’} (Set output order may vary between Python versions.)",
     "difficulty": 0.55,
     "type": "logic",
     "estimated_time": 65,
@@ -668,7 +668,7 @@
   {
     "id": "PY-0042",
     "subject": "Python",
-    "question": "What will be the value of 'result' in following Python program?\n\nlist1 = [1,2,3,4]\nlist2 = [2,4,5,6]\nlist3 = [2,6,7,8]\nresult = list()\nresult.extend(i for i in list1 if i not in (list2+list3) and i not in result)\nresult.extend(i for i in list2 if i not in (list1+list3) and i not in result)\nresult.extend(i for i in list3 if i not in (list1+list2) and i not in result)\nprint(result)",
+    "question": "What will be the value of ‘result’ in following Python program?\n\nlist1 = [1,2,3,4]\nlist2 = [2,4,5,6]\nlist3 = [2,6,7,8]\nresult = list()\nresult.extend(i for i in list1 if i not in (list2+list3) and i not in result)\nresult.extend(i for i in list2 if i not in (list1+list3) and i not in result)\nresult.extend(i for i in list3 if i not in (list1+list2) and i not in result)\nprint(result)",
     "options": [
       "[1, 3, 5, 7, 8]",
       "[1, 7, 8]",
@@ -676,7 +676,7 @@
       "error"
     ],
     "correct_answer": "[1, 3, 5, 7, 8]",
-    "explanation": "Here, 'result' is a list which is extending three times. When first time 'extend' function is called for 'result', the inner code generates a generator object, which is further used in 'extend' function. This generator object contains the values which are in 'list1' only (not in 'list2' and 'list3'). Same is happening in second and third call of 'extend' function in these generator object contains values only in 'list2' and 'list3' respectively. So, 'result' variable will contain elements which are only in one list (not more than 1 list).",
+    "explanation": "Here, ‘result’ is a list which is extending three times. When first time ‘extend’ function is called for ‘result’, the inner code generates a generator object, which is further used in ‘extend’ function. This generator object contains the values which are in ‘list1’ only (not in ‘list2’ and ‘list3’). Same is happening in second and third call of ‘extend’ function in these generator object contains values only in ‘list2’ and ‘list3’ respectively. So, ‘result’ variable will contain elements which are only in one list (not more than 1 list).",
     "difficulty": 0.75,
     "type": "program",
     "estimated_time": 75,
@@ -742,8 +742,8 @@
     "subject": "Python",
     "question": "Which one of the following is the use of function in python?",
     "options": [
-      "Functions don't provide better modularity for your application",
-      "you can't also create your own functions",
+      "Functions don’t provide better modularity for your application",
+      "you can’t also create your own functions",
       "Functions are reusable pieces of programs",
       "All of the mentioned"
     ],
@@ -874,7 +874,7 @@
       "No output"
     ],
     "correct_answer": "True",
-    "explanation": "The code shown above is used to check whether a particular item is a part of a given set or not. Since 'a' is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.",
+    "explanation": "The code shown above is used to check whether a particular item is a part of a given set or not. Since ‘a’ is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.",
     "difficulty": 0.4,
     "type": "program",
     "estimated_time": 55,
@@ -914,7 +914,7 @@
     "difficulty": 0.25,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "DocStrings are special string literals placed at the start of a function, class or module. They are accessible via the __doc__ attribute.",
+    "hint": "Think about the fundamental concept being tested here. Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings.",
     "needs_code": false
   },
   {
@@ -922,7 +922,7 @@
     "subject": "Python",
     "question": "What will be the output of the following Python code?\n\nprint(\"Hello {0[0]} and {0[1]}\".format(('foo', 'bin')))",
     "options": [
-      "Hello ('foo', 'bin') and ('foo', 'bin')",
+      "Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)",
       "Error",
       "Hello foo and bin",
       "None of the mentioned"
@@ -940,13 +940,13 @@
     "subject": "Python",
     "question": "Which of the following is the use of id() function in python?",
     "options": [
-      "Every object in Python doesn't have a unique id",
+      "Every object in Python doesn’t have a unique id",
       "In Python Id function returns the identity of the object",
       "None of the mentioned",
       "All of the mentioned"
     ],
     "correct_answer": "In Python Id function returns the identity of the object",
-    "explanation": "Each object in Python has a unique id. The id() function returns the object's id.",
+    "explanation": "Each object in Python has a unique id. The id() function returns the object’s id.",
     "difficulty": 0.2,
     "type": "direct",
     "estimated_time": 25,
@@ -960,11 +960,11 @@
     "options": [
       "01",
       "[0] [1]",
-      "('01')",
-      "('[0] [1]',)"
+      "(’01’)",
+      "(‘[0] [1]’,)"
     ],
     "correct_answer": "('[0] [1]',)",
-    "explanation": "In this code, map(str, x) converts each inner list [0] and [1] into strings: \"[0]\" and \"[1]\". Then ' '.join(…) creates the string \"[0] [1]\". Finally, it is wrapped in a tuple using the comma syntax, resulting in ('[0] [1]',).",
+    "explanation": "In this code, map(str, x) converts each inner list [0] and [1] into strings: “[0]” and “[1]”. Then ‘ ‘.join(…) creates the string “[0] [1]”. Finally, it is wrapped in a tuple using the comma syntax, resulting in (‘[0] [1]’,).",
     "difficulty": 0.7,
     "type": "program",
     "estimated_time": 70,
@@ -1117,7 +1117,7 @@
     "difficulty": 0.15,
     "type": "logic",
     "estimated_time": 50,
-    "hint": "Python's conditional statement starts with a specific keyword. Think about the 3 keywords used in a full if-elif-else block.",
+    "hint": "Think carefully: Python uses the 'if' keyword to begin a conditional statement, optionally followed by 'elif' and 'else'.",
     "needs_code": false,
     "topic": "Python syntax, keywords, indentation, and basic program structure"
   },

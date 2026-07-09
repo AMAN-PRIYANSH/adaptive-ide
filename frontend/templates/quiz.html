@@ -11,92 +11,112 @@
 </head>
 <body class="page-quiz" oncontextmenu="return false">
 
-  <!-- ── DEV PANEL ─────────────────────────────────────────────────── -->
-  <div id="devToggleWrap">
-    <button id="devToggleBtn" class="dev-toggle-btn">🛠 Dev</button>
-  </div>
+  <!-- ── DEV PANEL — bottom-left, never overlaps header ────────────── -->
   <div id="devPanel" class="dev-panel hidden">
-    <div class="dev-title">⚙ Engine v2 — Live State</div>
+    <div class="dev-panel-header">
+      <span class="dev-title">⚙ Engine v2</span>
+      <button id="devCloseBtn" class="dev-close">✕</button>
+    </div>
     <div class="dev-section">IRT</div>
-    <div class="dev-row"><span>Question ID</span>       <span id="dv-qid">—</span></div>
-    <div class="dev-row"><span>Type</span>              <span id="dv-type">—</span></div>
-    <div class="dev-row"><span>Difficulty (b)</span>    <span id="dv-diff">—</span></div>
-    <div class="dev-row"><span>Discrimination (a)</span><span id="dv-disc">—</span></div>
-    <div class="dev-row"><span>Guessing (c)</span>      <span id="dv-gues">—</span></div>
-    <div class="dev-row"><span>Est. Time</span>         <span id="dv-est">—</span></div>
+    <div class="dev-row"><span>Question ID</span>        <span id="dv-qid">—</span></div>
+    <div class="dev-row"><span>Type</span>               <span id="dv-type">—</span></div>
+    <div class="dev-row"><span>Difficulty (b)</span>     <span id="dv-diff">—</span></div>
+    <div class="dev-row"><span>Discrimination (a)</span> <span id="dv-disc">—</span></div>
+    <div class="dev-row"><span>Guessing (c)</span>       <span id="dv-gues">—</span></div>
+    <div class="dev-row"><span>Est. Time</span>          <span id="dv-est">—</span></div>
     <div class="dev-section">Ability</div>
-    <div class="dev-row"><span>θ Before</span>          <span id="dv-ab">—</span></div>
-    <div class="dev-row"><span>θ After</span>           <span id="dv-aa">—</span></div>
-    <div class="dev-row"><span>Δθ</span>                <span id="dv-delta">—</span></div>
-    <div class="dev-row"><span>Uncertainty σ</span>     <span id="dv-sigma">—</span></div>
+    <div class="dev-row"><span>θ Before</span>           <span id="dv-ab">—</span></div>
+    <div class="dev-row"><span>θ After</span>            <span id="dv-aa">—</span></div>
+    <div class="dev-row"><span>Δθ</span>                 <span id="dv-delta">—</span></div>
+    <div class="dev-row"><span>Uncertainty σ</span>      <span id="dv-sigma">—</span></div>
     <div class="dev-section">Surprise Chain</div>
-    <div class="dev-row"><span>Expected P</span>        <span id="dv-ep">—</span></div>
-    <div class="dev-row"><span>Surprise (raw)</span>    <span id="dv-surp">—</span></div>
-    <div class="dev-row"><span>Surprise (adj)</span>    <span id="dv-surpa">—</span></div>
-    <div class="dev-row"><span>Guess Detected</span>    <span id="dv-guess">—</span></div>
+    <div class="dev-row"><span>Expected P</span>         <span id="dv-ep">—</span></div>
+    <div class="dev-row"><span>Surprise (raw)</span>     <span id="dv-surp">—</span></div>
+    <div class="dev-row"><span>Surprise (adj)</span>     <span id="dv-surpa">—</span></div>
+    <div class="dev-row"><span>Guess Detected</span>     <span id="dv-guess">—</span></div>
     <div class="dev-section">Modifiers</div>
-    <div class="dev-row"><span>Hint Modifier</span>     <span id="dv-hm">—</span></div>
-    <div class="dev-row"><span>Time Modifier</span>     <span id="dv-tm">—</span></div>
-    <div class="dev-row"><span>Time Ratio τ</span>      <span id="dv-tr">—</span></div>
-    <div class="dev-row"><span>Streak Modifier</span>   <span id="dv-sm">—</span></div>
-    <div class="dev-row"><span>Learning Rate α</span>   <span id="dv-lr">—</span></div>
+    <div class="dev-row"><span>Hint Modifier</span>      <span id="dv-hm">—</span></div>
+    <div class="dev-row"><span>Time Modifier</span>      <span id="dv-tm">—</span></div>
+    <div class="dev-row"><span>Time Ratio τ</span>       <span id="dv-tr">—</span></div>
+    <div class="dev-row"><span>Streak Modifier</span>    <span id="dv-sm">—</span></div>
+    <div class="dev-row"><span>Learning Rate α</span>    <span id="dv-lr">—</span></div>
     <div class="dev-section">Streaks</div>
-    <div class="dev-row"><span>✓ Streak</span>          <span id="dv-cs">—</span></div>
-    <div class="dev-row"><span>✗ Streak</span>          <span id="dv-ws">—</span></div>
+    <div class="dev-row"><span>✓ Streak</span>           <span id="dv-cs">—</span></div>
+    <div class="dev-row"><span>✗ Streak</span>           <span id="dv-ws">—</span></div>
   </div>
 
-  <!-- ── QUIZ HEADER ───────────────────────────────────────────────── -->
+  <!-- ── HEADER ────────────────────────────────────────────────────── -->
   <header class="quiz-header">
     <div class="quiz-header-left">
-      <span class="quiz-subject" id="quizSubjectLabel"></span>
+      <span class="quiz-subject">Python</span>
     </div>
+
     <div class="quiz-header-center">
       <div class="progress-bar-wrap">
         <div class="progress-bar-fill" id="progressFill"></div>
       </div>
       <span class="progress-label" id="progressLabel">0 / 0</span>
     </div>
+
     <div class="quiz-header-right">
+      <div class="timer-badge" id="timerBadge">⏱ <span id="timerDisplay">0s</span></div>
       <div class="ability-badge">
         θ <span id="abilityDisplay">—</span>
         <span class="sigma-display">±<span id="sigmaDisplay">—</span></span>
       </div>
-      <div class="timer-badge" id="timerBadge">⏱ <span id="timerDisplay">0s</span></div>
+      <button id="devToggleBtn" class="dev-toggle-btn" title="Dev Panel">🛠</button>
     </div>
   </header>
 
   <!-- ── MAIN ──────────────────────────────────────────────────────── -->
-  <main class="quiz-main" id="quizMain">
+  <main class="quiz-main">
 
+    <!-- Loading -->
     <div id="loadingState" class="loading-state">
       <div class="spinner"></div>
       <p>Loading question…</p>
     </div>
 
+    <!-- Question card -->
     <div id="questionCard" class="question-card hidden">
+
+      <!-- Badges row -->
       <div class="q-meta">
-        <span class="q-badge q-type" id="qTypeBadge">direct</span>
+        <span class="q-badge q-type" id="qTypeBadge">DIRECT</span>
         <span class="q-badge q-diff" id="qDiffBadge">—</span>
+        <span class="q-badge q-topic hidden" id="qTopicBadge"></span>
       </div>
-      <p class="question-text" id="questionText"></p>
+
+      <!-- ★ THIS is the only place question content lives.
+           JS always sets innerHTML here — never appends elsewhere.
+           Fixes the stacking bug completely. -->
+      <div id="questionBody"></div>
+
+      <!-- Options -->
       <div class="options-grid" id="optionsGrid"></div>
+
+      <!-- Hint -->
       <div class="hint-row">
-        <button class="btn-hint" id="hintBtn">💡 Use Hint</button>
-        <span class="hint-cost">−40% ability boost if correct</span>
+        <button class="btn-hint" id="hintBtn">💡 Hint</button>
+        <span class="hint-cost">−40% boost if correct</span>
         <span class="hint-msg" id="hintMsg"></span>
       </div>
+
     </div>
 
+    <!-- Feedback card (shown after answering, before next question) -->
     <div id="feedbackCard" class="feedback-card hidden">
-      <div class="feedback-verdict" id="feedbackVerdict"></div>
+      <div class="feedback-verdict"   id="feedbackVerdict"></div>
       <div class="feedback-explanation" id="feedbackExplanation"></div>
+
       <div class="feedback-ability-change">
         <span id="fbAbilityBefore">—</span>
         <span class="arrow">→</span>
         <span id="fbAbilityAfter">—</span>
         <span class="ability-delta" id="fbDelta"></span>
-        <span class="sigma-note" id="fbSigma"></span>
+        <span class="sigma-note"   id="fbSigma"></span>
       </div>
+
       <button class="btn-primary" id="nextBtn">Next Question →</button>
     </div>
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Adaptive Learning IDE</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    .admin-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:1rem; margin:1.5rem 0; }
+    .admin-charts { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2rem; }
+    @media(max-width:620px){ .admin-charts{ grid-template-columns:1fr; } }
+    .log-table { width:100%; border-collapse:collapse; font-size:0.76rem; font-family:var(--mono); }
+    .log-table th { background:var(--surface); padding:0.4rem 0.6rem; text-align:left; color:var(--text-dim); font-weight:600; }
+    .log-table td { padding:0.35rem 0.6rem; border-bottom:1px solid var(--border); }
+    .log-table tr:hover td { background:var(--surface); }
+    .correct-y { color:var(--green); } .correct-n { color:var(--red); }
+    .guess-y   { color:var(--amber); }
+    .table-wrap { overflow-x:auto; background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius); padding:1rem; }
+    .refresh-btn { background:var(--surface); border:1px solid var(--border); color:var(--text); border-radius:var(--radius-sm); padding:0.4rem 1rem; cursor:pointer; font-size:0.85rem; }
+    .refresh-btn:hover { border-color:var(--accent); }
+  </style>
+</head>
+<body class="page-result">
+<div class="result-container">
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;">
+    <div>
+      <h1 style="font-size:1.5rem;font-weight:700;">Admin Dashboard</h1>
+      <p style="color:var(--text-dim);font-size:0.85rem;">Live session data · Adaptive Learning IDE</p>
+    </div>
+    <div style="display:flex;gap:0.75rem">
+      <button class="refresh-btn" onclick="loadAll()">↻ Refresh</button>
+      <a href="/" class="btn-primary" style="font-size:0.85rem;padding:0.4rem 1rem;">← Home</a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="admin-grid" id="statsGrid">
+    <div class="stat-card"><div class="stat-val" id="st-total">—</div><div class="stat-label">Total Attempts</div></div>
+    <div class="stat-card"><div class="stat-val" id="st-acc">—</div><div class="stat-label">Accuracy</div></div>
+    <div class="stat-card"><div class="stat-val" id="st-correct">—</div><div class="stat-label">Correct</div></div>
+    <div class="stat-card"><div class="stat-val" id="st-hints">—</div><div class="stat-label">Hints Used</div></div>
+    <div class="stat-card"><div class="stat-val" id="st-guesses">—</div><div class="stat-label">Guesses Detected</div></div>
+    <div class="stat-card"><div class="stat-val" id="st-time">—</div><div class="stat-label">Avg Time/Q</div></div>
+  </div>
+
+  <!-- Charts -->
+  <div class="admin-charts">
+    <div class="chart-wrap">
+      <h3 class="chart-title">Ability Distribution</h3>
+      <canvas id="bucketChart"></canvas>
+    </div>
+    <div class="chart-wrap">
+      <h3 class="chart-title">Ability Over Time (last 100)</h3>
+      <canvas id="abilityChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Top questions -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <h3 class="chart-title" style="text-align:left;margin-bottom:0.75rem;">Most Served Questions</h3>
+    <div id="topQ" style="display:flex;flex-wrap:wrap;gap:0.4rem;font-family:var(--mono);font-size:0.78rem;"></div>
+  </div>
+
+  <!-- Raw log -->
+  <div class="table-wrap">
+    <h3 style="font-size:0.9rem;font-weight:600;margin-bottom:0.75rem;color:var(--text-dim);">Recent Attempts (last 200)</h3>
+    <table class="log-table">
+      <thead>
+        <tr>
+          <th>Time</th><th>QID</th><th>Diff</th><th>θ Before</th>
+          <th>θ After</th><th>Δθ</th><th>Correct</th>
+          <th>Guess</th><th>Hint</th><th>Time(s)</th>
+        </tr>
+      </thead>
+      <tbody id="logBody"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+let bucketChart, abilityChart;
+
+async function loadAll() {
+  const [sr, lr] = await Promise.all([
+    fetch('/api/admin/stats').then(r=>r.json()),
+    fetch('/api/admin/log').then(r=>r.json()),
+  ]);
+
+  // Stats
+  document.getElementById('st-total').textContent   = sr.stats.total   ?? 0;
+  document.getElementById('st-acc').textContent     = sr.stats.total ? (sr.stats.accuracy*100).toFixed(1)+'%' : '—';
+  document.getElementById('st-correct').textContent = sr.stats.correct ?? 0;
+  document.getElementById('st-hints').textContent   = sr.stats.hints   ?? 0;
+  document.getElementById('st-guesses').textContent = sr.stats.guesses ?? 0;
+  document.getElementById('st-time').textContent    = sr.stats.avg_time ? sr.stats.avg_time+'s' : '—';
+
+  // Bucket chart
+  const buckets = sr.ability_buckets;
+  const bLabels = Object.keys(buckets);
+  const bData   = Object.values(buckets);
+  if (bucketChart) bucketChart.destroy();
+  bucketChart = new Chart(document.getElementById('bucketChart'), {
+    type: 'bar',
+    data: { labels: bLabels, datasets:[{
+      label:'Attempts', data:bData,
+      backgroundColor:'rgba(108,99,255,0.6)', borderColor:'#6c63ff', borderWidth:1,
+    }]},
+    options:{ responsive:true, plugins:{legend:{display:false}},
+      scales:{ y:{beginAtZero:true,ticks:{stepSize:1}} } }
+  });
+
+  // Ability over time
+  const series = sr.ability_series;
+  const aLabels = series.map((_,i)=>i+1);
+  const aData   = series.map(s=>s.ability);
+  if (abilityChart) abilityChart.destroy();
+  abilityChart = new Chart(document.getElementById('abilityChart'), {
+    type:'line',
+    data:{ labels:aLabels, datasets:[{
+      label:'θ', data:aData,
+      borderColor:'#50fa7b', backgroundColor:'rgba(80,250,123,0.08)',
+      fill:true, tension:0.3, pointRadius:2,
+    }]},
+    options:{ responsive:true, plugins:{legend:{display:false}},
+      scales:{ y:{min:0,max:1, ticks:{callback:v=>(v*100).toFixed(0)+'%'}} } }
+  });
+
+  // Top questions
+  const tqEl = document.getElementById('topQ');
+  tqEl.innerHTML = sr.top_questions.map(q=>
+    `<span style="background:var(--surface);border:1px solid var(--border);
+     border-radius:4px;padding:0.2rem 0.5rem;">${q.qid} <b style="color:var(--cyan)">${q.count}</b></span>`
+  ).join('');
+
+  // Log table
+  const tbody = document.getElementById('logBody');
+  tbody.innerHTML = [...lr].reverse().map(e => `
+    <tr>
+      <td>${e.ts?.slice(11)||'—'}</td>
+      <td>${e.qid||'—'}</td>
+      <td>${e.difficulty?.toFixed(2)||'—'}</td>
+      <td>${e.ability_before?.toFixed(3)||'—'}</td>
+      <td>${e.ability_after?.toFixed(3)||'—'}</td>
+      <td class="${(e.delta||0)>=0?'correct-y':'correct-n'}">${e.delta>=0?'+':''}${e.delta?.toFixed(3)||'—'}</td>
+      <td class="${e.correct?'correct-y':'correct-n'}">${e.correct?'✓':'✗'}</td>
+      <td class="${e.guess_detected?'guess-y':''}">${e.guess_detected?'⚠':'—'}</td>
+      <td>${e.hint_used?'💡':'—'}</td>
+      <td>${e.time_taken||'—'}</td>
+    </tr>`).join('');
+}
+
+loadAll();
+setInterval(loadAll, 30000);   // auto-refresh every 30s
+</script>
+</body>
+</html>
