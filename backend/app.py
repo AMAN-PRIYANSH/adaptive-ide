@@ -1,6 +1,16 @@
-# app.py v2.2
+# app.py v2.2 — production ready
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
+
+# Load .env file if it exists (local dev only — Render uses env vars directly)
+env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+if os.path.exists(env_path):
+    with open(env_path) as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                k, v = line.split('=', 1)
+                os.environ.setdefault(k.strip(), v.strip())
 
 from flask import Flask, session, request, jsonify, render_template
 import config as cfg
@@ -123,7 +133,59 @@ def api_admin_log():
 
 # ── Entry point ────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5050))
-    # debug=False in production (Render sets PORT env var)
-    debug = os.environ.get("RENDER") is None
+    port  = int(os.environ.get("PORT", 5050))
+    debug = os.environ.get("RENDER") is None   # False on Render, True locally
     app.run(host="0.0.0.0", port=port, debug=debug)
+
+
+# ──────────────────────────────────────────────────────────────────────
+# Question Editor (local admin only — do not expose on hosted site)
+# ──────────────────────────────────────────────────────────────────────
+
+@app.route("/admin/questions")
+def question_editor():
+    return render_template("question_editor.html")
+
+@app.route("/api/admin/questions")
+def api_admin_questions():
+    """Return all questions with all fields for the editor."""
+    import json
+    path = os.path.join(cfg.DATA_DIR, "python_questions.json")
+    with open(path, encoding="utf-8") as f:
+        qs = json.load(f)
+    return jsonify(qs)
+
+@app.route("/api/admin/questions/update", methods=["POST"])
+def api_admin_questions_update():
+    """
+    Patch question fields.
+    Body: { "PY-0001": {"difficulty": 0.3, "estimated_time": 25}, ... }
+    """
+    import json
+    changes = request.get_json(force=True)
+    path = os.path.join(cfg.DATA_DIR, "python_questions.json")
+
+    with open(path, encoding="utf-8") as f:
+        qs = json.load(f)
+
+    qmap   = {q["id"]: q for q in qs}
+    updated = 0
+    EDITABLE = {"difficulty", "estimated_time", "type", "topic", "hint"}
+
+    for qid, fields in changes.items():
+        if qid not in qmap:
+            continue
+        for field, value in fields.items():
+            if field in EDITABLE:
+                qmap[qid][field] = value
+                updated += 1
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(qs, f, indent=2, ensure_ascii=False)
+
+    return jsonify({"ok": True, "updated": updated})
+
+
+@app.route("/admin/review")
+def question_review():
+    return render_template("question_review.html")

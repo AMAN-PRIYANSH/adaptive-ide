@@ -1,45 +1,22 @@
+# Environment — NEVER push this
+.env
+
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+.pytest_cache/
 
-# Virtual environments
-.venv/
-venv/
-env/
+# Data files (large, generated)
+backend/data/session_log.jsonl
+backend/data/synthetic_sessions.jsonl
+simulator/synthetic_sessions.jsonl
+*.jsonl
 
-# Environment variables
-.env
-.env.*
-
-# IDE
-.vscode/
-.idea/
+# ML model binary
+backend/models/ability_model.pkl
+*.pkl
 
 # OS
 .DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Database
-*.db
-*.sqlite3
-
-# Python cache
-.pytest_cache/
-.mypy_cache/
-
-# Data / model artifacts
-*.jsonl
-*.pkl
-
-# Coverage
-.coverage
-htmlcov/
-
-# Build
-build/
-dist/
-*.egg-info/
+*.swp

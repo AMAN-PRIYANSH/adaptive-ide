@@ -15,8 +15,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Python language is designed by a Dutch programmer Guido van Rossum in the Netherlands.",
-    "needs_code": false,
-    "topic": "Python syntax, keywords, indentation, and basic program structure"
+    "needs_code": false
   },
   {
     "id": "PY-0002",
@@ -34,8 +33,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Python is an interpreted programming language, which supports object-oriented, structured, and functional programming.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0003",
@@ -53,8 +51,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Case is always significant while dealing with identifiers in python.",
-    "needs_code": false,
-    "topic": "Python loops: for, while, break, continue, else on loops"
+    "needs_code": false
   },
   {
     "id": "PY-0004",
@@ -67,13 +64,12 @@
       ".p"
     ],
     "correct_answer": ".py",
-    "explanation": "'.py' is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension '.py'.",
+    "explanation": "‘.py’ is the correct extension of the Python file. Python programs can be written in any text editor. To save these programs we need to save in files with file extension ‘.py’.",
     "difficulty": 0.1,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Think about the fundamental concept being tested here. '.",
-    "needs_code": false,
-    "topic": "Python file I/O: open, read, write, context managers, with statement"
+    "hint": "Think about the fundamental concept being tested here. ‘.",
+    "needs_code": false
   },
   {
     "id": "PY-0005",
@@ -91,8 +87,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Many languages have been implemented using both compilers and interpreters, including C, Pascal, and Python.",
-    "needs_code": false,
-    "topic": "Python syntax, keywords, indentation, and basic program structure"
+    "needs_code": false
   },
   {
     "id": "PY-0006",
@@ -110,8 +105,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Most keywords are in lowercase, but some like True, False, and None are capitalized.",
-    "needs_code": false,
-    "topic": "Python control flow: if, elif, else statements and truthiness"
+    "needs_code": false
   },
   {
     "id": "PY-0007",
@@ -129,8 +123,7 @@
     "type": "logic",
     "estimated_time": 50,
     "hint": "Think carefully: In Python, the modulus operator % has higher precedence than addition +.",
-    "needs_code": false,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence"
+    "needs_code": false
   },
   {
     "id": "PY-0008",
@@ -148,8 +141,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. In Python, to define a block of code we use indentation.",
-    "needs_code": false,
-    "topic": "Python syntax, keywords, indentation, and basic program structure"
+    "needs_code": false
   },
   {
     "id": "PY-0009",
@@ -167,8 +159,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. The def keyword is used to create, (or define) a function in python.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0010",
@@ -181,13 +172,12 @@
       "/*"
     ],
     "correct_answer": "#",
-    "explanation": "To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes. Example: \"\"\" comment text \"\"\"",
+    "explanation": "To write single-line comments in Python use the Hash character (#) at the beginning of the line. It is also called number sign or pound sign. To write multi-line comments, close the text between triple quotes. Example: “”” comment text “””",
     "difficulty": 0.15,
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. To write single-line comments in Python use the Hash character (#) at the beginning of the line.",
-    "needs_code": false,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence"
+    "needs_code": false
   },
   {
     "id": "PY-0011",
@@ -205,8 +195,7 @@
     "type": "program",
     "estimated_time": 60,
     "hint": "Focus on operator precedence and how Python evaluates this expression.",
-    "needs_code": false,
-    "topic": "Python loops: for, while, break, continue, else on loops"
+    "needs_code": false
   },
   {
     "id": "PY-0012",
@@ -224,8 +213,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. The function sys.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0013",
@@ -238,13 +226,12 @@
       "none of the mentioned"
     ],
     "correct_answer": "lambda",
-    "explanation": "In Python, lambda functions are anonymous, meaning they don't have a name. They are defined using the lambda keyword and can take any number of arguments but only have one expression. Lambdas are useful for creating small, throwaway functions quickly without formally defining them using def.",
+    "explanation": "In Python, lambda functions are anonymous, meaning they don’t have a name. They are defined using the lambda keyword and can take any number of arguments but only have one expression. Lambdas are useful for creating small, throwaway functions quickly without formally defining them using def.",
     "difficulty": 0.35,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Think about the fundamental concept being tested here. In Python, lambda functions are anonymous, meaning they don't have a name.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "hint": "Think about the fundamental concept being tested here. In Python, lambda functions are anonymous, meaning they don’t have a name.",
+    "needs_code": false
   },
   {
     "id": "PY-0014",
@@ -262,8 +249,7 @@
     "type": "logic",
     "estimated_time": 45,
     "hint": "Remember PEMDAS: Parentheses, Exponentiation, Multiplication/Division, Addition/Subtraction.",
-    "needs_code": false,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence"
+    "needs_code": false
   },
   {
     "id": "PY-0016",
@@ -281,8 +267,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. pip is a package manager for python.",
-    "needs_code": false,
-    "topic": "Python syntax, keywords, indentation, and basic program structure"
+    "needs_code": false
   },
   {
     "id": "PY-0017",
@@ -300,8 +285,7 @@
     "type": "logic",
     "estimated_time": 50,
     "hint": "Think carefully: Python allows variable names of unlimited length.",
-    "needs_code": false,
-    "topic": "Python control flow: if, elif, else statements and truthiness"
+    "needs_code": false
   },
   {
     "id": "PY-0018",
@@ -319,8 +303,7 @@
     "type": "logic",
     "estimated_time": 55,
     "hint": "Think carefully: Expression 1 is evaluated as: 2**9, which is equal to 512.",
-    "needs_code": false,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence"
+    "needs_code": false
   },
   {
     "id": "PY-0019",
@@ -338,8 +321,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. // is the operator for truncation division.",
-    "needs_code": false,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence"
+    "needs_code": false
   },
   {
     "id": "PY-0020",
@@ -352,13 +334,12 @@
       "[1, 0, 2, 0, 'hello', '', []]"
     ],
     "correct_answer": "[1, 2, 'hello']",
-    "explanation": "The function filter(bool, l) removes all false elements from the list l, such as 0, \", and []. The remaining true elements — 1, 2, and 'hello' — are returned as a new list.",
+    "explanation": "The function filter(bool, l) removes all false elements from the list l, such as 0, ”, and []. The remaining true elements — 1, 2, and ‘hello’ — are returned as a new list.",
     "difficulty": 0.6,
     "type": "program",
     "estimated_time": 70,
     "hint": "Think about Python's data type rules and what the operation produces.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0021",
@@ -376,15 +357,14 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. The function seed is a function which is present in the random module.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0022",
     "subject": "Python",
     "question": "Which of the following is the use of id() function in python?",
     "options": [
-      "Every object doesn't have a unique id",
+      "Every object doesn’t have a unique id",
       "Id  returns the identity of the object",
       "All of the mentioned",
       "None of the mentioned"
@@ -395,8 +375,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. The id() function in Python returns the identity of an object.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0024",
@@ -414,8 +393,7 @@
     "type": "program",
     "estimated_time": 70,
     "hint": "Consider what happens at each line — especially variable reassignment.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0025",
@@ -433,8 +411,7 @@
     "type": "logic",
     "estimated_time": 50,
     "hint": "Think carefully: Class is a user-defined data type.",
-    "needs_code": false,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism"
+    "needs_code": false
   },
   {
     "id": "PY-0026",
@@ -451,9 +428,8 @@
     "difficulty": 0.4,
     "type": "logic",
     "estimated_time": 40,
-    "hint": "The %.2f format specifier rounds to 2 decimal places. Think about what 56.236 becomes when rounded to 2 decimal places.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "hint": "Think carefully: The expression shown above rounds off the given number to the number of decimal places specified.",
+    "needs_code": false
   },
   {
     "id": "PY-0027",
@@ -471,8 +447,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. In Python, a package is defined as a folder containing multiple Python modules, along with a special __init__.",
-    "needs_code": false,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism"
+    "needs_code": false
   },
   {
     "id": "PY-0028",
@@ -485,13 +460,12 @@
       "3"
     ],
     "correct_answer": "4",
-    "explanation": "The len() function returns the number of elements in the list, regardless of their types. In this case, the list [\"hello\", 2, 4, 6] contains four elements, so len() returns 4.",
+    "explanation": "The len() function returns the number of elements in the list, regardless of their types. In this case, the list [“hello”, 2, 4, 6] contains four elements, so len() returns 4.",
     "difficulty": 0.35,
     "type": "program",
     "estimated_time": 55,
     "hint": "Focus on operator precedence and how Python evaluates this expression.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0030",
@@ -504,13 +478,12 @@
       "Python first searches the global namespace, then the local namespace and finally the built-in namespace"
     ],
     "correct_answer": "Python first searches the local namespace, then the global namespace and finally the built-in namespace",
-    "explanation": "When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it's a nested function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.",
+    "explanation": "When Python encounters an identifier (like a variable or function name), it follows the LEGB rule to resolve it. It first looks in the Local namespace (inside the current function), then in the Enclosing namespace (if it’s a nested function), followed by the Global namespace (top-level of the module), and finally the Built-in namespace (predefined functions like len(), sum(), etc.). So, the correct search order for namespaces is: local → global → built-in.",
     "difficulty": 0.4,
     "type": "logic",
     "estimated_time": 50,
     "hint": "Remember PEMDAS: Parentheses, Exponentiation, Multiplication/Division, Addition/Subtraction.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0031",
@@ -523,13 +496,12 @@
       "none of the mentioned"
     ],
     "correct_answer": "4 3 2 1",
-    "explanation": "The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. The for loop iterates over this reversed list and prints each element, with end=' ' ensuring the output is on one line with spaces in between.",
+    "explanation": "The expression [1, 2, 3, 4][::-1] uses slicing with a step of -1 to reverse the list. So the list becomes [4, 3, 2, 1]. The for loop iterates over this reversed list and prints each element, with end=’ ‘ ensuring the output is on one line with spaces in between.",
     "difficulty": 0.45,
     "type": "program",
     "estimated_time": 65,
     "hint": "Think about Python's data type rules and what the operation produces.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0032",
@@ -542,13 +514,12 @@
       "bca"
     ],
     "correct_answer": "abc",
-    "explanation": "In Python, the + operator is used for string concatenation. \"a\" + \"bc\" joins the two strings together into a single string \"abc\".",
+    "explanation": "In Python, the + operator is used for string concatenation. “a” + “bc” joins the two strings together into a single string “abc”.",
     "difficulty": 0.2,
     "type": "program",
     "estimated_time": 45,
     "hint": "Consider what happens at each line — especially variable reassignment.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "needs_code": false
   },
   {
     "id": "PY-0034",
@@ -566,8 +537,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. eval can be used as a variable.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0035",
@@ -580,13 +550,12 @@
       "Error"
     ],
     "correct_answer": "12",
-    "explanation": "When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is \"12\". However, the local variable id is reassigned to \"224\", but this change does not affect self.id, which retains the value \"12\".",
+    "explanation": "When the tester class is instantiated with temp = tester(12), the __init__ method is called. The id argument is passed as 12, and inside the __init__ method, self.id is assigned the string value of id, which is “12”. However, the local variable id is reassigned to “224”, but this change does not affect self.id, which retains the value “12”.",
     "difficulty": 0.65,
     "type": "program",
     "estimated_time": 70,
     "hint": "Consider what happens at each line — especially variable reassignment.",
-    "needs_code": false,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism"
+    "needs_code": false
   },
   {
     "id": "PY-0036",
@@ -604,8 +573,7 @@
     "type": "program",
     "estimated_time": 65,
     "hint": "Focus on operator precedence and how Python evaluates this expression.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0037",
@@ -618,32 +586,30 @@
       "os"
     ],
     "correct_answer": "getopt",
-    "explanation": "The getopt module in Python's standard library is used to parse command-line options and arguments. It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. For example: import getopt , sys opts , args = getopt . getopt ( sys . argv [ 1 : ] , \"h\" , [ \"help\" ] ) This line parses short option -h and long option –help.",
+    "explanation": "The getopt module in Python’s standard library is used to parse command-line options and arguments. It allows the script to accept flags and parameters (like -h or –help) similar to those in shell scripts. For example: import getopt , sys opts , args = getopt . getopt ( sys . argv [ 1 : ] , \"h\" , [ \"help\" ] ) This line parses short option -h and long option –help.",
     "difficulty": 0.3,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "Python's standard library has a dedicated module for parsing command-line options. Think about which module handles argv parsing.",
-    "needs_code": false,
-    "topic": "Python modules, packages, imports, and standard library"
+    "hint": "Think about the fundamental concept being tested here. The getopt module in Python’s standard library is used to parse command-line options and arguments.",
+    "needs_code": false
   },
   {
     "id": "PY-0038",
     "subject": "Python",
     "question": "What will be the output of the following Python program?\n\nz=set('abc')\nz.add('san')\nz.update(set(['p', 'q']))\nprint(z)",
     "options": [
-      "{'a', 'c', 'c', 'p', 'q', 's', 'a', 'n'}",
-      "{'abc', 'p', 'q', 'san'}",
-      "{'a', 'b', 'c', 'p', 'q', 'san'}",
-      "{'a', 'b', 'c', ['p', 'q'], 'san}"
+      "{‘a’, ‘c’, ‘c’, ‘p’, ‘q’, ‘s’, ‘a’, ‘n’}",
+      "{‘abc’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’}",
+      "{‘a’, ‘b’, ‘c’, [‘p’, ‘q’], ‘san}"
     ],
     "correct_answer": "{'a', 'b', 'c', 'p', 'q', 'san'}",
-    "explanation": "The code shown first adds the element 'san' to the set z. The set z is then updated and two more elements, namely, 'p' and 'q' are added to it. Hence the output is: {'a', 'b', 'c', 'p', 'q', 'san'} (Set output order may vary between Python versions.)",
+    "explanation": "The code shown first adds the element ‘san’ to the set z. The set z is then updated and two more elements, namely, ‘p’ and ‘q’ are added to it. Hence the output is: {‘a’, ‘b’, ‘c’, ‘p’, ‘q’, ‘san’} (Set output order may vary between Python versions.)",
     "difficulty": 0.55,
     "type": "logic",
     "estimated_time": 65,
     "hint": "Think about Python's scoping rules and when variables are evaluated.",
-    "needs_code": false,
-    "topic": "Python sets and frozensets: operations, set comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0039",
@@ -661,8 +627,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. + is used to concatenate and * is used to multiply strings.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "needs_code": false
   },
   {
     "id": "PY-0040",
@@ -680,8 +645,7 @@
     "type": "program",
     "estimated_time": 55,
     "hint": "Trace the code step by step and pay attention to what each operation returns.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "needs_code": false
   },
   {
     "id": "PY-0041",
@@ -699,13 +663,12 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. { } creates a dictionary not a set.",
-    "needs_code": false,
-    "topic": "Python sets and frozensets: operations, set comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0042",
     "subject": "Python",
-    "question": "What will be the value of 'result' in following Python program?\n\nlist1 = [1,2,3,4]\nlist2 = [2,4,5,6]\nlist3 = [2,6,7,8]\nresult = list()\nresult.extend(i for i in list1 if i not in (list2+list3) and i not in result)\nresult.extend(i for i in list2 if i not in (list1+list3) and i not in result)\nresult.extend(i for i in list3 if i not in (list1+list2) and i not in result)\nprint(result)",
+    "question": "What will be the value of ‘result’ in following Python program?\n\nlist1 = [1,2,3,4]\nlist2 = [2,4,5,6]\nlist3 = [2,6,7,8]\nresult = list()\nresult.extend(i for i in list1 if i not in (list2+list3) and i not in result)\nresult.extend(i for i in list2 if i not in (list1+list3) and i not in result)\nresult.extend(i for i in list3 if i not in (list1+list2) and i not in result)\nprint(result)",
     "options": [
       "[1, 3, 5, 7, 8]",
       "[1, 7, 8]",
@@ -713,13 +676,12 @@
       "error"
     ],
     "correct_answer": "[1, 3, 5, 7, 8]",
-    "explanation": "Here, 'result' is a list which is extending three times. When first time 'extend' function is called for 'result', the inner code generates a generator object, which is further used in 'extend' function. This generator object contains the values which are in 'list1' only (not in 'list2' and 'list3'). Same is happening in second and third call of 'extend' function in these generator object contains values only in 'list2' and 'list3' respectively. So, 'result' variable will contain elements which are only in one list (not more than 1 list).",
+    "explanation": "Here, ‘result’ is a list which is extending three times. When first time ‘extend’ function is called for ‘result’, the inner code generates a generator object, which is further used in ‘extend’ function. This generator object contains the values which are in ‘list1’ only (not in ‘list2’ and ‘list3’). Same is happening in second and third call of ‘extend’ function in these generator object contains values only in ‘list2’ and ‘list3’ respectively. So, ‘result’ variable will contain elements which are only in one list (not more than 1 list).",
     "difficulty": 0.75,
     "type": "program",
     "estimated_time": 75,
     "hint": "Trace the code step by step and pay attention to what each operation returns.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0043",
@@ -737,8 +699,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. We use the function append to add an element to the list.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0044",
@@ -756,8 +717,7 @@
     "type": "program",
     "estimated_time": 55,
     "hint": "Think about Python's scoping rules and when variables are evaluated.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "needs_code": false
   },
   {
     "id": "PY-0045",
@@ -775,16 +735,15 @@
     "type": "program",
     "estimated_time": 60,
     "hint": "Consider what happens at each line — especially variable reassignment.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0046",
     "subject": "Python",
     "question": "Which one of the following is the use of function in python?",
     "options": [
-      "Functions don't provide better modularity for your application",
-      "you can't also create your own functions",
+      "Functions don’t provide better modularity for your application",
+      "you can’t also create your own functions",
       "Functions are reusable pieces of programs",
       "All of the mentioned"
     ],
@@ -794,8 +753,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Functions are reusable pieces of programs.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0047",
@@ -813,8 +771,7 @@
     "type": "logic",
     "estimated_time": 45,
     "hint": "Think carefully: The output that is required is 6, that is, row 2, item 3.",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0048",
@@ -832,8 +789,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. In Python, identifiers can be of any length.",
-    "needs_code": false,
-    "topic": "Python variables and data types: int, float, str, bool, None"
+    "needs_code": false
   },
   {
     "id": "PY-0050",
@@ -851,8 +807,7 @@
     "type": "program",
     "estimated_time": 55,
     "hint": "Trace the code step by step and pay attention to what each operation returns.",
-    "needs_code": false,
-    "topic": "Python loops: for, while, break, continue, else on loops"
+    "needs_code": false
   },
   {
     "id": "PY-0051",
@@ -870,8 +825,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Built-in functions and user defined ones.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0052",
@@ -889,8 +843,7 @@
     "type": "program",
     "estimated_time": 65,
     "hint": "Focus on operator precedence and how Python evaluates this expression.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0053",
@@ -908,8 +861,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. A tuple in Python is an immutable sequence type and is defined using round brackets ( ).",
-    "needs_code": false,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions"
+    "needs_code": false
   },
   {
     "id": "PY-0054",
@@ -922,13 +874,12 @@
       "No output"
     ],
     "correct_answer": "True",
-    "explanation": "The code shown above is used to check whether a particular item is a part of a given set or not. Since 'a' is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.",
+    "explanation": "The code shown above is used to check whether a particular item is a part of a given set or not. Since ‘a’ is a part of the set z, the output is true. Note that this code would result in an error in the absence of the quotes.",
     "difficulty": 0.4,
     "type": "program",
     "estimated_time": 55,
     "hint": "Focus on operator precedence and how Python evaluates this expression.",
-    "needs_code": false,
-    "topic": "Python control flow: if, elif, else statements and truthiness"
+    "needs_code": false
   },
   {
     "id": "PY-0055",
@@ -946,8 +897,7 @@
     "type": "logic",
     "estimated_time": 40,
     "hint": "Think carefully: The round() function rounds the number to the nearest integer by default.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0056",
@@ -964,16 +914,15 @@
     "difficulty": 0.25,
     "type": "direct",
     "estimated_time": 25,
-    "hint": "DocStrings are special string literals placed at the start of a function, class or module. They are accessible via the __doc__ attribute.",
-    "needs_code": false,
-    "topic": "Python syntax, keywords, indentation, and basic program structure"
+    "hint": "Think about the fundamental concept being tested here. Python has a nifty feature called documentation strings, usually referred to by its shorter name docstrings.",
+    "needs_code": false
   },
   {
     "id": "PY-0057",
     "subject": "Python",
     "question": "What will be the output of the following Python code?\n\nprint(\"Hello {0[0]} and {0[1]}\".format(('foo', 'bin')))",
     "options": [
-      "Hello ('foo', 'bin') and ('foo', 'bin')",
+      "Hello (‘foo’, ‘bin’) and (‘foo’, ‘bin’)",
       "Error",
       "Hello foo and bin",
       "None of the mentioned"
@@ -984,27 +933,25 @@
     "type": "program",
     "estimated_time": 60,
     "hint": "Consider what happens at each line — especially variable reassignment.",
-    "needs_code": false,
-    "topic": "Python strings: indexing, slicing, formatting, built-in methods"
+    "needs_code": false
   },
   {
     "id": "PY-0059",
     "subject": "Python",
     "question": "Which of the following is the use of id() function in python?",
     "options": [
-      "Every object in Python doesn't have a unique id",
+      "Every object in Python doesn’t have a unique id",
       "In Python Id function returns the identity of the object",
       "None of the mentioned",
       "All of the mentioned"
     ],
     "correct_answer": "In Python Id function returns the identity of the object",
-    "explanation": "Each object in Python has a unique id. The id() function returns the object's id.",
+    "explanation": "Each object in Python has a unique id. The id() function returns the object’s id.",
     "difficulty": 0.2,
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Each object in Python has a unique id.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0060",
@@ -1013,17 +960,16 @@
     "options": [
       "01",
       "[0] [1]",
-      "('01')",
-      "('[0] [1]',)"
+      "(’01’)",
+      "(‘[0] [1]’,)"
     ],
     "correct_answer": "('[0] [1]',)",
-    "explanation": "In this code, map(str, x) converts each inner list [0] and [1] into strings: \"[0]\" and \"[1]\". Then ' '.join(…) creates the string \"[0] [1]\". Finally, it is wrapped in a tuple using the comma syntax, resulting in ('[0] [1]',).",
+    "explanation": "In this code, map(str, x) converts each inner list [0] and [1] into strings: “[0]” and “[1]”. Then ‘ ‘.join(…) creates the string “[0] [1]”. Finally, it is wrapped in a tuple using the comma syntax, resulting in (‘[0] [1]’,).",
     "difficulty": 0.7,
     "type": "program",
     "estimated_time": 70,
     "hint": "Trace the code step by step and pay attention to what each operation returns.",
-    "needs_code": false,
-    "topic": "Python comprehensions: list, dict, set, generator expressions"
+    "needs_code": false
   },
   {
     "id": "PY-0061",
@@ -1041,8 +987,7 @@
     "type": "direct",
     "estimated_time": 25,
     "hint": "Think about the fundamental concept being tested here. Pickling is the process of serializing a Python object, that is, conversion of a Python object hierarchy into a byte stream.",
-    "needs_code": false,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism"
+    "needs_code": false
   },
   {
     "id": "PY-0062",
@@ -1060,8 +1005,7 @@
     "type": "program",
     "estimated_time": 70,
     "hint": "Think about Python's data type rules and what the operation produces.",
-    "needs_code": false,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion"
+    "needs_code": false
   },
   {
     "id": "PY-0063",
@@ -1173,7 +1117,7 @@
     "difficulty": 0.15,
     "type": "logic",
     "estimated_time": 50,
-    "hint": "Python's conditional statement starts with a specific keyword. Think about the 3 keywords used in a full if-elif-else block.",
+    "hint": "Think carefully: Python uses the 'if' keyword to begin a conditional statement, optionally followed by 'elif' and 'else'.",
     "needs_code": false,
     "topic": "Python syntax, keywords, indentation, and basic program structure"
   },
@@ -2962,1496 +2906,5 @@
     "hint": "Think about Python's data type rules and what the operation produces.",
     "needs_code": false,
     "topic": "Python dictionaries: CRUD, methods, dict comprehensions, defaultdict"
-  },
-  {
-    "id": "PY-0178",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef greet(name='World'):\n    return f'Hello, {name}!'\n\nprint(greet())\nprint(greet('Python'))",
-    "options": [
-      "Hello, World!\nHello, Python!",
-      "Hello!\nHello, Python!",
-      "Error",
-      "Hello, World!\nHello!"
-    ],
-    "correct_answer": "Hello, World!\nHello, Python!",
-    "explanation": "Default parameter 'World' is used when no argument is passed; 'Python' overrides it in the second call.",
-    "hint": "What happens when you call a function without providing an argument that has a default value?",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python functions: def, return, args, kwargs, scope, recursion",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0179",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\na = [1, 2, 3]\nb = a\nb.append(4)\nprint(a)",
-    "options": [
-      "[1, 2, 3]",
-      "[1, 2, 3, 4]",
-      "Error",
-      "[4, 1, 2, 3]"
-    ],
-    "correct_answer": "[1, 2, 3, 4]",
-    "explanation": "b = a makes b point to the same list object, not a copy. Appending to b also changes a.",
-    "hint": "Does assigning a list to a new variable create a copy or a reference?",
-    "difficulty": 0.4,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0180",
-    "subject": "Python",
-    "question": "Which method removes the last element from a list and returns it?",
-    "options": [
-      "delete()",
-      "remove()",
-      "pop()",
-      "discard()"
-    ],
-    "correct_answer": "pop()",
-    "explanation": "list.pop() removes and returns the last element by default. pop(i) removes at index i.",
-    "hint": "Think about which list method both removes AND returns an element.",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0181",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nwords = ['hello', 'world', 'python']\nresult = [w.upper() for w in words if len(w) == 5]\nprint(result)",
-    "options": [
-      "['HELLO', 'WORLD', 'PYTHON']",
-      "['HELLO', 'WORLD']",
-      "['HELLO', 'PYTHON']",
-      "['WORLD', 'PYTHON']"
-    ],
-    "correct_answer": "['HELLO', 'WORLD']",
-    "explanation": "Only 'hello'(5) and 'world'(5) have length == 5. 'python' has length 6 so it's excluded.",
-    "hint": "Count the length of each word carefully. The filter is len == 5, not len > 4.",
-    "difficulty": 0.45,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0182",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nmatrix = [[1,2],[3,4],[5,6]]\nprint([row[0] for row in matrix])",
-    "options": [
-      "[1, 3, 5]",
-      "[1, 2, 3]",
-      "[[1],[3],[5]]",
-      "[2, 4, 6]"
-    ],
-    "correct_answer": "[1, 3, 5]",
-    "explanation": "The comprehension extracts the first element (index 0) of each sublist.",
-    "hint": "Think about what row[0] returns for each row in the matrix.",
-    "difficulty": 0.5,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0183",
-    "subject": "Python",
-    "question": "Which of the following correctly creates a list of squares of even numbers from 1 to 10?",
-    "options": [
-      "[x**2 for x in range(1,11) if x%2==0]",
-      "[x^2 for x in range(1,11) if x%2==0]",
-      "[x**2 for x in range(1,10) if x%2==0]",
-      "[x*x for x in range(2,11,2) if x%2==1]"
-    ],
-    "correct_answer": "[x**2 for x in range(1,11) if x**2==0]",
-    "explanation": "range(1,11) covers 1-10. x%2==0 filters even numbers. x**2 computes the square.",
-    "hint": "Remember: ** is Python's exponentiation operator, not ^.",
-    "difficulty": 0.45,
-    "type": "logic",
-    "estimated_time": 45,
-    "topic": "Python lists: CRUD operations, methods, list comprehensions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0184",
-    "subject": "Python",
-    "question": "What is the purpose of the __str__ method in a Python class?",
-    "options": [
-      "To initialise the object",
-      "To return a string representation of the object",
-      "To compare two objects",
-      "To delete the object"
-    ],
-    "correct_answer": "To return a string representation of the object",
-    "explanation": "__str__ is called by str() and print(). It should return a human-readable string describing the object.",
-    "hint": "Think about what happens when you print() an object of your class.",
-    "difficulty": 0.25,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0185",
-    "subject": "Python",
-    "question": "Which keyword is used to call the parent class's method from a child class?",
-    "options": [
-      "parent()",
-      "super()",
-      "base()",
-      "inherit()"
-    ],
-    "correct_answer": "super()",
-    "explanation": "super() returns a proxy object that delegates method calls to the parent class.",
-    "hint": "Python has a built-in function specifically for calling parent class methods.",
-    "difficulty": 0.2,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0186",
-    "subject": "Python",
-    "question": "What is encapsulation in Python OOP?",
-    "options": [
-      "Wrapping data and methods into a single unit (class) and restricting direct access",
-      "Creating multiple instances of a class",
-      "Inheriting methods from a parent class",
-      "Overriding a parent method in a child class"
-    ],
-    "correct_answer": "Wrapping data and methods into a single unit (class) and restricting direct access",
-    "explanation": "Encapsulation bundles data and behaviour into a class and uses access modifiers to protect internal state.",
-    "hint": "Think about what 'encapsulate' means — to enclose something within a container.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0187",
-    "subject": "Python",
-    "question": "What does the @property decorator do in Python?",
-    "options": [
-      "Creates a class method",
-      "Allows a method to be accessed like an attribute",
-      "Makes an attribute private",
-      "Creates a static method"
-    ],
-    "correct_answer": "Allows a method to be accessed like an attribute",
-    "explanation": "@property lets you define a method that can be accessed without parentheses, like obj.value instead of obj.value().",
-    "hint": "Think about how you access regular attributes vs methods — @property bridges the two.",
-    "difficulty": 0.55,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0188",
-    "subject": "Python",
-    "question": "Which of the following is true about class methods in Python?",
-    "options": [
-      "They take self as the first parameter",
-      "They take cls as the first parameter and are decorated with @classmethod",
-      "They take no parameters",
-      "They are decorated with @staticmethod"
-    ],
-    "correct_answer": "They take cls as the first parameter and are decorated with @classmethod",
-    "explanation": "@classmethod decorator and cls parameter give the method access to the class itself, not instances.",
-    "hint": "Compare @classmethod (receives class) with regular methods (receive instance) and @staticmethod (receive nothing).",
-    "difficulty": 0.55,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0189",
-    "subject": "Python",
-    "question": "What is method overriding in Python?",
-    "options": [
-      "Defining multiple methods with the same name but different parameters",
-      "Redefining a parent class method in a child class with the same name",
-      "Calling a parent method from a child class",
-      "Creating a method that can't be changed"
-    ],
-    "correct_answer": "Redefining a parent class method in a child class with the same name",
-    "explanation": "Method overriding allows a child class to provide its own implementation of a method already defined in the parent.",
-    "hint": "Think about what 'override' means — replacing something that already exists.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python OOP: classes, objects, inheritance, encapsulation, polymorphism",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0190",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ntry:\n    x = 1 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')\nfinally:\n    print('Done')",
-    "options": [
-      "Cannot divide by zero\nDone",
-      "Cannot divide by zero",
-      "Done",
-      "Error"
-    ],
-    "correct_answer": "Cannot divide by zero\nDone",
-    "explanation": "ZeroDivisionError is caught, printing the message. finally always executes.",
-    "hint": "Remember: the finally block runs regardless of whether an exception occurred.",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0191",
-    "subject": "Python",
-    "question": "Which of the following correctly raises a ValueError with a message?",
-    "options": [
-      "raise ValueError",
-      "raise ValueError('Invalid input')",
-      "throw ValueError('Invalid input')",
-      "raise new ValueError('Invalid input')"
-    ],
-    "correct_answer": "raise ValueError('Invalid input')",
-    "explanation": "Python uses 'raise' keyword (not 'throw'). You can pass a message string to the exception constructor.",
-    "hint": "Python's keyword for raising exceptions is 'raise', not 'throw' (which is used in Java/C++).",
-    "difficulty": 0.2,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0192",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef check_age(age):\n    if age < 0:\n        raise ValueError('Age cannot be negative')\n    return age\n\ntry:\n    print(check_age(-1))\nexcept ValueError as e:\n    print(e)",
-    "options": [
-      "Age cannot be negative",
-      "-1",
-      "Error",
-      "ValueError"
-    ],
-    "correct_answer": "Age cannot be negative",
-    "explanation": "check_age(-1) raises ValueError. The except block catches it and prints the message string.",
-    "hint": "What gets printed when you print() a caught exception object?",
-    "difficulty": 0.35,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0193",
-    "subject": "Python",
-    "question": "How do you create a custom exception in Python?",
-    "options": [
-      "By using the 'exception' keyword",
-      "By inheriting from the Exception class",
-      "By using @exception decorator",
-      "By defining a function that raises an error"
-    ],
-    "correct_answer": "By inheriting from the Exception class",
-    "explanation": "Custom exceptions are created by defining a class that inherits from Exception (or its subclasses).",
-    "hint": "All built-in exceptions inherit from Exception. Your custom one should too.",
-    "difficulty": 0.35,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0194",
-    "subject": "Python",
-    "question": "Which exception is raised when you try to access a key that doesn't exist in a dictionary?",
-    "options": [
-      "IndexError",
-      "ValueError",
-      "KeyError",
-      "AttributeError"
-    ],
-    "correct_answer": "KeyError",
-    "explanation": "Accessing a missing key with d[key] raises KeyError. Use d.get(key) to avoid this.",
-    "hint": "Different container types raise different errors for missing elements. Lists raise IndexError, dicts raise ____.",
-    "difficulty": 0.2,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0195",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nx = {'a': 1}\ntry:\n    print(x['b'])\nexcept KeyError:\n    print(x.get('b', 'Not found'))",
-    "options": [
-      "Not found",
-      "None",
-      "KeyError",
-      "Error"
-    ],
-    "correct_answer": "Not found",
-    "explanation": "x['b'] raises KeyError. x.get('b', 'Not found') returns the default 'Not found' when key is missing.",
-    "hint": "dict.get(key, default) never raises KeyError — it returns the default instead.",
-    "difficulty": 0.3,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0196",
-    "subject": "Python",
-    "question": "What is the purpose of the 'finally' block in Python exception handling?",
-    "options": [
-      "To catch all exceptions",
-      "To run code only when no exception occurs",
-      "To run code regardless of whether an exception occurred",
-      "To re-raise the exception"
-    ],
-    "correct_answer": "To run code regardless of whether an exception occurred",
-    "explanation": "finally always executes — whether an exception occurred, was caught, or not. Useful for cleanup (closing files, etc.).",
-    "hint": "Think of finally as 'cleanup code that must always run no matter what'.",
-    "difficulty": 0.2,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0197",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError:\n        return None\n    else:\n        return result\n\nprint(divide(10, 2))\nprint(divide(10, 0))",
-    "options": [
-      "5.0\nNone",
-      "5\nNone",
-      "5.0\n0",
-      "None\nNone"
-    ],
-    "correct_answer": "5.0\nNone",
-    "explanation": "divide(10,2): no exception, else runs, returns 5.0. divide(10,0): ZeroDivisionError caught, returns None.",
-    "hint": "The else block in try-except only runs when NO exception is raised.",
-    "difficulty": 0.45,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0198",
-    "subject": "Python",
-    "question": "Which of the following is NOT a built-in Python exception?",
-    "options": [
-      "IndexError",
-      "ValueError",
-      "NullPointerException",
-      "KeyError"
-    ],
-    "correct_answer": "NullPointerException",
-    "explanation": "NullPointerException is a Java exception. Python uses None (not null) and raises AttributeError or TypeError for similar issues.",
-    "hint": "One of these comes from a different programming language. Python doesn't have 'null'.",
-    "difficulty": 0.25,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python exception handling: try, except, finally, raise, custom exceptions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0199",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nsquares = [x**2 for x in range(5)]\nprint(squares)",
-    "options": [
-      "[1, 4, 9, 16, 25]",
-      "[0, 1, 4, 9, 16]",
-      "[0, 1, 2, 3, 4]",
-      "[1, 2, 3, 4, 5]"
-    ],
-    "correct_answer": "[0, 1, 4, 9, 16]",
-    "explanation": "range(5) gives 0,1,2,3,4. Squaring each: 0,1,4,9,16.",
-    "hint": "range(5) starts from 0, not 1. What is 0 squared?",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0200",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nevens = [x for x in range(10) if x % 2 == 0]\nprint(evens)",
-    "options": [
-      "[0, 2, 4, 6, 8]",
-      "[2, 4, 6, 8, 10]",
-      "[1, 3, 5, 7, 9]",
-      "[0, 2, 4, 6, 8, 10]"
-    ],
-    "correct_answer": "[0, 2, 4, 6, 8]",
-    "explanation": "range(10) gives 0-9. Filtering x%2==0 keeps even numbers: 0,2,4,6,8.",
-    "hint": "range(10) generates 0 through 9 (not 10). Filter for even numbers.",
-    "difficulty": 0.15,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0201",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nd = {x: x**2 for x in range(1, 5)}\nprint(d)",
-    "options": [
-      "{1: 1, 2: 4, 3: 9, 4: 16}",
-      "{0: 0, 1: 1, 2: 4, 3: 9}",
-      "{1: 2, 2: 4, 3: 6, 4: 8}",
-      "Error"
-    ],
-    "correct_answer": "{1: 1, 2: 4, 3: 9, 4: 16}",
-    "explanation": "Dict comprehension {key: value for ...}. range(1,5) = 1,2,3,4. Each maps to its square.",
-    "hint": "Dict comprehension syntax: {key_expr: value_expr for item in iterable}",
-    "difficulty": 0.3,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0202",
-    "subject": "Python",
-    "question": "What is a generator expression in Python?",
-    "options": [
-      "A list comprehension that uses square brackets",
-      "A comprehension using parentheses that generates values lazily one at a time",
-      "A function that creates lists",
-      "A comprehension that always returns a set"
-    ],
-    "correct_answer": "A comprehension using parentheses that generates values lazily one at a time",
-    "explanation": "Generator expressions use () instead of []. They produce values on demand (lazy), saving memory vs list comprehensions.",
-    "hint": "Compare [x for x in range(10)] with (x for x in range(10)) — what's different?",
-    "difficulty": 0.4,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0203",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ng = (x*2 for x in range(4))\nprint(type(g))\nprint(list(g))",
-    "options": [
-      "<class 'generator'>\n[0, 2, 4, 6]",
-      "<class 'list'>\n[0, 2, 4, 6]",
-      "<class 'tuple'>\n[0, 2, 4, 6]",
-      "Error"
-    ],
-    "correct_answer": "<class 'generator'>\n[0, 2, 4, 6]",
-    "explanation": "Parentheses create a generator object, not a list or tuple. list() consumes it.",
-    "hint": "Parentheses around a comprehension create a generator, not a tuple.",
-    "difficulty": 0.4,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0204",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nresult = {x % 3 for x in range(10)}\nprint(result)",
-    "options": [
-      "{0, 1, 2}",
-      "{0, 1, 2, 0, 1, 2, 0, 1, 2, 0}",
-      "{1, 2, 3}",
-      "{0, 1, 2, 3}"
-    ],
-    "correct_answer": "{0, 1, 2}",
-    "explanation": "Set comprehension removes duplicates. x%3 for 0-9 gives 0,1,2,0,1,2,0,1,2,0. Unique values: {0,1,2}.",
-    "hint": "Set comprehensions automatically remove duplicates — what unique values does x%3 produce for 0-9?",
-    "difficulty": 0.45,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0205",
-    "subject": "Python",
-    "question": "What is the advantage of using a generator expression over a list comprehension?",
-    "options": [
-      "Generators are faster for small datasets",
-      "Generators use less memory by producing values one at a time",
-      "Generators can be indexed like lists",
-      "Generators always produce sorted output"
-    ],
-    "correct_answer": "Generators use less memory by producing values one at a time",
-    "explanation": "List comprehensions store all values in memory at once. Generators yield one value at a time — crucial for large datasets.",
-    "hint": "Think about what happens in memory when you have a million items.",
-    "difficulty": 0.35,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0206",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nnums = [1, 2, 3, 4, 5]\nresult = [x for x in nums if x > 2 if x < 5]\nprint(result)",
-    "options": [
-      "[3, 4]",
-      "[1, 2, 3, 4, 5]",
-      "[3, 4, 5]",
-      "[2, 3, 4]"
-    ],
-    "correct_answer": "[3, 4]",
-    "explanation": "Two conditions: x > 2 AND x < 5. Only 3 and 4 satisfy both.",
-    "hint": "Multiple if conditions in a comprehension are combined with AND logic.",
-    "difficulty": 0.4,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0207",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\npairs = [(x, y) for x in range(3) for y in range(3) if x != y]\nprint(len(pairs))",
-    "options": [
-      "6",
-      "9",
-      "3",
-      "4"
-    ],
-    "correct_answer": "6",
-    "explanation": "3x3=9 pairs total, minus 3 where x==y (0,0),(1,1),(2,2) = 6 pairs.",
-    "hint": "Count total combinations first (3×3=9), then subtract the ones filtered out.",
-    "difficulty": 0.55,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0208",
-    "subject": "Python",
-    "question": "Which of the following creates a dictionary mapping each letter to its ASCII value?",
-    "options": [
-      "{ch: ord(ch) for ch in 'abc'}",
-      "{ch, ord(ch) for ch in 'abc'}",
-      "[ch: ord(ch) for ch in 'abc']",
-      "(ch: ord(ch) for ch in 'abc')"
-    ],
-    "correct_answer": "{ch: ord(ch) for ch in 'abc'}",
-    "explanation": "Dict comprehension uses {key: value ...} syntax. ord() returns the ASCII/Unicode code point.",
-    "hint": "Dict comprehension uses curly braces with a colon separating key and value.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0209",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nsentence = 'the quick brown fox'\nword_lengths = {word: len(word) for word in sentence.split()}\nprint(word_lengths['quick'])",
-    "options": [
-      "5",
-      "4",
-      "3",
-      "Error"
-    ],
-    "correct_answer": "5",
-    "explanation": "sentence.split() gives ['the','quick','brown','fox']. Dict maps each word to its length. len('quick')=5.",
-    "hint": "How many characters does 'quick' have?",
-    "difficulty": 0.25,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python comprehensions: list, dict, set, generator expressions",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0210",
-    "subject": "Python",
-    "question": "What is a decorator in Python?",
-    "options": [
-      "A function that modifies the behaviour of another function",
-      "A class that inherits from another class",
-      "A way to add CSS styling to Python output",
-      "A method for sorting collections"
-    ],
-    "correct_answer": "A function that modifies the behaviour of another function",
-    "explanation": "Decorators wrap a function to add functionality before/after it runs, without modifying its source code.",
-    "hint": "Think of a decorator as a wrapper — it 'decorates' another function with extra behaviour.",
-    "difficulty": 0.25,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0211",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef my_decorator(func):\n    def wrapper():\n        print('Before')\n        func()\n        print('After')\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print('Hello')\n\nsay_hello()",
-    "options": [
-      "Before\nHello\nAfter",
-      "Hello",
-      "Before\nAfter",
-      "Before\nHello"
-    ],
-    "correct_answer": "Before\nHello\nAfter",
-    "explanation": "@my_decorator replaces say_hello with wrapper. Calling say_hello() calls wrapper() which prints Before, calls original func (Hello), then After.",
-    "hint": "Trace through the wrapper function step by step.",
-    "difficulty": 0.3,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0212",
-    "subject": "Python",
-    "question": "What is a closure in Python?",
-    "options": [
-      "A function that closes the program",
-      "A function that remembers variables from its enclosing scope even after that scope has finished",
-      "A method that cannot be overridden",
-      "A class with private attributes only"
-    ],
-    "correct_answer": "A function that remembers variables from its enclosing scope even after that scope has finished",
-    "explanation": "Closures capture variables from their enclosing function. The inner function 'closes over' those variables.",
-    "hint": "What happens to variables in an outer function after it returns? Can the inner function still use them?",
-    "difficulty": 0.45,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0213",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef outer(x):\n    def inner(y):\n        return x + y\n    return inner\n\nadd5 = outer(5)\nprint(add5(3))",
-    "options": [
-      "8",
-      "5",
-      "3",
-      "Error"
-    ],
-    "correct_answer": "8",
-    "explanation": "outer(5) returns inner with x=5 captured. add5(3) calls inner(3) which returns 5+3=8. This is a closure.",
-    "hint": "outer(5) returns a function. What is x set to inside that returned function?",
-    "difficulty": 0.4,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0214",
-    "subject": "Python",
-    "question": "What does @staticmethod do in Python?",
-    "options": [
-      "Makes the method private",
-      "Creates a method that belongs to the class but takes no self or cls parameter",
-      "Makes the method run faster",
-      "Prevents the method from being overridden"
-    ],
-    "correct_answer": "Creates a method that belongs to the class but takes no self or cls parameter",
-    "explanation": "Static methods are defined in a class but don't access instance or class state. They're like regular functions inside a class.",
-    "hint": "Compare: regular method (self), class method (cls), static method (no special first param).",
-    "difficulty": 0.5,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0215",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef repeat(n):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            for _ in range(n):\n                func(*args, **kwargs)\n        return wrapper\n    return decorator\n\n@repeat(3)\ndef greet():\n    print('Hi')\n\ngreet()",
-    "options": [
-      "Hi\nHi\nHi",
-      "Hi",
-      "Error",
-      "HiHiHi"
-    ],
-    "correct_answer": "Hi\nHi\nHi",
-    "explanation": "repeat(3) returns a decorator. @repeat(3) applies it to greet. wrapper calls greet 3 times.",
-    "hint": "This is a decorator factory — repeat(3) returns the actual decorator. How many times does wrapper call func?",
-    "difficulty": 0.65,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0216",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef bold(func):\n    def wrapper(text):\n        return '<b>' + func(text) + '</b>'\n    return wrapper\n\ndef italic(func):\n    def wrapper(text):\n        return '<i>' + func(text) + '</i>'\n    return wrapper\n\n@bold\n@italic\ndef format_text(text):\n    return text\n\nprint(format_text('hello'))",
-    "options": [
-      "<b><i>hello</i></b>",
-      "<i><b>hello</b></i>",
-      "<b>hello</b>",
-      "<i>hello</i>"
-    ],
-    "correct_answer": "<b><i>hello</i></b>",
-    "explanation": "Decorators are applied bottom-up: italic first wraps format_text, then bold wraps that. Order: bold(italic(format_text)).",
-    "hint": "Multiple decorators are applied from bottom to top. Which one is applied first?",
-    "difficulty": 0.7,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0217",
-    "subject": "Python",
-    "question": "Which of the following is the correct way to use functools.wraps when writing a decorator?",
-    "options": [
-      "@wraps(func) on the wrapper function",
-      "@wraps on the decorator function",
-      "wraps(func) called after defining the decorator",
-      "No need for functools.wraps — it's automatic"
-    ],
-    "correct_answer": "@wraps(func) on the wrapper function",
-    "explanation": "@functools.wraps(func) preserves the original function's name and docstring inside the wrapper.",
-    "hint": "functools.wraps helps the wrapper function 'pretend' to be the original function for documentation purposes.",
-    "difficulty": 0.65,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0218",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef logger(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__}')\n        return func(*args, **kwargs)\n    return wrapper\n\n@logger\ndef add(a, b):\n    return a + b\n\nresult = add(3, 4)\nprint(result)",
-    "options": [
-      "Calling add\n7",
-      "7",
-      "Calling add",
-      "Calling add\nNone"
-    ],
-    "correct_answer": "Calling add\n7",
-    "explanation": "wrapper prints the function name, calls add(3,4)=7, returns 7. print(result) prints 7.",
-    "hint": "Trace through: what does wrapper do, and what does it return?",
-    "difficulty": 0.45,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0219",
-    "subject": "Python",
-    "question": "What is the difference between a closure and a class with __call__?",
-    "options": [
-      "There is no difference",
-      "Closures are functions that capture variables; __call__ makes a class instance callable — both can achieve similar results",
-      "Closures are faster",
-      "Classes with __call__ cannot maintain state"
-    ],
-    "correct_answer": "Closures are functions that capture variables; __call__ makes a class instance callable — both can achieve similar results",
-    "explanation": "Both maintain state: closures via captured variables, __call__ classes via instance attributes. Choose based on complexity.",
-    "hint": "Think about what makes a closure 'stateful' vs what makes a class instance 'callable'.",
-    "difficulty": 0.7,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python decorators and closures",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0220",
-    "subject": "Python",
-    "question": "What keyword is used to create a generator function in Python?",
-    "options": [
-      "return",
-      "yield",
-      "generate",
-      "next"
-    ],
-    "correct_answer": "yield",
-    "explanation": "A function with 'yield' instead of 'return' becomes a generator function. It produces values lazily.",
-    "hint": "Regular functions use 'return'. Generator functions use a different keyword to pause and produce values.",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0221",
-    "subject": "Python",
-    "question": "What exception is raised when a generator is exhausted?",
-    "options": [
-      "GeneratorExit",
-      "StopIteration",
-      "RuntimeError",
-      "StopGenerator"
-    ],
-    "correct_answer": "StopIteration",
-    "explanation": "When a generator function returns (or runs off the end), it raises StopIteration. for loops catch this automatically.",
-    "hint": "The for loop stops when it catches a specific exception from the iterator protocol.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0222",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef squares(n):\n    for i in range(n):\n        yield i * i\n\ng = squares(4)\nprint(list(g))\nprint(list(g))",
-    "options": [
-      "[0, 1, 4, 9]\n[]",
-      "[0, 1, 4, 9]\n[0, 1, 4, 9]",
-      "[1, 4, 9, 16]\n[]",
-      "Error"
-    ],
-    "correct_answer": "[0, 1, 4, 9]\n[]",
-    "explanation": "list(g) exhausts the generator. Calling list(g) again gives [] because the generator is already done.",
-    "hint": "A generator can only be iterated ONCE. After exhaustion, it produces nothing.",
-    "difficulty": 0.45,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0223",
-    "subject": "Python",
-    "question": "What is the key advantage of generators over regular functions that return lists?",
-    "options": [
-      "Generators are always faster",
-      "Generators use less memory — they generate values one at a time instead of storing all at once",
-      "Generators can be called multiple times",
-      "Generators produce sorted output"
-    ],
-    "correct_answer": "Generators use less memory — they generate values one at a time instead of storing all at once",
-    "explanation": "For large sequences, generators are memory-efficient. range(1000000) uses almost no memory; list(range(1000000)) stores 1M numbers.",
-    "hint": "Think about what happens in memory when you return a list of 1 million items vs yield them one by one.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0224",
-    "subject": "Python",
-    "question": "Which of the following correctly implements an infinite counter generator?",
-    "options": [
-      "def counter():\n    n = 0\n    while True:\n        yield n\n        n += 1",
-      "def counter():\n    return range(999999999)",
-      "def counter():\n    n = 0\n    while True:\n        return n\n        n += 1",
-      "def counter():\n    for i in range(float('inf')):\n        yield i"
-    ],
-    "correct_answer": "def counter():\n    n = 0\n    while True:\n        yield n\n        n += 1",
-    "explanation": "An infinite generator uses while True with yield. return would exit the function; range(float('inf')) is invalid.",
-    "hint": "An infinite generator must use yield (not return) and never end naturally.",
-    "difficulty": 0.45,
-    "type": "logic",
-    "estimated_time": 45,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0225",
-    "subject": "Python",
-    "question": "What does the iter() function do in Python?",
-    "options": [
-      "Returns the length of an iterable",
-      "Returns an iterator object from an iterable",
-      "Sorts the iterable",
-      "Converts an iterator back to a list"
-    ],
-    "correct_answer": "Returns an iterator object from an iterable",
-    "explanation": "iter(obj) calls obj.__iter__() and returns an iterator. Lists, tuples, dicts are iterable but not iterators — iter() converts them.",
-    "hint": "There's a difference between 'iterable' and 'iterator'. iter() creates an iterator from an iterable.",
-    "difficulty": 0.45,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0226",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\ndef take(n, iterable):\n    it = iter(iterable)\n    for _ in range(n):\n        yield next(it)\n\nprint(list(take(3, range(10))))",
-    "options": [
-      "[0, 1, 2]",
-      "[1, 2, 3]",
-      "[0, 1, 2, 3]",
-      "Error"
-    ],
-    "correct_answer": "[0, 1, 2]",
-    "explanation": "take creates an iterator from range(10), then yields the first n=3 values: 0, 1, 2.",
-    "hint": "iter() on range(10) creates an iterator. next() gets values one at a time.",
-    "difficulty": 0.55,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python generators and iterators: yield, next, iter, StopIteration",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0227",
-    "subject": "Python",
-    "question": "Which of the following correctly imports only the sqrt function from the math module?",
-    "options": [
-      "import sqrt from math",
-      "from math import sqrt",
-      "import math.sqrt",
-      "include math.sqrt"
-    ],
-    "correct_answer": "from math import sqrt",
-    "explanation": "'from module import name' imports a specific name. 'import module' imports the whole module.",
-    "hint": "Python's import syntax: 'from X import Y' to get just one thing from a module.",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0228",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nimport math\nprint(math.ceil(4.2))\nprint(math.floor(4.8))",
-    "options": [
-      "5\n4",
-      "4\n5",
-      "5\n5",
-      "4\n4"
-    ],
-    "correct_answer": "5\n4",
-    "explanation": "math.ceil rounds up to nearest integer: ceil(4.2)=5. math.floor rounds down: floor(4.8)=4.",
-    "hint": "ceil = ceiling (always up), floor = floor (always down). They're opposites.",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0229",
-    "subject": "Python",
-    "question": "What does the 'as' keyword do in an import statement?",
-    "options": [
-      "Creates a new module",
-      "Creates an alias for the imported module or name",
-      "Checks if the module exists",
-      "Hides the original module name"
-    ],
-    "correct_answer": "Creates an alias for the imported module or name",
-    "explanation": "'import numpy as np' creates the alias 'np' for numpy. Useful for long module names or avoiding name conflicts.",
-    "hint": "Why do data scientists write 'import numpy as np' instead of 'import numpy'?",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0230",
-    "subject": "Python",
-    "question": "What is the purpose of __name__ == '__main__' in Python?",
-    "options": [
-      "To import the module",
-      "To check if the script is being run directly (not imported as a module)",
-      "To define the main function",
-      "To prevent the file from being imported"
-    ],
-    "correct_answer": "To check if the script is being run directly (not imported as a module)",
-    "explanation": "When a script is run directly, __name__ is '__main__'. When imported, __name__ is the module name. This lets you write code that only runs when executed directly.",
-    "hint": "When you import a module, does its top-level code run? What about code inside 'if __name__ == __main__'?",
-    "difficulty": 0.35,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0231",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nfrom collections import Counter\nwords = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']\nc = Counter(words)\nprint(c['apple'])",
-    "options": [
-      "3",
-      "1",
-      "2",
-      "Error"
-    ],
-    "correct_answer": "3",
-    "explanation": "Counter counts occurrences. 'apple' appears 3 times in the list.",
-    "hint": "Counter maps each element to how many times it appears.",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0232",
-    "subject": "Python",
-    "question": "What does the os.path.join() function do?",
-    "options": [
-      "Joins two strings with a comma",
-      "Constructs a file path by joining components with the OS-appropriate separator",
-      "Checks if a file path exists",
-      "Splits a path into directory and filename"
-    ],
-    "correct_answer": "Constructs a file path by joining components with the OS-appropriate separator",
-    "explanation": "os.path.join('home', 'user', 'file.txt') produces 'home/user/file.txt' on Linux, 'home\\user\\file.txt' on Windows.",
-    "hint": "Why not just use string concatenation for file paths? Think about Windows vs Linux.",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0233",
-    "subject": "Python",
-    "question": "What does sys.argv contain in Python?",
-    "options": [
-      "The current Python version",
-      "A list of command-line arguments passed to the script",
-      "The system's environment variables",
-      "All imported modules"
-    ],
-    "correct_answer": "A list of command-line arguments passed to the script",
-    "explanation": "sys.argv[0] is the script name, sys.argv[1] onwards are the arguments. Running 'python script.py hello' gives sys.argv=['script.py','hello'].",
-    "hint": "What gets passed to a Python script when you run it from the command line?",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0234",
-    "subject": "Python",
-    "question": "What is a Python package?",
-    "options": [
-      "A single Python file",
-      "A directory containing an __init__.py file and other Python modules",
-      "A compressed zip of Python scripts",
-      "A built-in Python function"
-    ],
-    "correct_answer": "A directory containing an __init__.py file and other Python modules",
-    "explanation": "A package is a directory with __init__.py that organises related modules. It enables 'from package.module import something'.",
-    "hint": "How does Python distinguish a regular directory from a package directory?",
-    "difficulty": 0.25,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python modules, packages, imports, and standard library",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0235",
-    "subject": "Python",
-    "question": "What is the correct way to open a file for reading in Python?",
-    "options": [
-      "open('file.txt')",
-      "open('file.txt', 'r')",
-      "Both A and B are correct",
-      "read('file.txt')"
-    ],
-    "correct_answer": "Both A and B are correct",
-    "explanation": "'r' (read) is the default mode. open('file.txt') and open('file.txt', 'r') are equivalent.",
-    "hint": "What is the default mode when you don't specify one in open()?",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0236",
-    "subject": "Python",
-    "question": "What is the advantage of using 'with open()' over just 'open()'?",
-    "options": [
-      "It's faster",
-      "It automatically closes the file even if an exception occurs",
-      "It reads the whole file at once",
-      "It works only with text files"
-    ],
-    "correct_answer": "It automatically closes the file even if an exception occurs",
-    "explanation": "The 'with' statement is a context manager. It calls __exit__ (which closes the file) when the block ends, even on error.",
-    "hint": "What happens to an open file if an exception occurs before you call file.close()?",
-    "difficulty": 0.25,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0237",
-    "subject": "Python",
-    "question": "Which file mode is used to append to an existing file without overwriting it?",
-    "options": [
-      "'w'",
-      "'r'",
-      "'a'",
-      "'x'"
-    ],
-    "correct_answer": "'a'",
-    "explanation": "'a' (append) adds to the end of the file. 'w' overwrites the whole file.",
-    "hint": "If you want to add to a file without losing what's already there, which mode do you use?",
-    "difficulty": 0.15,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0238",
-    "subject": "Python",
-    "question": "What will the following Python code do?\n\nwith open('data.txt', 'w') as f:\n    f.write('Hello')\n    f.write(' World')",
-    "options": [
-      "Writes 'Hello\\n World' with a newline",
-      "Writes 'Hello World' to the file",
-      "Raises an error because you can't call write twice",
-      "Creates two files"
-    ],
-    "correct_answer": "Writes 'Hello World' to the file",
-    "explanation": "write() doesn't add newlines automatically. Two write() calls concatenate: 'Hello' + ' World' = 'Hello World'.",
-    "hint": "Does write() add a newline at the end automatically?",
-    "difficulty": 0.25,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0239",
-    "subject": "Python",
-    "question": "What does file.readlines() return?",
-    "options": [
-      "A single string with the entire file content",
-      "A list of strings, one per line (including newline characters)",
-      "A generator of lines",
-      "The number of lines in the file"
-    ],
-    "correct_answer": "A list of strings, one per line (including newline characters)",
-    "explanation": "readlines() returns a list like ['line1\\n', 'line2\\n', 'line3']. Each string includes the newline except possibly the last.",
-    "hint": "What's the difference between read(), readline(), and readlines()?",
-    "difficulty": 0.3,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0240",
-    "subject": "Python",
-    "question": "What file mode would you use to open a binary file for reading?",
-    "options": [
-      "'r'",
-      "'rb'",
-      "'b'",
-      "'br'"
-    ],
-    "correct_answer": "'rb'",
-    "explanation": "'rb' = read binary. Used for non-text files like images, PDFs, executables.",
-    "hint": "Binary mode adds 'b' to the mode string. What does 'rb' stand for?",
-    "difficulty": 0.2,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0241",
-    "subject": "Python",
-    "question": "What does the following code do?\n\nwith open('file.txt', 'r') as f:\n    for line in f:\n        print(line.strip())",
-    "options": [
-      "Reads the file all at once into memory",
-      "Reads the file line by line (memory efficient)",
-      "Writes lines to the file",
-      "Error — cannot iterate over a file object"
-    ],
-    "correct_answer": "Reads the file line by line (memory efficient)",
-    "explanation": "Iterating over a file object reads one line at a time — efficient for large files. strip() removes the trailing newline.",
-    "hint": "When you use 'for line in file', how much of the file is in memory at once?",
-    "difficulty": 0.35,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0242",
-    "subject": "Python",
-    "question": "What will happen if you try to open a file with mode 'x' and the file already exists?",
-    "options": [
-      "The file is overwritten",
-      "A FileExistsError is raised",
-      "The file is opened for appending",
-      "Nothing — it opens normally"
-    ],
-    "correct_answer": "A FileExistsError is raised",
-    "explanation": "'x' (exclusive creation) creates a new file but fails if the file already exists. Use when you want to ensure you don't overwrite.",
-    "hint": "Mode 'x' is designed for creating NEW files only. What happens if the file exists?",
-    "difficulty": 0.4,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0243",
-    "subject": "Python",
-    "question": "What does the following code print?\n\nimport os\nprint(os.path.exists('nonexistent_file.txt'))",
-    "options": [
-      "True",
-      "False",
-      "Error",
-      "None"
-    ],
-    "correct_answer": "False",
-    "explanation": "os.path.exists() returns False for files that don't exist, True for those that do. No exception raised.",
-    "hint": "os.path.exists() safely checks if a path exists without raising an exception.",
-    "difficulty": 0.2,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0244",
-    "subject": "Python",
-    "question": "What will the following code do?\n\nwith open('numbers.txt', 'w') as f:\n    for i in range(3):\n        f.write(str(i) + '\\n')",
-    "options": [
-      "Writes '012' to the file",
-      "Writes '0\\n1\\n2\\n' to the file (three lines)",
-      "Raises an error — cannot write integers",
-      "Writes '[0, 1, 2]' to the file"
-    ],
-    "correct_answer": "Writes '0\\n1\\n2\\n' to the file (three lines)",
-    "explanation": "str(i) converts each int to string. '\\n' adds a newline. The file gets three lines: 0, 1, 2.",
-    "hint": "write() only accepts strings. What does str(i) + '\\n' produce for i=0,1,2?",
-    "difficulty": 0.3,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0245",
-    "subject": "Python",
-    "question": "What is a context manager in Python?",
-    "options": [
-      "A function that manages memory",
-      "An object that defines __enter__ and __exit__ for use with the 'with' statement",
-      "A decorator for managing threads",
-      "A built-in module for file management"
-    ],
-    "correct_answer": "An object that defines __enter__ and __exit__ for use with the 'with' statement",
-    "explanation": "Context managers implement __enter__ (setup) and __exit__ (cleanup). 'with' calls these automatically.",
-    "hint": "What two methods must an object implement to be used with the 'with' statement?",
-    "difficulty": 0.45,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0246",
-    "subject": "Python",
-    "question": "What does json.dump() vs json.dumps() do?",
-    "options": [
-      "dump() writes to a file, dumps() returns a string",
-      "dumps() writes to a file, dump() returns a string",
-      "They are identical",
-      "dump() is for dicts only, dumps() works for all types"
-    ],
-    "correct_answer": "dump() writes to a file, dumps() returns a string",
-    "explanation": "json.dump(obj, file) writes JSON to a file object. json.dumps(obj) returns JSON as a string. The 's' stands for 'string'.",
-    "hint": "The 's' in dumps stands for 'string'. Without 's', it works with a file object.",
-    "difficulty": 0.35,
-    "type": "direct",
-    "estimated_time": 25,
-    "topic": "Python file I/O: open, read, write, context managers, with statement",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0247",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\nx = 5\ny = 2\nprint(x // y)\nprint(x % y)",
-    "options": [
-      "2\n1",
-      "2.5\n1",
-      "2\n0",
-      "2\n2"
-    ],
-    "correct_answer": "2\n1",
-    "explanation": "// is integer (floor) division: 5//2=2. % is modulo (remainder): 5%2=1.",
-    "hint": "// gives the integer part of division. % gives the remainder.",
-    "difficulty": 0.15,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
-  },
-  {
-    "id": "PY-0248",
-    "subject": "Python",
-    "question": "What will be the output of the following Python code?\n\na = 10\nb = 3\nprint(a & b)\nprint(a | b)",
-    "options": [
-      "2\n11",
-      "10\n3",
-      "1\n11",
-      "2\n3"
-    ],
-    "correct_answer": "2\n11",
-    "explanation": "10=1010, 3=0011 in binary. AND: 0010=2. OR: 1011=11.",
-    "hint": "Convert both numbers to binary first, then apply AND (&) and OR (|) bit by bit.",
-    "difficulty": 0.55,
-    "type": "program",
-    "estimated_time": 60,
-    "topic": "Python operators: arithmetic, comparison, logical, bitwise, precedence",
-    "needs_code": false,
-    "discrimination": null,
-    "guessing_param": null
   }
 ]

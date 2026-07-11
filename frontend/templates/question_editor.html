@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Editor — Admin</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <style>
+    body { padding: 1.5rem; }
+    .editor-header { display:flex; gap:1rem; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; }
+    .editor-header h1 { font-size:1.4rem; font-weight:700; }
+    .filter-row { display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1rem; }
+    select, input[type=text] {
+      background:var(--surface); border:1px solid var(--border);
+      color:var(--text); border-radius:var(--radius-sm);
+      padding:0.4rem 0.7rem; font-size:0.85rem;
+    }
+    select:focus, input:focus { outline:none; border-color:var(--accent); }
+
+    /* Table */
+    .q-table { width:100%; border-collapse:collapse; font-size:0.8rem; }
+    .q-table th {
+      background:var(--surface); padding:0.5rem 0.6rem;
+      text-align:left; color:var(--text-dim); font-weight:600;
+      position:sticky; top:0; z-index:10;
+      border-bottom:2px solid var(--border);
+    }
+    .q-table td { padding:0.5rem 0.6rem; border-bottom:1px solid var(--border); vertical-align:top; }
+    .q-table tr:hover td { background:var(--surface); }
+
+    /* Inline edit cells */
+    .edit-cell { font-family:var(--mono); cursor:pointer; }
+    .edit-cell:hover { color:var(--accent); }
+    .edit-input {
+      background:var(--bg3); border:1px solid var(--accent);
+      color:var(--text); border-radius:4px; padding:0.2rem 0.4rem;
+      font-family:var(--mono); font-size:0.78rem; width:100%;
+    }
+    .q-text { max-width:320px; font-size:0.78rem; line-height:1.4; color:var(--text-dim); }
+    .q-text pre { background:var(--bg3); border-radius:4px; padding:0.3rem 0.5rem; font-size:0.72rem; margin-top:0.3rem; white-space:pre-wrap; }
+
+    /* Badges */
+    .badge { display:inline-block; padding:0.15rem 0.5rem; border-radius:999px; font-size:0.68rem; font-weight:700; }
+    .badge-direct  { background:rgba(108,99,255,0.15); color:#6c63ff; }
+    .badge-logic   { background:rgba(255,184,108,0.15); color:#ffb86c; }
+    .badge-program { background:rgba(139,233,253,0.15); color:#8be9fd; }
+
+    /* Diff bar */
+    .diff-bar { height:6px; border-radius:3px; background:linear-gradient(90deg,#50fa7b,#ffb86c,#ff5555); position:relative; width:80px; }
+    .diff-marker { position:absolute; top:-3px; width:2px; height:12px; background:#fff; border-radius:1px; }
+
+    /* Flags */
+    .flag-warn { color:var(--amber); font-size:0.75rem; }
+    .flag-ok   { color:var(--green); font-size:0.75rem; }
+
+    /* Save state */
+    .save-btn { background:var(--accent); border:none; color:#fff; border-radius:var(--radius-sm); padding:0.3rem 0.8rem; font-size:0.78rem; cursor:pointer; }
+    .save-btn:hover { opacity:0.85; }
+    .save-status { font-size:0.78rem; color:var(--text-dim); margin-left:0.5rem; }
+
+    .table-wrap { overflow:auto; max-height:calc(100vh - 200px); border:1px solid var(--border); border-radius:var(--radius); }
+
+    .stat-strip { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .stat-chip { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm); padding:0.3rem 0.8rem; font-size:0.78rem; font-family:var(--mono); }
+    .stat-chip b { color:var(--accent); }
+  </style>
+</head>
+<body>
+
+<div class="editor-header">
+  <h1>📋 Question Editor</h1>
+  <span style="color:var(--text-dim);font-size:0.82rem;">Local admin only — do not deploy this page publicly</span>
+  <div style="margin-left:auto;display:flex;gap:0.5rem;align-items:center;">
+    <button class="save-btn" onclick="saveAll()">💾 Save All Changes</button>
+    <span class="save-status" id="saveStatus"></span>
+  </div>
+</div>
+
+<!-- Stats strip -->
+<div class="stat-strip" id="statStrip"></div>
+
+<!-- Filters -->
+<div class="filter-row">
+  <input type="text" id="searchInput" placeholder="Search question text…" oninput="applyFilters()" style="width:220px">
+  <select id="filterType" onchange="applyFilters()">
+    <option value="">All types</option>
+    <option value="direct">direct</option>
+    <option value="logic">logic</option>
+    <option value="program">program</option>
+  </select>
+  <select id="filterTopic" onchange="applyFilters()">
+    <option value="">All topics</option>
+  </select>
+  <select id="filterDiff" onchange="applyFilters()">
+    <option value="">All difficulties</option>
+    <option value="easy">Easy (≤0.35)</option>
+    <option value="medium">Medium (0.35–0.65)</option>
+    <option value="hard">Hard (≥0.65)</option>
+  </select>
+  <select id="filterFlag" onchange="applyFilters()">
+    <option value="">All</option>
+    <option value="warn">⚠ Flagged only</option>
+  </select>
+  <span id="countLabel" style="color:var(--text-dim);font-size:0.82rem;align-self:center;"></span>
+</div>
+
+<!-- Table -->
+<div class="table-wrap">
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Question</th>
+        <th>Type</th>
+        <th>Topic</th>
+        <th>Difficulty</th>
+        <th>Est. Time (s)</th>
+        <th>Options</th>
+        <th>Correct Answer</th>
+        <th>Flag</th>
+      </tr>
+    </thead>
+    <tbody id="qTableBody"></tbody>
+  </table>
+</div>
+
+<script>
+let allQuestions = [];
+let changes = {};   // qid → {field: newValue}
+
+async function loadQuestions() {
+  const res  = await fetch('/api/admin/questions');
+  allQuestions = await res.json();
+  buildTopicFilter();
+  buildStats();
+  applyFilters();
+}
+
+function buildTopicFilter() {
+  const topics = [...new Set(allQuestions.map(q=>q.topic||'').filter(Boolean))].sort();
+  const sel = document.getElementById('filterTopic');
+  topics.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = t;
+    sel.appendChild(o);
+  });
+}
+
+function buildStats() {
+  const types  = {direct:0, logic:0, program:0};
+  const diffs  = {easy:0, medium:0, hard:0};
+  const topics = {};
+  allQuestions.forEach(q => {
+    types[q.type] = (types[q.type]||0) + 1;
+    const d = q.difficulty;
+    if (d <= 0.35) diffs.easy++;
+    else if (d < 0.65) diffs.medium++;
+    else diffs.hard++;
+    const t = q.topic || 'Uncategorised';
+    topics[t] = (topics[t]||0) + 1;
+  });
+  const strip = document.getElementById('statStrip');
+  strip.innerHTML = `
+    <div class="stat-chip">Total <b>${allQuestions.length}</b></div>
+    <div class="stat-chip">Direct <b>${types.direct}</b></div>
+    <div class="stat-chip">Logic <b>${types.logic}</b></div>
+    <div class="stat-chip">Program <b>${types.program}</b></div>
+    <div class="stat-chip">Easy <b>${diffs.easy}</b></div>
+    <div class="stat-chip">Medium <b>${diffs.medium}</b></div>
+    <div class="stat-chip">Hard <b>${diffs.hard}</b></div>
+    <div class="stat-chip">Topics <b>${Object.keys(topics).length}</b></div>
+  `;
+}
+
+function flagIssue(q) {
+  const issues = [];
+  if (q.estimated_time < 10)  issues.push('Est.time too low');
+  if (q.estimated_time > 120) issues.push('Est.time very high');
+  if (q.difficulty === 0.50 && !q.difficulty_reviewed) issues.push('Default difficulty');
+  if (!q.topic || q.topic.trim() === '') issues.push('No topic');
+  if (!q.hint || q.hint.includes('You can do it')) issues.push('Generic hint');
+  if (q.options.length < 4) issues.push('< 4 options');
+  return issues;
+}
+
+function applyFilters() {
+  const search   = document.getElementById('searchInput').value.toLowerCase();
+  const type     = document.getElementById('filterType').value;
+  const topic    = document.getElementById('filterTopic').value;
+  const diff     = document.getElementById('filterDiff').value;
+  const flag     = document.getElementById('filterFlag').value;
+
+  let filtered = allQuestions.filter(q => {
+    if (search && !q.question.toLowerCase().includes(search) && !q.id.toLowerCase().includes(search)) return false;
+    if (type  && q.type  !== type)  return false;
+    if (topic && (q.topic||'') !== topic) return false;
+    if (diff === 'easy'   && q.difficulty > 0.35)  return false;
+    if (diff === 'medium' && (q.difficulty <= 0.35 || q.difficulty >= 0.65)) return false;
+    if (diff === 'hard'   && q.difficulty < 0.65)  return false;
+    if (flag === 'warn'   && flagIssue(q).length === 0) return false;
+    return true;
+  });
+
+  document.getElementById('countLabel').textContent = `${filtered.length} / ${allQuestions.length} questions`;
+  renderTable(filtered);
+}
+
+function renderTable(qs) {
+  const tbody = document.getElementById('qTableBody');
+  tbody.innerHTML = '';
+  qs.forEach(q => {
+    const issues = flagIssue(q);
+    const parts  = q.question.split('\n\n');
+    const qText  = parts[0];
+    const code   = parts.length > 1 ? parts.slice(1).join('\n\n') : null;
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><span style="font-family:var(--mono);font-size:0.75rem;color:var(--accent)">${q.id}</span></td>
+      <td class="q-text">
+        ${esc(qText)}
+        ${code ? `<pre>${esc(code)}</pre>` : ''}
+      </td>
+      <td>
+        <select class="edit-input" onchange="recordChange('${q.id}','type',this.value)">
+          <option ${q.type==='direct' ?'selected':''}>direct</option>
+          <option ${q.type==='logic'  ?'selected':''}>logic</option>
+          <option ${q.type==='program'?'selected':''}>program</option>
+        </select>
+      </td>
+      <td>
+        <input class="edit-input" value="${esc(q.topic||'')}" style="width:130px"
+          onchange="recordChange('${q.id}','topic',this.value)">
+      </td>
+      <td>
+        <input class="edit-input" type="number" min="0" max="1" step="0.05"
+          value="${q.difficulty}" style="width:60px"
+          onchange="recordChange('${q.id}','difficulty',parseFloat(this.value))">
+        <div class="diff-bar" style="margin-top:4px">
+          <div class="diff-marker" style="left:calc(${q.difficulty*100}% - 1px)"></div>
+        </div>
+      </td>
+      <td>
+        <input class="edit-input" type="number" min="5" max="180" step="5"
+          value="${q.estimated_time}" style="width:60px"
+          onchange="recordChange('${q.id}','estimated_time',parseInt(this.value))">
+      </td>
+      <td style="font-size:0.72rem;color:var(--text-dim);max-width:180px">
+        ${q.options.map((o,i)=>`<div>${String.fromCharCode(65+i)}) ${esc(o)}</div>`).join('')}
+      </td>
+      <td style="font-size:0.75rem;color:var(--green);font-family:var(--mono);max-width:120px">
+        ${esc(q.correct_answer)}
+      </td>
+      <td>
+        ${issues.length ? `<span class="flag-warn">⚠ ${issues.join('<br>')}</span>` : '<span class="flag-ok">✓</span>'}
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function recordChange(qid, field, value) {
+  if (!changes[qid]) changes[qid] = {};
+  changes[qid][field] = value;
+  document.getElementById('saveStatus').textContent = `${Object.keys(changes).length} unsaved change(s)`;
+}
+
+async function saveAll() {
+  if (Object.keys(changes).length === 0) {
+    document.getElementById('saveStatus').textContent = 'Nothing to save.';
+    return;
+  }
+  const res = await fetch('/api/admin/questions/update', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(changes),
+  });
+  const data = await res.json();
+  if (data.ok) {
+    document.getElementById('saveStatus').textContent = `✓ Saved ${data.updated} changes`;
+    changes = {};
+    await loadQuestions();
+  } else {
+    document.getElementById('saveStatus').textContent = '✗ Save failed: ' + data.error;
+  }
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+loadQuestions();
+</script>
+</body>
+</html>

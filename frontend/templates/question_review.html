@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Review — Admin</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <style>
+    body { display:flex; height:100vh; overflow:hidden; background:var(--bg); }
+
+    /* ── Left sidebar ── */
+    .sidebar {
+      width: 260px; min-width:200px; max-width:320px;
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      overflow: hidden; flex-shrink:0;
+    }
+    .sidebar-header { padding:1rem; border-bottom:1px solid var(--border); }
+    .sidebar-header h2 { font-size:0.95rem; font-weight:700; margin-bottom:0.5rem; }
+    .sidebar-search { width:100%; background:var(--surface); border:1px solid var(--border);
+      color:var(--text); border-radius:var(--radius-sm); padding:0.4rem 0.6rem;
+      font-size:0.82rem; box-sizing:border-box; }
+    .sidebar-search:focus { outline:none; border-color:var(--accent); }
+    .filter-row { display:flex; gap:0.4rem; margin-top:0.5rem; }
+    .filter-select { flex:1; background:var(--surface); border:1px solid var(--border);
+      color:var(--text); border-radius:var(--radius-sm); padding:0.3rem 0.4rem;
+      font-size:0.75rem; }
+
+    .q-list { flex:1; overflow-y:auto; }
+    .q-list-item {
+      padding:0.6rem 1rem; border-bottom:1px solid var(--border);
+      cursor:pointer; display:flex; align-items:flex-start; gap:0.5rem;
+      transition: background 0.1s;
+    }
+    .q-list-item:hover    { background:var(--surface); }
+    .q-list-item.active   { background:var(--accent-glow); border-left:3px solid var(--accent); }
+    .q-list-item.flagged  { border-left:3px solid var(--amber); }
+    .q-list-item.reviewed { opacity:0.55; }
+    .q-id   { font-family:var(--mono); font-size:0.72rem; color:var(--accent); white-space:nowrap; }
+    .q-preview { font-size:0.75rem; color:var(--text-dim); line-height:1.3; }
+    .q-badge-sm { font-size:0.62rem; padding:0.1rem 0.35rem; border-radius:3px; font-weight:700; white-space:nowrap; }
+    .badge-direct  { background:rgba(108,99,255,0.2); color:#6c63ff; }
+    .badge-logic   { background:rgba(255,184,108,0.2); color:#ffb86c; }
+    .badge-program { background:rgba(139,233,253,0.2); color:#8be9fd; }
+
+    /* ── Main content ── */
+    .main-content {
+      flex:1; display:flex; flex-direction:column; overflow:hidden;
+    }
+
+    /* Top bar */
+    .top-bar {
+      padding:0.75rem 1.5rem; background:var(--bg2);
+      border-bottom:1px solid var(--border);
+      display:flex; align-items:center; gap:1rem; flex-wrap:wrap;
+      flex-shrink:0;
+    }
+    .top-bar h1 { font-size:1rem; font-weight:700; }
+    .top-bar-right { margin-left:auto; display:flex; gap:0.5rem; align-items:center; }
+    .btn-sm { padding:0.3rem 0.8rem; font-size:0.8rem; border-radius:var(--radius-sm);
+      border:none; cursor:pointer; font-weight:600; }
+    .btn-save { background:var(--accent); color:#fff; }
+    .btn-save:hover { opacity:0.85; }
+    .btn-prev, .btn-next { background:var(--surface); color:var(--text);
+      border:1px solid var(--border); }
+    .btn-prev:hover, .btn-next:hover { border-color:var(--accent); }
+    .nav-counter { font-size:0.82rem; color:var(--text-dim); font-family:var(--mono); }
+
+    /* Content area split */
+    .content-split {
+      flex:1; display:flex; overflow:hidden;
+    }
+
+    /* Question area */
+    .question-area {
+      flex:1; overflow-y:auto; padding:1.5rem;
+    }
+    .card-section { margin-bottom:1.25rem; }
+    .section-label { font-size:0.72rem; font-weight:700; color:var(--text-dim);
+      text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; }
+
+    .q-text-display {
+      background:var(--bg2); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:1rem;
+      font-size:0.9rem; line-height:1.6; white-space:pre-wrap;
+    }
+    .q-code-display {
+      background:#0d0d14; border:1px solid var(--border);
+      border-left:3px solid var(--accent);
+      border-radius:var(--radius-sm); padding:0.75rem 1rem;
+      font-family:var(--mono); font-size:0.83rem; color:var(--cyan);
+      white-space:pre; overflow-x:auto; margin-top:0.5rem;
+    }
+
+    /* Options */
+    .options-list { display:flex; flex-direction:column; gap:0.4rem; }
+    .option-row { display:flex; align-items:center; gap:0.5rem; }
+    .option-letter { font-family:var(--mono); font-size:0.78rem; color:var(--text-dim);
+      width:20px; flex-shrink:0; }
+    .option-text {
+      flex:1; background:var(--surface); border:1px solid var(--border);
+      border-radius:var(--radius-sm); padding:0.4rem 0.75rem;
+      font-size:0.85rem; color:var(--text);
+    }
+    .option-correct { border-color:var(--green); background:rgba(80,250,123,0.08); color:var(--green); }
+
+    /* Editable params */
+    .params-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+    .param-field label { display:block; font-size:0.72rem; color:var(--text-dim);
+      margin-bottom:0.3rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; }
+    .param-input {
+      width:100%; background:var(--surface); border:1px solid var(--border);
+      color:var(--text); border-radius:var(--radius-sm); padding:0.4rem 0.6rem;
+      font-size:0.85rem; font-family:var(--mono); box-sizing:border-box;
+    }
+    .param-input:focus { outline:none; border-color:var(--accent); }
+    .param-select { appearance:none; }
+
+    /* Diff slider */
+    .diff-row { display:flex; align-items:center; gap:0.75rem; }
+    .diff-row input[type=range] { flex:1; }
+    .diff-val { font-family:var(--mono); font-size:0.85rem; color:var(--accent); min-width:35px; }
+
+    .hint-textarea {
+      width:100%; background:var(--surface); border:1px solid var(--border);
+      color:var(--text); border-radius:var(--radius-sm); padding:0.5rem 0.75rem;
+      font-size:0.83rem; line-height:1.5; resize:vertical; min-height:60px;
+      box-sizing:border-box; font-family:var(--font);
+    }
+    .hint-textarea:focus { outline:none; border-color:var(--accent); }
+
+    /* ── Right panel: Notepad ── */
+    .notepad-panel {
+      width:280px; min-width:220px;
+      background:var(--bg3); border-left:1px solid var(--border);
+      display:flex; flex-direction:column; flex-shrink:0;
+    }
+    .notepad-header { padding:0.75rem 1rem; border-bottom:1px solid var(--border);
+      font-size:0.82rem; font-weight:700; color:var(--text-dim); }
+    .notepad-textarea {
+      flex:1; background:transparent; border:none; color:var(--text);
+      padding:1rem; font-size:0.82rem; line-height:1.6; resize:none;
+      font-family:var(--font);
+    }
+    .notepad-textarea:focus { outline:none; }
+    .notepad-footer { padding:0.5rem 1rem; border-top:1px solid var(--border);
+      display:flex; justify-content:space-between; align-items:center; }
+    .notepad-footer span { font-size:0.72rem; color:var(--text-faint); }
+    .btn-clear-note { background:none; border:1px solid var(--border); color:var(--text-dim);
+      border-radius:4px; padding:0.2rem 0.5rem; font-size:0.72rem; cursor:pointer; }
+    .btn-clear-note:hover { border-color:var(--red); color:var(--red); }
+
+    /* Status bar */
+    .status-bar { padding:0.4rem 1.5rem; background:var(--bg3); border-top:1px solid var(--border);
+      font-size:0.75rem; color:var(--text-dim); display:flex; gap:1rem; flex-shrink:0; }
+    .status-bar span b { color:var(--accent); }
+
+    /* Mark reviewed */
+    .reviewed-check { display:flex; align-items:center; gap:0.4rem; font-size:0.8rem; }
+    .reviewed-check input { accent-color:var(--green); }
+  </style>
+</head>
+<body>
+
+<!-- ── SIDEBAR ──────────────────────────────────────────────────────── -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>📋 Questions (Python)</h2>
+    <input class="sidebar-search" type="text" id="sidebarSearch"
+           placeholder="Search by ID or text…" oninput="filterSidebar()">
+    <div class="filter-row">
+      <select class="filter-select" id="filterType" onchange="filterSidebar()">
+        <option value="">All types</option>
+        <option value="direct">Direct</option>
+        <option value="logic">Logic</option>
+        <option value="program">Program</option>
+      </select>
+      <select class="filter-select" id="filterTopic" onchange="filterSidebar()">
+        <option value="">All topics</option>
+      </select>
+    </div>
+  </div>
+  <div class="q-list" id="qList"></div>
+</div>
+
+<!-- ── MAIN CONTENT ─────────────────────────────────────────────────── -->
+<div class="main-content">
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <h1 id="topTitle">Select a question</h1>
+    <div class="top-bar-right">
+      <label class="reviewed-check">
+        <input type="checkbox" id="reviewedCheck" onchange="markReviewed()">
+        Mark reviewed
+      </label>
+      <button class="btn-sm btn-prev" onclick="navigate(-1)">◀ Prev</button>
+      <span class="nav-counter" id="navCounter">—</span>
+      <button class="btn-sm btn-next" onclick="navigate(1)">Next ▶</button>
+      <button class="btn-sm btn-save" onclick="saveChanges()">💾 Save</button>
+    </div>
+  </div>
+
+  <div class="content-split">
+
+    <!-- Question area -->
+    <div class="question-area" id="questionArea">
+      <p style="color:var(--text-faint);text-align:center;margin-top:4rem;">
+        ← Select a question from the sidebar
+      </p>
+    </div>
+
+    <!-- Notepad -->
+    <div class="notepad-panel">
+      <div class="notepad-header">📝 Notes for this question</div>
+      <textarea class="notepad-textarea" id="notepadText"
+        placeholder="Type notes here…&#10;&#10;Examples:&#10;- Option B is wrong, should be…&#10;- Code is missing from scraper&#10;- Difficulty should be higher&#10;- Refers to previous question"></textarea>
+      <div class="notepad-footer">
+        <span id="noteCount">0 chars</span>
+        <button class="btn-clear-note" onclick="clearNote()">Clear</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Status bar -->
+  <div class="status-bar">
+    <span>Total: <b id="stTotal">—</b></span>
+    <span>Reviewed: <b id="stReviewed">0</b></span>
+    <span>Flagged: <b id="stFlagged">—</b></span>
+    <span>Unsaved: <b id="stUnsaved">0</b></span>
+    <span id="stSaveMsg" style="color:var(--green)"></span>
+  </div>
+
+</div>
+
+<script>
+let allQuestions = [];
+let filteredIds  = [];
+let currentIdx   = 0;
+let changes      = {};
+let notes        = JSON.parse(localStorage.getItem('q_notes') || '{}');
+let reviewed     = JSON.parse(localStorage.getItem('q_reviewed') || '{}');
+
+// ── Load ───────────────────────────────────────────────────────────────
+async function load() {
+  const res = await fetch('/api/admin/questions');
+  allQuestions = await res.json();
+  buildTopicFilter();
+  filterSidebar();
+  updateStatus();
+}
+
+function buildTopicFilter() {
+  const topics = [...new Set(allQuestions.map(q=>q.topic||'').filter(Boolean))].sort();
+  const sel = document.getElementById('filterTopic');
+  topics.forEach(t => {
+    const o = document.createElement('option');
+    o.value = t; o.textContent = t.length > 35 ? t.slice(0,35)+'…' : t;
+    sel.appendChild(o);
+  });
+}
+
+// ── Sidebar ────────────────────────────────────────────────────────────
+function filterSidebar() {
+  const search = document.getElementById('sidebarSearch').value.toLowerCase();
+  const type   = document.getElementById('filterType').value;
+  const topic  = document.getElementById('filterTopic').value;
+
+  const filtered = allQuestions.filter(q => {
+    if (search && !q.id.toLowerCase().includes(search)
+               && !q.question.toLowerCase().includes(search)) return false;
+    if (type  && q.type  !== type)  return false;
+    if (topic && (q.topic||'') !== topic) return false;
+    return true;
+  });
+
+  filteredIds = filtered.map(q => q.id);
+  renderSidebar(filtered);
+}
+
+function renderSidebar(qs) {
+  const list = document.getElementById('qList');
+  list.innerHTML = '';
+  qs.forEach((q, i) => {
+    const isActive   = allQuestions.indexOf(q) === currentIdx;
+    const isFlagged  = hasFlag(q);
+    const isReviewed = reviewed[q.id];
+    const div = document.createElement('div');
+    div.className = 'q-list-item' +
+      (isActive ? ' active' : '') +
+      (isFlagged ? ' flagged' : '') +
+      (isReviewed ? ' reviewed' : '');
+    div.innerHTML = `
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.2rem">
+          <span class="q-id">${q.id}</span>
+          <span class="q-badge-sm badge-${q.type}">${q.type}</span>
+          ${isReviewed ? '<span style="color:var(--green);font-size:0.65rem">✓</span>' : ''}
+          ${isFlagged  ? '<span style="color:var(--amber);font-size:0.65rem">⚠</span>' : ''}
+        </div>
+        <div class="q-preview">${q.question.split('\n\n')[0].slice(0,60)}…</div>
+      </div>`;
+    div.addEventListener('click', () => {
+      currentIdx = allQuestions.indexOf(q);
+      renderQuestion();
+      renderSidebar(qs);
+    });
+    list.appendChild(div);
+  });
+}
+
+// ── Question render ────────────────────────────────────────────────────
+function renderQuestion() {
+  const q = allQuestions[currentIdx];
+  if (!q) return;
+
+  // Apply any pending changes
+  const merged = { ...q, ...(changes[q.id] || {}) };
+
+  document.getElementById('topTitle').textContent = q.id + ' — ' + (q.topic || 'No topic').slice(0,40);
+  document.getElementById('navCounter').textContent =
+    (currentIdx+1) + ' / ' + allQuestions.length;
+  document.getElementById('reviewedCheck').checked = !!reviewed[q.id];
+
+  const parts = merged.question.split('\n\n');
+  const qText = parts[0];
+  const code  = parts.length > 1 ? parts.slice(1).join('\n\n') : null;
+
+  const area = document.getElementById('questionArea');
+  area.innerHTML = `
+    <!-- Question text -->
+    <div class="card-section">
+      <div class="section-label">Question</div>
+      <div class="q-text-display">${esc(qText)}</div>
+      ${code ? `<div class="q-code-display">${esc(code)}</div>` : ''}
+    </div>
+
+    <!-- Options -->
+    <div class="card-section">
+      <div class="section-label">Options &amp; Correct Answer</div>
+      <div class="options-list">
+        ${merged.options.map((opt, i) => {
+          const isCorrect = opt.trim().toLowerCase() === merged.correct_answer.trim().toLowerCase();
+          return `<div class="option-row">
+            <span class="option-letter">${String.fromCharCode(65+i)})</span>
+            <div class="option-text ${isCorrect ? 'option-correct' : ''}">${esc(opt)}
+              ${isCorrect ? ' ✓' : ''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <!-- Explanation -->
+    <div class="card-section">
+      <div class="section-label">Explanation</div>
+      <div class="q-text-display" style="font-size:0.83rem;color:var(--text-dim)">${esc(merged.explanation)}</div>
+    </div>
+
+    <!-- Editable params -->
+    <div class="card-section">
+      <div class="section-label">Editable Parameters</div>
+      <div class="params-grid">
+
+        <div class="param-field">
+          <label>Type</label>
+          <select class="param-input param-select" id="ep-type" onchange="recordChange('type', this.value)">
+            <option ${merged.type==='direct' ?'selected':''} value="direct">direct</option>
+            <option ${merged.type==='logic'  ?'selected':''} value="logic">logic</option>
+            <option ${merged.type==='program'?'selected':''} value="program">program</option>
+          </select>
+        </div>
+
+        <div class="param-field">
+          <label>Estimated Time (s)</label>
+          <input class="param-input" type="number" id="ep-time" min="5" max="180" step="5"
+            value="${merged.estimated_time}"
+            onchange="recordChange('estimated_time', parseInt(this.value))">
+        </div>
+
+        <div class="param-field" style="grid-column:1/-1">
+          <label>Topic</label>
+          <input class="param-input" type="text" id="ep-topic"
+            value="${esc(merged.topic||'')}"
+            onchange="recordChange('topic', this.value)">
+        </div>
+
+        <div class="param-field" style="grid-column:1/-1">
+          <label>Difficulty — <span id="diff-label">${merged.difficulty}</span></label>
+          <div class="diff-row">
+            <input type="range" min="0.05" max="0.95" step="0.05"
+              value="${merged.difficulty}" id="ep-diff"
+              oninput="document.getElementById('diff-label').textContent=this.value"
+              onchange="recordChange('difficulty', parseFloat(this.value))">
+            <span class="diff-val">${merged.difficulty}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-faint)">
+            <span>Easy (0.05)</span><span>Medium (0.50)</span><span>Hard (0.95)</span>
+          </div>
+        </div>
+
+        <div class="param-field" style="grid-column:1/-1">
+          <label>Hint</label>
+          <textarea class="hint-textarea" id="ep-hint"
+            onchange="recordChange('hint', this.value)">${esc(merged.hint||'')}</textarea>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+  // Notepad
+  const noteEl = document.getElementById('notepadText');
+  noteEl.value = notes[q.id] || '';
+  updateNoteCount();
+}
+
+// ── Changes & Save ─────────────────────────────────────────────────────
+function recordChange(field, value) {
+  const q = allQuestions[currentIdx];
+  if (!changes[q.id]) changes[q.id] = {};
+  changes[q.id][field] = value;
+  document.getElementById('stUnsaved').textContent = Object.keys(changes).length;
+}
+
+async function saveChanges() {
+  if (Object.keys(changes).length === 0) {
+    document.getElementById('stSaveMsg').textContent = 'Nothing to save';
+    return;
+  }
+  const res = await fetch('/api/admin/questions/update', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(changes),
+  });
+  const data = await res.json();
+  if (data.ok) {
+    document.getElementById('stSaveMsg').textContent = `✓ Saved ${data.updated} fields`;
+    document.getElementById('stUnsaved').textContent = '0';
+    changes = {};
+    await load();
+    renderQuestion();
+    setTimeout(() => document.getElementById('stSaveMsg').textContent = '', 3000);
+  }
+}
+
+// ── Notes ──────────────────────────────────────────────────────────────
+document.getElementById('notepadText').addEventListener('input', function() {
+  const q = allQuestions[currentIdx];
+  if (!q) return;
+  notes[q.id] = this.value;
+  localStorage.setItem('q_notes', JSON.stringify(notes));
+  updateNoteCount();
+});
+
+function updateNoteCount() {
+  const val = document.getElementById('notepadText').value;
+  document.getElementById('noteCount').textContent = val.length + ' chars';
+}
+
+function clearNote() {
+  document.getElementById('notepadText').value = '';
+  const q = allQuestions[currentIdx];
+  if (q) { delete notes[q.id]; localStorage.setItem('q_notes', JSON.stringify(notes)); }
+  updateNoteCount();
+}
+
+// ── Reviewed ───────────────────────────────────────────────────────────
+function markReviewed() {
+  const q = allQuestions[currentIdx];
+  if (!q) return;
+  if (document.getElementById('reviewedCheck').checked) {
+    reviewed[q.id] = true;
+  } else {
+    delete reviewed[q.id];
+  }
+  localStorage.setItem('q_reviewed', JSON.stringify(reviewed));
+  updateStatus();
+}
+
+// ── Navigation ─────────────────────────────────────────────────────────
+function navigate(dir) {
+  currentIdx = Math.max(0, Math.min(allQuestions.length-1, currentIdx + dir));
+  renderQuestion();
+  filterSidebar();
+  // Scroll sidebar to active item
+  setTimeout(() => {
+    const active = document.querySelector('.q-list-item.active');
+    if (active) active.scrollIntoView({block:'nearest'});
+  }, 50);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') navigate(1);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   navigate(-1);
+  if ((e.ctrlKey || e.metaKey) && e.key === 's') { e.preventDefault(); saveChanges(); }
+});
+
+// ── Helpers ────────────────────────────────────────────────────────────
+function hasFlag(q) {
+  return !q.topic || !q.hint || q.options.length < 4;
+}
+
+function updateStatus() {
+  document.getElementById('stTotal').textContent    = allQuestions.length;
+  document.getElementById('stReviewed').textContent = Object.keys(reviewed).length;
+  document.getElementById('stFlagged').textContent  = allQuestions.filter(hasFlag).length;
+}
+
+function esc(s) {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+load();
+</script>
+</body>
+</html>

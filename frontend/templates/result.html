@@ -75,8 +75,15 @@
     document.getElementById('statAvgTime').textContent  = results.avg_time + 's';
     document.getElementById('statScore').textContent    = results.score.toFixed(1);
 
+    // Level reached logic
+    const levelReached = results.final_ability >= 0.70 ? 'Advanced' :
+                         results.final_ability >= 0.40 ? 'Intermediate' : 'Beginner';
+    const levelEmoji   = results.final_ability >= 0.70 ? '🚀' :
+                         results.final_ability >= 0.40 ? '📈' : '📚';
+    const levelChanged = levelReached !== results.level;
     document.getElementById('resultSub').textContent =
-      results.subject + ' · ' + results.level + ' start';
+      results.subject + ' · Started: ' + results.level +
+      (levelChanged ? ' → Reached: ' + levelReached + ' ' + levelEmoji : '');
 
     // Badge / emoji based on accuracy
     const acc = results.accuracy;

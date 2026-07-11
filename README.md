@@ -5,21 +5,6 @@ and adapts question difficulty after every answer.
 
 ---
 
-## What's New in v2.2
-
-- Fixed question stacking bug (questions now render fresh each time)
-- Added Supabase PostgreSQL logger for persistent data collection
-- Added admin dashboard at `/admin` with live stats and charts
-- Added synthetic student simulator (200 students, 3000 training rows)
-- Trained baseline ML model (Random Forest, AUC=0.5497 vs IRT 0.5423)
-- Added `ml_predictor.py` as drop-in replacement for IRT formula
-- Fixed 4 hints that had cross-question references
-- Fixed 21 broken questions, normalised Unicode quotes across all 156 Qs
-- Added `requirements.txt`, `Procfile`, `render.yaml` for Render deployment
-- App now reads `PORT` env var for cloud hosting compatibility
-
----
-
 ## Project Structure
 
 ```
@@ -165,14 +150,3 @@ This is your training set. When you have enough data:
 - `estimated_time` and `difficulty` values are Claude's initial
   estimates — replace with human-reviewed values using the
   enriched `.md` files in `data/`.
-
----
-
-## Deployment (Render + Supabase)
-
-Set environment variables on Render:
-```
-SUPABASE_URL = your project URL
-SUPABASE_KEY = your anon key
-```
-Then push to GitHub — Render auto-deploys.

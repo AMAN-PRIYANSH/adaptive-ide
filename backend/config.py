@@ -1,4 +1,4 @@
-# config.py v2.3 — tuned after real student testing
+# config.py v2.4 — boundary dampening + 15Q tuning
 import os
 
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
@@ -29,10 +29,9 @@ DIFFICULTY_WINDOW_INIT = 0.15
 DIFFICULTY_WINDOW_STEP = 0.10
 DIFFICULTY_WINDOW_MAX  = 0.50
 
-# IRT — reduced guessing floor (was 0.20, now 0.15)
-# 0.20 was too high — was eating into positive surprise on easy Qs
+# IRT
 IRT_DEFAULT_DISCRIMINATION = 2.0
-IRT_GUESSING_PARAM         = 0.15   # was 0.20
+IRT_GUESSING_PARAM         = 0.15
 
 # Uncertainty
 UNCERTAINTY_INIT           = 0.30
@@ -46,16 +45,21 @@ STREAK_BOOST_FACTOR   = 1.10
 STREAK_PENALTY_START  = 3
 STREAK_PENALTY_FACTOR = 0.90
 
-# Guess detection — raised time threshold (was 0.30, now 0.20)
-# 6-10s on a 25s question = 0.24-0.40 ratio, was wrongly flagged
+# Guess detection
 GUESS_HARD_THRESHOLD  = 0.65
-GUESS_TIME_THRESHOLD  = 0.20   # was 0.30 — only flag truly instant answers
+GUESS_TIME_THRESHOLD  = 0.20
 GUESS_DISCOUNT        = 0.50
 
-# Learning rate — increased base, slower decay
-# was: base=0.12, decay=0.92 → too slow convergence for short 15Q sessions
-LEARNING_RATE_BASE  = 0.18   # was 0.12
-LEARNING_RATE_DECAY = 0.95   # was 0.92 (slower decay = stays responsive longer)
+# Learning rate — tuned for 15Q sessions
+LEARNING_RATE_BASE  = 0.18
+LEARNING_RATE_DECAY = 0.96
+
+# Boundary dampening — sigmoid-based, activates near floor/ceiling
+# Stays near 1.0 for theta in [0.20, 0.80], drops smoothly near extremes
+# k=12 controls how sharp the transition is
+BOUNDARY_DAMPENING_K      = 12     # sharpness of sigmoid transition
+BOUNDARY_DAMPENING_MARGIN = 0.12   # distance from boundary where dampening starts
+BOUNDARY_DAMPENING_MIN    = 0.10   # floor — never fully stops movement
 
 # Hint
 HINT_PENALTY = 0.40

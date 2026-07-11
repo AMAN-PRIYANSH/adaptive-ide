@@ -149,6 +149,7 @@ class QuizManager:
                 "discrimination":    update["discrimination"],
                 "guessing_param":    update["guessing_param"],
                 "question_type":     question.type,
+                "boundary_factor":   update["boundary_factor"],
                 "estimated_time":    question.estimated_time,
                 "correct_streak":    student.correct_streak,
                 "wrong_streak":      student.wrong_streak,

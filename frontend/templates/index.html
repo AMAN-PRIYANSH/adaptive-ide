@@ -25,7 +25,13 @@
       <label class="field-label">Subject</label>
       <div class="pill-group" id="subjectGroup">
         {% for subject in subjects %}
+        {% if subject == "Python" %}
         <button class="pill" data-val="{{ subject }}" data-group="subject">{{ subject }}</button>
+        {% else %}
+        <button class="pill pill-locked" disabled title="Coming soon — under review">
+          {{ subject }} 🔒
+        </button>
+        {% endif %}
         {% endfor %}
       </div>
     </div>
