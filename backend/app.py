@@ -131,13 +131,6 @@ def api_admin_stats():
 def api_admin_log():
     return jsonify(qm.logger.all_entries()[-200:])
 
-# ── Entry point ────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    port  = int(os.environ.get("PORT", 5050))
-    debug = os.environ.get("RENDER") is None   # False on Render, True locally
-    app.run(host="0.0.0.0", port=port, debug=debug)
-
-
 # ──────────────────────────────────────────────────────────────────────
 # Question Editor (local admin only — do not expose on hosted site)
 # ──────────────────────────────────────────────────────────────────────
@@ -189,3 +182,9 @@ def api_admin_questions_update():
 @app.route("/admin/review")
 def question_review():
     return render_template("question_review.html")
+
+# ── Entry point ────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    port  = int(os.environ.get("PORT", 5050))
+    debug = os.environ.get("RENDER") is None   # False on Render, True locally
+    app.run(host="0.0.0.0", port=port, debug=debug)
