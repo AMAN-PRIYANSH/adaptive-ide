@@ -111,6 +111,11 @@ class QuizManager:
             time_taken      = time_taken,
             new_ability     = update["ability_after"],
             new_uncertainty = update["uncertainty_after"],
+            question_text   = question.question.split("\n\n")[0],
+            student_answer  = answer_given,
+            correct_answer  = question.correct_answer,
+            explanation     = question.explanation,
+            topic           = question.topic,
         )
 
         self.logger.log(
@@ -182,4 +187,5 @@ class QuizManager:
             "uncertainty_history": student.uncertainty_history,
             "difficulty_history":  student.difficulty_history,
             "time_history":        student.time_history,
+            "wrong_questions":     student.wrong_questions,
         }

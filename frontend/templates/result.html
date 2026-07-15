@@ -57,6 +57,12 @@
       </div>
     </div>
 
+    <!-- Questions to Review -->
+    <div class="review-section hidden" id="reviewSection">
+      <h3 class="review-title">Questions to Review</h3>
+      <div class="review-list" id="reviewList"></div>
+    </div>
+
     <div class="result-actions">
       <a href="/" class="btn-primary">Try Again</a>
     </div>
@@ -163,6 +169,59 @@
         }
       }
     });
+    // ── Questions to Review ─────────────────────────────────────────────
+    const wrongQuestions = results.wrong_questions || [];
+    if (wrongQuestions.length > 0) {
+      document.getElementById('reviewSection').classList.remove('hidden');
+      const list = document.getElementById('reviewList');
+      wrongQuestions.forEach(wq => {
+        const card = document.createElement('div');
+        card.className = 'review-card';
+
+        const qText = document.createElement('div');
+        qText.className = 'review-q-text';
+        qText.textContent = wq.question_text;
+        card.appendChild(qText);
+
+        const meta = document.createElement('div');
+        meta.className = 'review-meta';
+        if (wq.topic) {
+          const topicBadge = document.createElement('span');
+          topicBadge.className = 'q-badge q-topic';
+          topicBadge.textContent = wq.topic;
+          meta.appendChild(topicBadge);
+        }
+        const diffBadge = document.createElement('span');
+        diffBadge.className = 'q-badge q-diff';
+        diffBadge.textContent = 'Difficulty ' + (wq.difficulty * 100).toFixed(0) + '%';
+        meta.appendChild(diffBadge);
+        card.appendChild(meta);
+
+        const answers = document.createElement('div');
+        answers.className = 'review-answers';
+
+        const yourAnswer = document.createElement('div');
+        yourAnswer.className = 'review-answer review-answer-wrong';
+        yourAnswer.textContent = 'Your answer: ' + wq.student_answer;
+        answers.appendChild(yourAnswer);
+
+        const correctAnswer = document.createElement('div');
+        correctAnswer.className = 'review-answer review-answer-correct';
+        correctAnswer.textContent = 'Correct answer: ' + wq.correct_answer;
+        answers.appendChild(correctAnswer);
+
+        card.appendChild(answers);
+
+        if (wq.explanation) {
+          const expl = document.createElement('div');
+          expl.className = 'review-explanation';
+          expl.textContent = wq.explanation;
+          card.appendChild(expl);
+        }
+
+        list.appendChild(card);
+      });
+    }
   </script>
 
 </body>

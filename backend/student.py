@@ -32,6 +32,7 @@ class Student:
         self.time_history:       list[float]= []
         self.score:              float      = 0.0
         self.start_ts:           float      = time.time()
+        self.wrong_questions:    list[dict] = []
 
     # ------------------------------------------------------------------
     def record_answer(
@@ -43,6 +44,11 @@ class Student:
         time_taken:  float,
         new_ability: float,
         new_uncertainty: float,
+        question_text:  str = None,
+        student_answer: str = None,
+        correct_answer: str = None,
+        explanation:    str = None,
+        topic:          str = None,
     ):
         self.answered_ids.append(qid)
         self.difficulty_history.append(round(difficulty, 3))
@@ -62,6 +68,14 @@ class Student:
             self.wrong          += 1
             self.wrong_streak   += 1
             self.correct_streak  = 0
+            self.wrong_questions.append({
+                "question_text":  question_text,
+                "student_answer": student_answer,
+                "correct_answer": correct_answer,
+                "explanation":    explanation,
+                "difficulty":     difficulty,
+                "topic":          topic,
+            })
 
         if hint_used:
             self.hints_used += 1
@@ -100,6 +114,7 @@ class Student:
             "time_history":        self.time_history,
             "score":               round(self.score, 2),
             "start_ts":            self.start_ts,
+            "wrong_questions":     self.wrong_questions,
         }
 
     @classmethod
@@ -123,4 +138,5 @@ class Student:
         s.time_history        = d["time_history"]
         s.score               = d["score"]
         s.start_ts            = d["start_ts"]
+        s.wrong_questions     = d.get("wrong_questions", [])
         return s
