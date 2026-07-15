@@ -50,7 +50,8 @@ class Logger:
         os.makedirs(os.path.dirname(self._path), exist_ok=True)
 
     def log(self, qid, difficulty, ability_before, ability_after,
-            correct, time_taken, hint_used, update_detail):
+            correct, time_taken, hint_used, update_detail,
+            session_id, level, topic, q_number, subject):
 
         entry = {
             "ts":             time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -61,6 +62,11 @@ class Logger:
             "correct":        int(correct),
             "time_taken":     time_taken,
             "hint_used":      int(hint_used),
+            "session_id":     session_id,
+            "level":          level,
+            "topic":          topic,
+            "q_number":       q_number,
+            "subject":        subject,
             **update_detail,
         }
 
@@ -86,7 +92,8 @@ class Logger:
             "correct","time_taken","hint_used","delta","expected_p",
             "discrimination","guessing_param","surprise","surprise_adj",
             "guess_detected","hint_modifier","time_modifier","time_ratio",
-            "streak_modifier","learning_rate","uncertainty_before","uncertainty_after"
+            "streak_modifier","learning_rate","uncertainty_before","uncertainty_after",
+            "session_id","level","topic","q_number","subject"
         }
         try:
             row = {k: v for k, v in entry.items() if k in COLS}

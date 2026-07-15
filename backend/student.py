@@ -6,7 +6,7 @@ Student — holds all per-session state including new v2 fields:
 """
 
 from __future__ import annotations
-import random, time
+import random, time, uuid
 from config import ABILITY_INIT, ABILITY_MIN, ABILITY_MAX, UNCERTAINTY_INIT
 
 
@@ -14,6 +14,7 @@ class Student:
 
     def __init__(self, level: str, subject: str):
         lo, hi = ABILITY_INIT[level]
+        self.session_id:         str        = uuid.uuid4().hex
         self.ability:            float      = round(random.uniform(lo, hi), 4)
         self.uncertainty:        float      = UNCERTAINTY_INIT
         self.subject:            str        = subject
@@ -81,6 +82,7 @@ class Student:
     # ------------------------------------------------------------------
     def to_dict(self) -> dict:
         return {
+            "session_id":          self.session_id,
             "ability":             self.ability,
             "uncertainty":         self.uncertainty,
             "subject":             self.subject,
@@ -103,6 +105,7 @@ class Student:
     @classmethod
     def from_dict(cls, d: dict) -> "Student":
         s = cls.__new__(cls)
+        s.session_id          = d.get("session_id") or uuid.uuid4().hex
         s.ability             = d["ability"]
         s.uncertainty         = d.get("uncertainty", UNCERTAINTY_INIT)
         s.subject             = d["subject"]

@@ -122,6 +122,11 @@ class QuizManager:
             time_taken     = time_taken,
             hint_used      = hint_used,
             update_detail  = update,
+            session_id     = student.session_id,
+            level          = student.level,
+            topic          = question.topic,
+            q_number       = student.questions_done,
+            subject        = student.subject,
         )
 
         result = {
