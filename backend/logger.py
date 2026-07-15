@@ -51,7 +51,9 @@ class Logger:
 
     def log(self, qid, difficulty, ability_before, ability_after,
             correct, time_taken, hint_used, update_detail,
-            session_id, level, topic, q_number, subject):
+            session_id, level, topic, q_number, subject,
+            questions_done_before, correct_streak_before, wrong_streak_before,
+            estimated_time, q_type):
 
         entry = {
             "ts":             time.strftime("%Y-%m-%dT%H:%M:%S"),
@@ -67,6 +69,11 @@ class Logger:
             "topic":          topic,
             "q_number":       q_number,
             "subject":        subject,
+            "questions_done_before": questions_done_before,
+            "correct_streak_before": correct_streak_before,
+            "wrong_streak_before":   wrong_streak_before,
+            "estimated_time":        estimated_time,
+            "q_type":                q_type,
             **update_detail,
         }
 
@@ -93,7 +100,9 @@ class Logger:
             "discrimination","guessing_param","surprise","surprise_adj",
             "guess_detected","hint_modifier","time_modifier","time_ratio",
             "streak_modifier","learning_rate","uncertainty_before","uncertainty_after",
-            "session_id","level","topic","q_number","subject"
+            "session_id","level","topic","q_number","subject",
+            "questions_done_before","correct_streak_before","wrong_streak_before",
+            "estimated_time","q_type"
         }
         try:
             row = {k: v for k, v in entry.items() if k in COLS}

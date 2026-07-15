@@ -103,6 +103,10 @@ class QuizManager:
             question_type   = question.type,
         )
 
+        q_num_before          = student.questions_done
+        correct_streak_before = student.correct_streak
+        wrong_streak_before   = student.wrong_streak
+
         student.record_answer(
             qid             = qid,
             difficulty      = question.difficulty,
@@ -132,6 +136,11 @@ class QuizManager:
             topic          = question.topic,
             q_number       = student.questions_done,
             subject        = student.subject,
+            questions_done_before  = q_num_before,
+            correct_streak_before  = correct_streak_before,
+            wrong_streak_before    = wrong_streak_before,
+            estimated_time         = question.estimated_time,
+            q_type                 = question.type,
         )
 
         result = {
