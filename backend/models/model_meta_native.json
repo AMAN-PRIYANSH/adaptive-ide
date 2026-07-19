@@ -1,0 +1,37 @@
+{
+  "model_name": "Gradient Boosting",
+  "features": [
+    "ability_before",
+    "uncertainty_before",
+    "difficulty",
+    "discrimination",
+    "guessing_param",
+    "expected_p",
+    "q_num",
+    "questions_done",
+    "correct_streak",
+    "wrong_streak",
+    "learning_rate",
+    "estimated_time",
+    "ability_difficulty_gap",
+    "uncertainty_weighted_p",
+    "q_type_enc"
+  ],
+  "train_rows": 704,
+  "test_rows": 177,
+  "test_accuracy": 0.6102,
+  "test_auc": 0.6397,
+  "test_brier": 0.2357,
+  "irt_baseline_auc": 0.5973,
+  "auc_improvement": 0.0424,
+  "cv_mean_auc": 0.576,
+  "cv_std_auc": 0.0474,
+  "cv_fold_aucs": [
+    0.5185,
+    0.5846,
+    0.5747,
+    0.6585,
+    0.5439
+  ],
+  "cv_sessions_total": 85
+}

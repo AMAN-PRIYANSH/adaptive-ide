@@ -1,0 +1,37 @@
+{
+  "model_name": "Logistic Regression",
+  "features": [
+    "ability_before",
+    "uncertainty_before",
+    "difficulty",
+    "discrimination",
+    "guessing_param",
+    "expected_p",
+    "q_num",
+    "questions_done",
+    "correct_streak",
+    "wrong_streak",
+    "learning_rate",
+    "estimated_time",
+    "ability_difficulty_gap",
+    "uncertainty_weighted_p",
+    "q_type_enc"
+  ],
+  "train_rows": 800,
+  "test_rows": 237,
+  "test_accuracy": 0.6582,
+  "test_auc": 0.6908,
+  "test_brier": 0.2223,
+  "irt_baseline_auc": 0.6333,
+  "auc_improvement": 0.0574,
+  "cv_mean_auc": 0.5736,
+  "cv_std_auc": 0.0706,
+  "cv_fold_aucs": [
+    0.458,
+    0.5501,
+    0.6752,
+    0.5923,
+    0.5925
+  ],
+  "cv_sessions_total": 97
+}
